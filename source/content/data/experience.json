@@ -1,25 +1,72 @@
 [
-  {
-    "company": "Company A",
-    "role": "Senior Data Scientist",
-    "start": "2022-05",
-    "end": "Present",
-    "bullets": [
-      "Designed uplift modeling framework improving targeting precision by 11%.",
-      "Reduced invalid experiments from 18% to 5% through governance tooling.",
-      "Co-led feature store initiative cutting model latency by 40%."
-    ],
-    "tech": ["Python", "Airflow", "AWS", "Spark"]
-  },
-  {
-    "company": "Company B",
-    "role": "Data Scientist",
-    "start": "2019-01",
-    "end": "2022-04",
-    "bullets": [
-      "Built churn scoring pipeline (AUC 0.89) used in weekly retention ops.",
-      "Developed causal inference framework (DID, synthetic control) for product launches."
-    ],
-    "tech": ["Python", "Snowflake", "dbt"]
-  }
+	{
+		"company": "DataConsult Group",
+		"role": "Senior Data Scientist",
+		"start": "2021-01",
+		"end": "Present",
+		"summary": "Lead ML consultant delivering production systems and experimentation frameworks across fintech, retail, and subscription platforms.",
+		"bullets": [
+			"Mentored 6 data scientists across concurrent client engagements.",
+			"Established reusable MLOps scaffold (feature store + experiment tracking) adopted by 4 client teams."
+		],
+		"projects": [
+			{
+				"name": "Client A – Churn Prediction & Retention Pipeline",
+				"bullets": [
+					"Designed weekly churn risk scoring (AUC 0.89) driving targeted retention campaigns.",
+					"Implemented automated feature freshness checks reducing stale feature issues by 70%.",
+					"Integrated uplift modeling to prioritize interventions, improving campaign ROI by 18%."
+				],
+				"impact": "Reduced voluntary churn in a pilot cohort by 14% within 3 months.",
+				"tech": ["Python", "Airflow", "XGBoost", "Snowflake"]
+			},
+			{
+				"name": "Client B – Experimentation Governance Platform",
+				"bullets": [
+					"Built pre-launch power & MDE estimator with CUPED variance reduction module.",
+					"Added guardrail metrics (latency, error rate) auto-attached to all experiments.",
+					"Reduced invalid or inconclusive experiment rate from 18% to 5%."
+				],
+				"impact": "Accelerated decision velocity for product managers (median test duration -22%).",
+				"tech": ["TypeScript", "Python", "FastAPI", "Redshift"]
+			},
+			{
+				"name": "Client C – Real-Time Personalization",
+				"bullets": [
+					"Prototyped embedding-based recommendation reranker (mean CTR lift +6.3%).",
+					"Deployed streaming feature ingestion via Kinesis + Lambda (P99 < 1.3s)."
+				],
+				"impact": "Increased session-level conversion probability by 4.1%.",
+				"tech": ["Python", "SageMaker", "Faiss", "AWS Lambda"]
+			}
+		],
+		"tech": ["Python", "Airflow", "Snowflake", "AWS", "MLOps", "Experimentation"]
+	},
+	{
+		"company": "DataConsult Group",
+		"role": "Data Scientist",
+		"start": "2017-01",
+		"end": "2020-12",
+		"summary": "Delivered foundational analytics & predictive models for early-stage clients.",
+		"projects": [
+			{
+				"name": "Client D – Lead Scoring Model",
+				"bullets": [
+					"Built gradient boosting lead prioritization (precision@100 +24%).",
+					"Delivered SHAP-based explainability reports adopted by sales ops."
+				],
+				"impact": "Increased qualified lead conversion by 11%.",
+				"tech": ["Python", "LightGBM", "PostgreSQL"]
+			},
+			{
+				"name": "Client E – Pricing Elasticity Analysis",
+				"bullets": [
+					"Applied panel regression + causal uplift to simulate scenario pricing.",
+					"Produced pricing playbook used in quarterly strategy reviews."
+				],
+				"tech": ["R", "Python", "Causal Inference"]
+			}
+		],
+		"tech": ["Python", "R", "SQL", "LightGBM"]
+	}
 ]

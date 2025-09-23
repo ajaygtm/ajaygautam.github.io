@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import {fetchApps, proseCSS} from '~/utils/apps.js';
 
 const meta = {
-	title: 'Feedback & Support — Sindre Sorhus',
+	title: 'Feedback & Support — Ajay Gautam',
 };
 
 // eslint-disable-next-line unicorn/no-await-expression-member
@@ -83,7 +83,7 @@ const labelCSS = 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-30
 		const product = params.get('product');
 		const app = apps.find(app => app.title === product);
 
-		$('title').text(`Feedback & Support for ${product} — Sindre Sorhus`);
+		$('title').text(`Feedback & Support for ${product} — Ajay Gautam`);
 		$('#product-name').text(product);
 
 		if (app) {
