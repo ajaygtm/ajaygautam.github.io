@@ -1,72 +1,75 @@
 [
 	{
-		"company": "DataConsult Group",
+		"company": "Knowledge Foundry",
 		"role": "Senior Data Scientist",
-		"start": "2021-01",
+		"start": "2021-10",
 		"end": "Present",
-		"summary": "Lead ML consultant delivering production systems and experimentation frameworks across fintech, retail, and subscription platforms.",
-		"bullets": [
-			"Mentored 6 data scientists across concurrent client engagements.",
-			"Established reusable MLOps scaffold (feature store + experiment tracking) adopted by 4 client teams."
-		],
+		"summary": "Leading delivery of generative AI, predictive modeling, and scalable ML systems across industrial automation, insurance, and media analytics; mentoring team members and aligning technical outputs with business impact.",
 		"projects": [
 			{
-				"name": "Client A – Churn Prediction & Retention Pipeline",
+				"name": "GenAI-Powered RFQ Summarization (Fortune 500 Industrial Automation Client)",
 				"bullets": [
-					"Designed weekly churn risk scoring (AUC 0.89) driving targeted retention campaigns.",
-					"Implemented automated feature freshness checks reducing stale feature issues by 70%.",
-					"Integrated uplift modeling to prioritize interventions, improving campaign ROI by 18%."
+					"Designed & deployed an end-to-end Retrieval-Augmented Generation (RAG) workflow on Azure using Python + LLMs to summarize complex RFQs.",
+					"Engineered document chunking, hybrid embedding retrieval, and relevance re-ranking to reach ~90% retrieval accuracy.",
+					"Reduced manual bid team review effort by ~70% through automated structured summaries and key value extraction.",
+					"Iteratively refined prompt strategy with bid stakeholders to align outputs with deal qualification criteria."
 				],
-				"impact": "Reduced voluntary churn in a pilot cohort by 14% within 3 months.",
-				"tech": ["Python", "Airflow", "XGBoost", "Snowflake"]
+				"impact": "Accelerated bid qualification and improved prioritization of high-value RFQs.",
+				"tech": ["Python", "Azure OpenAI", "RAG", "Vector Embeddings", "LLM Prompt Engineering", "Azure Cognitive Search"]
 			},
 			{
-				"name": "Client B – Experimentation Governance Platform",
+				"name": "Scalable ML for U.S. Insurance CRM",
 				"bullets": [
-					"Built pre-launch power & MDE estimator with CUPED variance reduction module.",
-					"Added guardrail metrics (latency, error rate) auto-attached to all experiments.",
-					"Reduced invalid or inconclusive experiment rate from 18% to 5%."
+					"Built enterprise-scale predictive models (propensity, cross-sell, churn risk) using Python & scikit-learn on AWS.",
+					"Implemented NLP-driven enrichment of agent/customer interaction logs for behavioral segmentation.",
+					"Led a team of 5; translated model outputs into CRM playbooks in partnership with sales operations.",
+					"Integrated automated retraining & monitoring (data drift + performance) to maintain reliability."
 				],
-				"impact": "Accelerated decision velocity for product managers (median test duration -22%).",
-				"tech": ["TypeScript", "Python", "FastAPI", "Redshift"]
+				"impact": "Improved deal closure rates by ~40% and enhanced CRM agent targeting precision.",
+				"tech": ["Python", "scikit-learn", "AWS", "NLP", "Airflow (orchestration)", "Model Monitoring"]
 			},
 			{
-				"name": "Client C – Real-Time Personalization",
+				"name": "Video Content Optimization (US-Based AI Startup)",
 				"bullets": [
-					"Prototyped embedding-based recommendation reranker (mean CTR lift +6.3%).",
-					"Deployed streaming feature ingestion via Kinesis + Lambda (P99 < 1.3s)."
+					"Developed OpenCV + GenAI pipeline for sermon video segmentation: speaker tracking, frame stabilization, and caption embedding.",
+					"Automated generation of short-form, platform-ready reels for social media distribution.",
+					"Optimized processing to reduce manual editing cycles for content teams."
 				],
-				"impact": "Increased session-level conversion probability by 4.1%.",
-				"tech": ["Python", "SageMaker", "Faiss", "AWS Lambda"]
+				"impact": "Accelerated production of social media-ready video clips; enabled scalable content repurposing.",
+				"tech": ["Python", "OpenCV", "Generative AI", "FFmpeg", "Captioning Pipelines"]
 			}
 		],
-		"tech": ["Python", "Airflow", "Snowflake", "AWS", "MLOps", "Experimentation"]
+		"tech": ["Python", "LLMs", "RAG", "Azure", "AWS", "NLP", "MLOps", "Scikit-learn", "OpenCV"]
 	},
 	{
-		"company": "DataConsult Group",
+		"company": "Knowledge Foundry",
 		"role": "Data Scientist",
-		"start": "2017-01",
-		"end": "2020-12",
-		"summary": "Delivered foundational analytics & predictive models for early-stage clients.",
+		"start": "2018-07",
+		"end": "2021-09",
+		"summary": "Delivered forecasting, risk, and customer analytics solutions for global retail and insurance clients; established reusable modeling and evaluation frameworks.",
 		"projects": [
 			{
-				"name": "Client D – Lead Scoring Model",
+				"name": "Supplier Forecasting (Global Retail Chain – European Pet SKUs)",
 				"bullets": [
-					"Built gradient boosting lead prioritization (precision@100 +24%).",
-					"Delivered SHAP-based explainability reports adopted by sales ops."
+					"Developed mid-term (1–3 month) demand forecasting solution using hierarchical time-series methods.",
+					"Implemented feature engineering for seasonality, promotion effects, and supply lag dynamics.",
+					"Provided accuracy dashboards and variance decomposition for supply planning stakeholders."
 				],
-				"impact": "Increased qualified lead conversion by 11%.",
-				"tech": ["Python", "LightGBM", "PostgreSQL"]
+				"impact": "Reduced forecast error by ~30% for targeted SKU groups, improving stock allocation.",
+				"tech": ["Python", "Time Series Forecasting", "Pandas", "Prophet/ARIMA", "Visualization"]
 			},
 			{
-				"name": "Client E – Pricing Elasticity Analysis",
+				"name": "Predictive Analytics for South African Insurer",
 				"bullets": [
-					"Applied panel regression + causal uplift to simulate scenario pricing.",
-					"Produced pricing playbook used in quarterly strategy reviews."
+					"Built AWS-based ML pipeline to predict policy default and early cancellation behavior.",
+					"Engineered risk segmentation features (payment history, interaction intensity, coverage complexity).",
+					"Delivered intervention scoring framework for retention workflows.",
+					"Collaborated with business teams to embed model outputs into decision routines."
 				],
-				"tech": ["R", "Python", "Causal Inference"]
+				"impact": "Reduced defaults by ~20% and NTU (Not-Taken-Up) by ~15%, driving measurable retention uplift.",
+				"tech": ["Python", "AWS", "ML Pipelines", "Risk Modeling"]
 			}
 		],
-		"tech": ["Python", "R", "SQL", "LightGBM"]
+		"tech": ["Python", "Forecasting", "Risk Modeling", "AWS", "Feature Engineering", "Analytics"]
 	}
 ]
