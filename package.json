@@ -79,5 +79,8 @@
 			],
 			"unicorn/prevent-abbreviations": "off"
 		}
+	},
+	"dependencies": {
+		"gray-matter": "^4.0.3"
 	}
 }

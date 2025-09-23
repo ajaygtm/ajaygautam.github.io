@@ -1,0 +1,25 @@
+[
+  {
+    "company": "Company A",
+    "role": "Senior Data Scientist",
+    "start": "2022-05",
+    "end": "Present",
+    "bullets": [
+      "Designed uplift modeling framework improving targeting precision by 11%.",
+      "Reduced invalid experiments from 18% to 5% through governance tooling.",
+      "Co-led feature store initiative cutting model latency by 40%."
+    ],
+    "tech": ["Python", "Airflow", "AWS", "Spark"]
+  },
+  {
+    "company": "Company B",
+    "role": "Data Scientist",
+    "start": "2019-01",
+    "end": "2022-04",
+    "bullets": [
+      "Built churn scoring pipeline (AUC 0.89) used in weekly retention ops.",
+      "Developed causal inference framework (DID, synthetic control) for product launches."
+    ],
+    "tech": ["Python", "Snowflake", "dbt"]
+  }
+]
