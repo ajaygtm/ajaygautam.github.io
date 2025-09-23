@@ -4,29 +4,34 @@ import {fetchProjects} from '~/utils/projects.js';
 import {SITE} from '~/config.mjs';
 
 const meta = {
-  title: `Projects — ${SITE.name}`,
-  description: 'Selected data science & machine learning projects'
+	title: `Projects — ${SITE.name}`,
+	description: 'Selected data science & machine learning projects',
 };
 
 const projects = await fetchProjects();
 ---
 
 <Layout {meta}>
-  <section class="container mx-auto max-w-5xl px-4 py-12">
-    <h1 class="text-4xl md:text-5xl font-bold mb-10 font-heading text-center">Projects</h1>
-    {projects.length === 0 && <p class="text-center text-gray-500 dark:text-gray-400">No projects yet.</p>}
-    <div class="grid gap-8 md:grid-cols-2">
-      {projects.map(p => (
-        <a href={p.url} class="group block p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-colors bg-white dark:bg-gray-900">
-          <h2 class="text-2xl font-semibold mb-2 group-hover:text-primary-600">{p.title}</h2>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{p.summary}</p>
-          <div class="flex flex-wrap gap-2">
-            {p.tech?.map(t => (
-              <span class="text-[11px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">{t}</span>
-            ))}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+	<section class="container mx-auto max-w-5xl px-4 py-12">
+		<h1 class="text-4xl md:text-5xl font-bold mb-10 font-heading text-center">Projects</h1>
+		{projects.length === 0 && <p class="text-center text-gray-500 dark:text-gray-400">No projects yet.</p>}
+		<div class="grid gap-8 md:grid-cols-2">
+			{projects.map(project => (
+				<a
+					href={project.url}
+					class="group block p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-colors bg-white dark:bg-gray-900"
+				>
+					<h2 class="text-2xl font-semibold mb-2 group-hover:text-primary-600">{project.title}</h2>
+					<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{project.summary}</p>
+					<div class="flex flex-wrap gap-2">
+						{project.tech?.map(tag => (
+							<span class="text-[11px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">
+								{tag}
+							</span>
+						))}
+					</div>
+				</a>
+			))}
+		</div>
+	</section>
 </Layout>

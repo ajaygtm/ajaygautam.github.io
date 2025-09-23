@@ -4,115 +4,100 @@ import {SITE} from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 const meta = {
-  title: SITE.title,
-  description: SITE.description
+	title: SITE.title,
+	description: SITE.description,
 };
 ---
 
 <Layout {meta}>
-  <section>
-    <div class="flex md:min-h-screen max-w-6xl mx-auto px-4 sm:px-6 md:-mt-20">
-      <div class="m-auto py-12 md:py-20 w-full">
-        <div class="text-center pb-10 md:pb-16">
-          <img
-            src="/assets/ajay-gautam.jpg"
-            class="mx-auto m-8 rounded-full"
-            width="160"
-            height="160"
-            alt="Profile photo of Ajay Gautam"
-          />
-          <h1
-            class="text-5xl md:text-[3.40rem] font-bold leading-tighter tracking-tighter mb-4 font-heading background-animate bg-clip-text text-transparent bg-linear-to-r from-primary-500 to-secondary-500 sm:whitespace-nowrap"
-          >
-            Ajay Gautam
-          </h1>
-          <div class="max-w-3xl mx-auto">
-            <p class="text-xl text-gray-600 mb-10 dark:text-slate-400">
-              <span class="text-2xl font-semibold">
-                Senior Data Scientist & AWS ML Specialist
-              </span>
-            </p>
+	<section>
+		<div class="flex md:min-h-screen max-w-6xl mx-auto px-4 sm:px-6 md:-mt-20">
+			<div class="m-auto py-12 md:py-20 w-full">
+				<div class="text-center pb-10 md:pb-16">
+					<img
+						src="/assets/ajay-gautam.jpg"
+						class="mx-auto m-8 rounded-full shadow-lg"
+						width="160"
+						height="160"
+						alt="Profile photo of Ajay Gautam"
+					/>
+					<h1
+						class="text-5xl md:text-[3.40rem] font-bold leading-tighter tracking-tighter mb-4 font-heading background-animate bg-clip-text text-transparent bg-linear-to-r from-primary-500 to-secondary-500 sm:whitespace-nowrap"
+					>
+						Ajay Gautam
+					</h1>
+					<div class="max-w-3xl mx-auto">
+						<p class="text-xl text-gray-600 mb-10 dark:text-slate-400">
+							<span class="text-2xl font-semibold">
+								Senior Data Scientist & AWS ML Specialist
+							</span>
+						</p>
 
-            <div
-              class="max-w-none px-6 my-2 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-6"
-              data-nosnippet
-            >
-              <div class="flex w-full sm:w-auto">
-                <a
-                  href="/projects"
-                  class="btn text-white border border-primary-600/30 bg-primary-600/90 dark:bg-primary-800/80 hover:bg-primary-800 hover:border-primary-800 sm:mb-0 px-8 py-3 w-full rounded-3xl"
-                >
-                  <Icon name="tabler:briefcase" class="w-5 h-5 mr-1 -ml-1.5" /> Projects
-                </a>
-              </div>
+						<div
+							class="max-w-none px-6 my-2 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-6"
+							data-nosnippet
+						>
+							<div class="flex w-full sm:w-auto">
+								<a
+									href="/projects"
+									class="btn text-white border border-primary-600/30 bg-primary-600/90 dark:bg-primary-800/80 hover:bg-primary-800 hover:border-primary-800 sm:mb-0 px-8 py-3 w-full rounded-3xl"
+								>
+									<Icon name="tabler:briefcase" class="w-5 h-5 mr-1 -ml-1.5"/> Projects
+								</a>
+							</div>
 
-              <div class="flex w-full sm:w-auto">
-                <a
-                  href="/experience"
-                  class="btn text-white bg-gray-900 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 px-8 py-3 w-full rounded-3xl"
-                >
-                  <Icon name="tabler:timeline" class="w-5 h-5 mr-1 -ml-1.5" /> Experience
-                </a>
-              </div>
+							<div class="flex w-full sm:w-auto">
+								<a
+									href="/experience"
+									class="btn text-white bg-gray-900 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 px-8 py-3 w-full rounded-3xl"
+								>
+									<Icon name="tabler:timeline" class="w-5 h-5 mr-1 -ml-1.5"/> Experience
+								</a>
+							</div>
 
-              <div class="flex w-full sm:w-auto">
-                <a
-                  href="https://github.com/ajaygtm"
-                  class="btn bg-white border border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 px-8 py-3 w-full rounded-3xl"
-                >
-                  <Icon name="tabler:brand-github" class="w-5 h-5 mr-1 -ml-1.5" /> Code
-                </a>
-              </div>
+							<div class="flex w-full sm:w-auto">
+								<a
+									href="https://github.com/ajaygtm"
+									class="btn bg-white border border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 px-8 py-3 w-full rounded-3xl"
+								>
+									<Icon name="tabler:brand-github" class="w-5 h-5 mr-1 -ml-1.5"/> Code
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-              <!-- Optional future buttons:
-              <div class="flex w-full sm:w-auto">
-                <a href="/blog" class="btn bg-white/80 dark:bg-gray-800/80 border border-gray-300 dark:border-gray-600 hover:border-primary-500 px-8 py-3 w-full rounded-3xl">
-                  <Icon name="tabler:article" class="w-5 h-5 mr-1 -ml-1.5" /> Blog
-                </a>
-              </div>
-              <div class="flex w-full sm:w-auto">
-                <a href="/contact" class="btn bg-white border border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 px-8 py-3 w-full rounded-3xl">
-                  <Icon name="tabler:mail" class="w-5 h-5 mr-1 -ml-1.5" /> Contact
-                </a>
-              </div>
-              -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ajay Gautam",
-    "url": "https://ajaygtm.github.io",
-    "image": "https://ajaygtm.github.io/assets/ajay-gautam.jpg",
-    "jobTitle": "Senior Data Scientist",
-    "description": "Senior Data Scientist focusing on scalable ML systems, experimentation frameworks, and measurable product impact.",
-    "sameAs": [
-      "https://github.com/ajaygtm",
-      "https://www.linkedin.com/in/ajay-gautam"
-    ]
-  }
-  </script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Ajay Gautam",
+		"url": "https://ajaygtm.github.io",
+		"image": "https://ajaygtm.github.io/assets/ajay-gautam.jpg",
+		"jobTitle": "Senior Data Scientist",
+		"description": "Senior Data Scientist focusing on scalable ML systems, experimentation frameworks, and measurable product impact.",
+		"sameAs": [
+			"https://github.com/ajaygtm"
+		]
+	}
+	</script>
 </Layout>
 
 <style>
 .background-animate {
-  background-size: 400%;
-  animation: AnimationName 4s ease infinite;
+	background-size: 400%;
+	animation: AnimationName 4s ease infinite;
 }
 
 @keyframes AnimationName {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+	0%, 100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
 }
 </style>
