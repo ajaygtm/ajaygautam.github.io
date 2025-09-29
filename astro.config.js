@@ -4,8 +4,7 @@ import {defineConfig} from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import remarkCustomHeaderId from 'remark-custom-header-id';
 import tailwindcss from '@tailwindcss/vite';
-/// import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import {SITE} from './source/config.mjs';
+// Comment: import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -29,7 +28,7 @@ export default defineConfig({
 		remarkPlugins: [
 			remarkCustomHeaderId,
 		],
-		// TODO
+		// NOTE: If you re-enable autolink headings later, add rehype plugins here.
 		// rehypePlugins: [
 		// 	rehypeHeadingIds,
 		// 	[rehypeAutolinkHeadings, {behavior: 'wrap'}],
@@ -46,7 +45,7 @@ export default defineConfig({
 		],
 	},
 	legacy: {
-		// TODO: https://docs.astro.build/en/guides/upgrade-to/v5/#enabling-the-legacycollections-flag
+		// NOTE: Using legacy collections flag until migration to new content collections is done.
 		collections: true,
 	},
 });
