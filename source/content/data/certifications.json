@@ -1,0 +1,53 @@
+[
+	{
+		"name": "AWS Certified Machine Learning – Specialty",
+		"issuer": "Amazon Web Services",
+		"issued": "2024-09",
+		"expiry": "2027-09",
+		"credentialId": "aefbdfd880404d93b4b824277888dc70",
+		"url": "https://www.credly.com/badges/c80e6539-5564-4765-a64e-010e8af099e1/public_url",
+		"logo": "/assets/cert-logos/aws-logo.png",
+		"tags": ["ML", "MLOps", "Cloud"]
+	},
+	{
+		"name": "Neo4j Certified Professional",
+		"issuer": "Neo4j",
+		"issued": "2020-10",
+		"expiry": null,
+		"credentialId": "94415404-d6e7-40b5-9950-9176bddec53f",
+		"url": "https://graphacademy.neo4j.com/c/94415404-d6e7-40b5-9950-9176bddec53f/",
+		"logo": "/assets/cert-logos/neo4j-logo.png",
+		"tags": ["Graph", "Cypher", "Data Modeling"]
+	},
+	{
+		"name": "LangChain & Vector Databases in Production",
+		"issuer": "Activeloop",
+		"issued": "2024-10",
+		"expiry": null,
+		"credentialId": "yuy4wm5wj1",
+		"url": "https://learn.activeloop.ai/certificates/yuy4wm5wj1",
+		"logo": "/assets/cert-logos/activeloop-logo.png",
+		"tags": ["Langchain", "LLMs", "Vector DB"]
+	},
+	{
+		"name": "RAG for Production",
+		"issuer": "Activeloop",
+		"issued": "2024-10",
+		"expiry": null,
+		"credentialId": "99jx6esrre",
+		"url": "https://learn.activeloop.ai/certificates/99jx6esrre",
+		"logo": "/assets/cert-logos/activeloop-logo.png",
+		"tags": ["RAG", "LLMs", "Vector DB"]
+	},
+	{
+		"name": "Semantic Web Training",
+		"issuer": "Semantic Web Company",
+		"issued": "2020-08",
+		"expiry": null,
+		"credentialId": "21405438",
+		"url": "https://www.credential.net/bbcb3aeb-b6c0-4bd7-a56f-c816cc9668d7",
+		"logo": "/assets/cert-logos/semantic-web-company-logo.png",
+		"tags": ["Knowledge Graph", "Taxonomy", "Semantic Web"]
+	}
+]
+
