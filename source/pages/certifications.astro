@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import items from '~/content/data/certifications.json';
+import items from '~/data/certifications.json';
 
 const meta = {
 	title: 'Certifications — Your Name',
@@ -14,14 +14,18 @@ function sortCerts(a, b) {
 const certifications = [...items].sort(sortCerts);
 
 function monthYear(iso) {
-	if (!iso) return '';
+	if (!iso) {
+        return '';
+    }
 	const [y, m] = iso.split('-');
 	const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	return `${monthNames[Number(m) - 1]} ${y}`;
 }
 
 function status(cert) {
-	if (!cert.expiry) return 'No Expiry';
+	if (!cert.expiry) {
+		return 'No Expiry';
+	}
 	const now = new Date();
 	const [y, m] = cert.expiry.split('-');
 	const expDate = new Date(Number(y), Number(m) - 1, 1);
@@ -30,12 +34,15 @@ function status(cert) {
 
 function statusColor(label) {
 	switch (label) {
-		case 'Active':
+		case 'Active': {
 			return 'text-emerald-600 dark:text-emerald-400';
-		case 'Expired':
+		}
+		case 'Expired': {
 			return 'text-red-600 dark:text-red-400';
-		default:
+		}
+		default: {
 			return 'text-gray-500 dark:text-gray-400';
+		}
 	}
 }
 ---
@@ -52,11 +59,9 @@ function statusColor(label) {
 						class="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 flex flex-col h-full transition-colors hover:border-primary-500/70 focus-within:border-primary-500/70"
 					>
 						<header class="flex items-start gap-4 mb-4">
+							{/* For circular logos, change rounded-xl to rounded-full */}
 							{cert.logo ? (
-								<div
-									class="w-14 h-14 rounded-xl overflow-hidden bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700"
-									/* For circular variant: replace rounded-xl with rounded-full */
-								>
+								<div class="w-14 h-14 rounded-xl overflow-hidden bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
 									<img
 										src={cert.logo}
 										alt={`${cert.issuer} logo`}

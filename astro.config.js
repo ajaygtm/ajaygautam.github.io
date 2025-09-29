@@ -11,7 +11,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://ajaygtm.github.io'",
+	site: 'https://ajaygtm.github.io',
 	srcDir: './source',
 	output: 'static',
 	trailingSlash: 'never',
