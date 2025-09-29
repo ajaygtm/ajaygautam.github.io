@@ -1,0 +1,725 @@
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ajay Gautam"><meta name="twitter:site" content="@sindresorhus"><meta name="twitter:creator" content="@sindresorhus"><meta name="twitter:description" content="Elevate your Mac experience"><meta name="fediverse:creator" content="@sindresorhus@mastodon.social"><meta name="x-build-time" content="Mon, 29 Sep 2025 20:07:49 GMT"><meta name="twitter:card" content="summary"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — Blog" href="/rss.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Apps" href="/rss-apps.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Repos" href="/rss-repos.xml"><link rel="alternate" type="application/rss+xml" title="Supercharge Release Notes" href="/supercharge/rss.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>"><script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script><!-- <ViewTransitions/> --><title>Supercharge — Ajay Gautam</title>
+<meta name="description" content="Elevate your Mac experience">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ajaygtm.github.io/supercharge">
+<meta property="og:title" content="Supercharge">
+<meta property="og:description" content="Elevate your Mac experience">
+<meta property="og:url" content="https://ajaygtm.github.io/supercharge">
+<meta property="og:type" content="product">
+<meta property="og:image" content="https://ajaygtm.github.io/apps/supercharge/icon.png">
+
+<meta property="og:locale" content="en_US"><link rel="stylesheet" href="/_astro/_page_.255jGt1i.css"></head> <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-950">  <style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style><header data-nosnippet class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-950 dark:md:bg-slate-950/90 md:backdrop-blur-md border-b dark:border-b-0"> <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"> Ajay Gautam </span> </a> <div class="flex items-center md:hidden"> <button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg> </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Primary navigation" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement"> <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"> <li> <a href="/projects" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Projects</span> </a> </li> <li> <a href="/certifications" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Certifications</span> </a> </li> <li> <a href="/experience" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Experience</span> </a> </li> <li> <a href="/about" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">About</span> </a> </li> <li> <a href="/blog" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Blog</span> </a> </li> <li> <a href="/contact" class="md:hidden font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Contact</span> </a> </li> </ul> <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"> <div class="hidden items-center md:flex"> <a href="/feeds" aria-label="RSS Feeds" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> <a href="/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></g></svg> </a> </div> </div> </nav> </div> </header> <main>  <section class="max-w-3xl py-8 sm:py-16 lg:py-20 mx-auto lg:-mt-10 mb-10"> <article itemscope itemtype="https://schema.org/SoftwareApplication"> <header class="flex flex-col items-center text-center px-4 sm:px-6 mb-40"> <img src="/apps/supercharge/icon.png" width="256" height="256" alt="Supercharge app icon" class=" mb-3"> <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 font-heading" itemprop="name"> Supercharge </h1> <h2 class="text-2xl md:text-4xl tracking-tight mb-8" itemprop="description"> Elevate your Mac experience </h2> <div id="another-random-app" class="flex justify-center hidden instapaper_ignore"> <a href="/apps/random" class="flex items-center gap-2 px-4 py-2 mb-6 font-semibold text-white bg-linear-to-r from-primary-500 to-secondary-500 rounded-full shadow-xs hover:shadow-md hover:from-primary-600 hover:to-secondary-600 focus:outline-hidden focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5" astro-icon="tabler:arrows-shuffle"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 4 3 3-3 3m0 10 3-3-3-3"/><path d="M3 7h3a5 5 0 0 1 5 5 5 5 0 0 0 5 5h5m0-10h-5a4.98 4.98 0 0 0-3 1m-4 8a5 5 0 0 1-3 1H3"/></g></svg>
+Another Random App
+</a> </div>  <nav class="flex flex-col sm:flex-row gap-x-4 gap-y-8 mt-2 instapaper_ignore" aria-label="Download options">  <a href="https://go.setapp.com/stp181?refAppID=742&utm_medium=vendor_program&utm_content=button"> <img src="/assets/download-on-setapp-badge.svg" alt="Download on Setapp" style="margin: 0; padding: 0; display: block; height: 60px; user-select: none"> </a>   <a href="https://sindresorhus.gumroad.com/l/supercharge?wanted=true" class="text-white bg-primary-700 hover:bg-primary-600 focus:ring-4 focus:outline-hidden focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-lg text-xl px-6 text-center mb-2 flex justify-center items-center whitespace-nowrap px-10 py-4" style="width: 180px; height: 60px;">Buy</a> </nav> <nav class="flex flex-wrap gap-4 max-w-md justify-center mt-8 font-semibold text-xl text-primary-600 instapaper_ignore" aria-label="App links"> <a href="#trial" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Trial</a><a href="#tips" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Tips</a><a href="#faq" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">FAQ</a><a href="/feedback?product=Supercharge" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Support</a> <div class="relative flex items-center" style="padding-top:2px"> <select aria-label="Overflow menu" class="overflow-menu-component absolute inset-0 w-full h-full opacity-0 cursor-pointer" style="font-weight: initial; font-family: system-ui;"> <option value="" disabled selected>…</option>  <option value="/supercharge/release-notes">Release Notes</option><option value="/supercharge/privacy-policy">Privacy Policy</option><option value="/apps/terms">Terms of Use</option> <option value="/apps/discounts">Discounts</option><hr> <option value="/apps/random">Show Random App</option>  </select> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 text-primary-600 dark:text-primary-400 pointer-events-none" astro-icon="tabler:dots-circle-horizontal"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0m5 0v.01m4-.01v.01m4-.01v.01"/></svg> </div> <script>
+document.addEventListener('change', event => {
+	if (event.target?.matches('.overflow-menu-component')) {
+		const selectedValue = event.target.value;
+		if (selectedValue) {
+			event.target.value = ''; // Clear selection
+			window.location.href = selectedValue;
+		}
+	}
+});
+</script> </nav> </header> <div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-img:rounded-md prose-img:shadow-lg mt-8 prose-a:text-black/75 dark:prose-a:text-white/90 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary-500 prose-a:hover:decoration-primary-600 prose-a:decoration-2 prose-a:hover:decoration-4 prose-a:hover:text-black dark:prose-a:hover:text-white break-words tracking-normal prose-h4:tracking-normal prose-h5:tracking-normal prose-h6:tracking-normal prose-code:before:hidden prose-code:after:hidden prose-h2:mt-24"> <section class="mb-20" aria-label="App media">  <img src="/_astro/screenshot1.P8PAKe8V.jpg" width="2094" height="1353" alt="Supercharge screenshot 1" loading="lazy"><img src="/_astro/screenshot2.DFV1aVbJ.jpg" width="2210" height="2752" alt="Supercharge screenshot 2" loading="lazy"> </section> <p><sup>Requires macOS 15.4 or later</sup></p>
+<hr>
+<p><strong>💡 Also available in the <a href="https://sindresorhus.gumroad.com/l/power-user">Power User Bundle</a> - Get 3 of my power user apps for 26% off normal price.</strong></p>
+<hr>
+<p>Improve your Mac experience with a bunch of useful functionality:</p>
+<p><em>(Every feature is opt-in, so you can enable only what you need)</em></p>
+<ul>
+<li>Clear notifications with a keyboard shortcut or from the menu</li>
+<li>Click top visible notification with a keyboard shortcut</li>
+<li><a href="#mission-control-improvements">Close &#x26; minimize windows and hide &#x26; quit apps directly from Mission Control</a></li>
+<li><a href="#dock-icon-click-behavior">Clicking an active app’s Dock icon hides the app, minimizes its windows, or cycles through its windows</a></li>
+<li>Unminimizes an app’s windows (all or one) when activated <sup>(e.g., via <kbd>Command+Tab</kbd>)</sup></li>
+<li>Hide all windows <sup>(aka. boss mode)</sup></li>
+<li><a href="#isolate-window">Isolate window</a></li>
+<li><a href="#capture-text">Capture text from anywhere on screen</a></li>
+<li><a href="#capture-translate-text">Capture and translate text from anywhere on screen</a></li>
+</ul>
+<!-- - [Hyper key](#hyper-key) -->
+<ul>
+<li>Prevent accidental app quits<sup><a href="#user-content-fn-quit" id="user-content-fnref-quit" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup> by instead using <kbd>⇧⌘Q</kbd>, double tap <kbd>Q</kbd> while holding <kbd>⌘</kbd>, or <a href="https://github.com/user-attachments/assets/0515e50f-2a93-4369-836e-085ad462fdf8">press and hold <kbd>⌘Q</kbd></a></li>
+<li><a href="https://github.com/user-attachments/assets/22bf135a-cc39-45ef-82ef-bf23176f0746">Launch any app with a customizable global keyboard shortcut</a></li>
+<li><a href="#green-traffic-light-button-fill">Clicking green traffic light button fills window instead of entering fullscreen</a></li>
+<li><a href="#yellow-traffic-light-button-hide">Clicking yellow traffic light button hides app instead of minimizing window</a></li>
+<li><a href="#scan-qr-codes">Scan QR codes and barcodes from anywhere on screen</a></li>
+<li>Cleaning Mode
+<span class="list-description">Makes your screen black and disables keyboard and mouse to let you safely clean your device. <a href="https://www.dropbox.com/scl/fi/6vm94elcusix6oqe5su78/434266737-572f4e43-d42a-49c2-925f-4db90ebbfd06-1748011610.mp4?rlkey=r538vzwv0k9ba5rjqhw4goaa7&#x26;raw=1">Screenshot.</a></span></li>
+<li>Cat Mode
+<span class="list-description">Disables keyboard and mouse to prevent cats and other cute creatures from interfering with your computer. Similar to Cleaning Mode but without blacking out the screen. <a href="https://www.dropbox.com/scl/fi/tpxsx5i9r1vkjlf2recad/Cat-Mode-1756829427.mp4?rlkey=wfyu7192971mnu19p3i2mmqs4&#x26;raw=1">Screenshot.</a></span> &#x3C;!— - Quit apps when closing their last window (clicking the red traffic light button or <kbd>Command+W</kbd>) (similar to Swift Quit and RedQuits apps)
+<ul>
+<li>(beta - try the <a href="#trial">trial</a>) —></li>
+</ul>
+</li>
+<li><a href="#run-shortcuts">Run shortcuts from the menu</a>
+<span class="list-description">Show your favorite shortcuts from the Shortcuts app in the menu.</span>
+<ul>
+<li>Also available as an <a href="/short-run">independent app</a>.</li>
+</ul>
+</li>
+<li>Move files received through AirDrop to a specified folder
+<span class="list-description">Automatically move files from the Downloads folder as soon as they are received.</span></li>
+<li><a href="#keep-awake">Keep computer awake</a></li>
+<li><a href="#automatic-clipboard-clearing">Automatically clear clipboard for improved privacy</a></li>
+<li><a href="#prevent-accidental-window-closing">Prevent accidental window closing for certain apps</a></li>
+<li>Prevent Dock from showing when moving mouse to screen edge
+<span class="list-description">Useful if you want to hide the Dock entirely or only show it with a keyboard shortcut. Does not apply to fullscreen.</span></li>
+<li>Open new window by Shift+clicking a running app in the Dock
+<span class="list-description">Makes it easy to open a new window for an app, similar to Windows. Works by simulating Command+N in the app, so it may not work correctly in all apps.</span>
+<ul>
+<li>(beta)</li>
+</ul>
+</li>
+<li>Finder: Move files by cutting<sup><a href="#user-content-fn-commandx" id="user-content-fnref-commandx" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup> (<kbd>Command+X</kbd>) and pasting (<kbd>Command+V</kbd>)</li>
+<li>Finder: Open files with <kbd>Return</kbd> (you can then rename with <kbd>Shift+Return</kbd> or <kbd>F2</kbd>)</li>
+<li>Finder: Create new text file with <kbd>Option+N</kbd> <em>(<a href="https://github.com/user-attachments/assets/cb2c4606-12eb-4915-a64c-9b8ac3e123cf">video</a>)</em> or from the <a href="#finder-context-menu">context menu</a>
+<span class="list-description">Set default extension, auto-open after naming, and choose app.</span></li>
+<li>Finder: Move files to the trash with <kbd>⌫</kbd> (Delete) instead of <kbd>⌘⌫</kbd></li>
+<li>Finder: Go back to the previous folder with <kbd>⌫</kbd> (Delete)</li>
+<li><a href="#finder-context-menu">Finder: Adds many useful actions to the context menu:</a> copy path, move to, open folder with, AirDrop, folder colors, etc.</li>
+<li>Finder: Auto-adjust column widths to filenames in column view, or do it once with a keyboard shortcut
+<ul>
+<li>Known (unfixable) issues:
+<ul>
+<li>Columns may not adjust correctly in synced folders due to sync status icons.</li>
+<li>Columns may not expand fully if the Finder window is narrow. A workaround is to make the Finder window very wide.</li>
+</ul>
+</li>
+<li><strong>If you are buying Supercharge just for this feature. Please try out the <a href="#trial">trial</a> first.</strong></li>
+</ul>
+</li>
+<li>Finder: Invert selection (deselects what’s currently selected and selects everything that wasn’t selected)</li>
+<li>Finder: Open new window when activating without windows
+<span class="list-description">By default, when you <kbd>Command-Tab</kbd> to Finder without any windows open, nothing happens. This ensures a new window opens automatically.</span></li>
+<li>Finder: Make <kbd>⌘Q</kbd> close all windows and hide Finder
+<span class="list-description">By default, <kbd>⌘Q</kbd> does nothing in Finder.</span></li>
+<li><a href="#macos-services">Adds many useful services to “Services” in context menus (like in Finder):</a> copy path, move to, AirDrop, etc.</li>
+<li>Exclude AirDrop, Mail, and Messages from the system Share menu
+<span class="list-description">These are usually forced to be shown by macOS.</span></li>
+<li>Center mouse pointer on primary display when waking and unlocking
+<span class="list-description">Helps you quickly locate the mouse pointer after returning to your Mac. Also available via keyboard shortcut.</span></li>
+<li>Disable delay when showing Dock.
+<span class="list-description">Does not apply to fullscreen.</span></li>
+<li>Minimize all windows or just all except frontmost with keyboard shortcuts and from the menu.</li>
+<li>Minimize all windows of the active app except frontmost with keyboard shortcuts and from the menu.</li>
+<li>Unminimize all windows or first window of active app with keyboard shortcut.</li>
+<li>Auto-copy screenshots to clipboard.
+<span class="list-description">Useful if you want screenshots saved and also instantly available to paste. Works with the built-in screenshot tool.</span></li>
+<li><a href="https://github.com/user-attachments/assets/20b0cfe8-d588-4329-9132-9120b32da7ff">Show markup tools by default in screenshot preview</a></li>
+<li>Auto-open screenshot preview after capturing</li>
+<li><a href="https://github.com/user-attachments/assets/e6015206-c927-4c97-8f66-7408231d4f23">Show input devices in the Sound menu bar item menu</a>
+<span class="list-description">By default, it only shows output devices.</span></li>
+<li>Archive old items in the Downloads folder automatically
+<span class="list-description">Keeps your Downloads folder tidy by moving older items to a separate location based on when they were added.</span></li>
+<li><a href="#mail-copy-message-link">Mail: Copy message link</a></li>
+<li><a href="#notes-copy-note-link">Notes: Copy note link</a></li>
+<li>Safari: Use <kbd>Delete</kbd> and <kbd>Shift+Delete</kbd> to navigate back and forward</li>
+<li>Toggle Finder with a keyboard shortcut <sup>(aka. <a href="https://totalfinder.binaryage.com/visor">visor mode</a>)</sup></li>
+<li>Show the <a href="https://github.com/user-attachments/assets/1b8e2e12-187a-4d32-8ba3-c13f154de9e0">menu bar window</a> for the Passwords app with a keyboard shortcut</li>
+<li>Show the <a href="https://github.com/user-attachments/assets/567bbbf5-12a1-45be-8ffa-93712574d4a0">menu bar window</a> for the Weather app with a keyboard shortcut</li>
+<li>Show the window for the “Now Playing” menu bar item with a keyboard shortcut</li>
+<li><a href="https://github.com/user-attachments/assets/b58a04da-2bdc-4bd0-bed4-ba62ba456491">Change default browser</a> (without a prompt)
+<ul>
+<li>Also available as an <a href="/default-browser">independent app</a>.</li>
+</ul>
+</li>
+<li>Auto-open downloaded calendar event (<code>.ics</code>) files and move them to trash after import
+<span class="list-description">Optionally remove alarms from events.</span></li>
+<li>Lowercase file extension of files in Downloads folders
+<span class="list-description">For example, images from iPhone, which usually have <code>.JPG</code> or <code>.HEIC</code> extensions. Applies to both the local Downloads folder and the Downloads folder in iCloud Drive.</span></li>
+<li><a href="https://github.com/user-attachments/assets/e994755b-94ca-4e3c-8f70-5d3bffc3aed1">Make volume key adjustments more precise with half and quarter-step increments</a></li>
+<li>Export/import (backup) settings for any apps <em>(<a href="https://github.com/user-attachments/assets/82727408-3acb-4c18-91c6-428f1e0ad8c5">video</a>)</em></li>
+<li>Toggle Terminal with a keyboard shortcut</li>
+<li><a href="https://github.com/user-attachments/assets/5ecb9b0b-5719-4382-98a0-c3316bd20a6b">Offers to install apps from mounted DMG files</a></li>
+<li>Toggle Stage Manager directly from its menu bar item
+<span class="list-description">Normally, clicking it would open a window with a toggle. This saves one click.</span></li>
+<li>Hide mouse pointer with keyboard shortcut
+<span class="list-description">Reappears on movement or when the shortcut is pressed again.</span></li>
+<li>Show desktop (menu action)</li>
+<li>Sleep displays (menu action and keyboard shortcut)
+<span class="list-description">Puts all your Mac’s screens to sleep.</span></li>
+<li>Quit all apps (menu action and keyboard shortcut)
+<span class="list-description">Optionally exclude specific apps.</span></li>
+<li>Quit all apps except frontmost (menu action and keyboard shortcut)
+<span class="list-description">Optionally exclude specific apps.</span></li>
+<li>Eject all disks (menu action and keyboard shortcut) (optionally exclude some)</li>
+<li>Dim icons of hidden apps in the Dock</li>
+<li>Pick color on screen and copy (menu action and keyboard shortcut) (Hex, RGB, OKLCH)</li>
+<li>Toggle mute sound
+<span class="list-description">Mute or unmute your Mac sound with a keyboard shortcut, from the menu, or using Shortcuts.</span></li>
+<li>Toggle mute microphone
+<span class="list-description">Mute or unmute your microphone with a keyboard shortcut, from the menu, or using Shortcuts. Can show a menu bar icon for the current state. <a href="https://www.dropbox.com/scl/fi/dh8qprcekcjftnjc1hy2l/Mute-microphone-Screen-Shot-2025-07-31-at-19.16.08-1753983397.mp4?rlkey=i9c1ehd348v07g72t2ahpqcsz&#x26;raw=1">Screenshot.</a></span></li>
+<li>Toggle dark mode</li>
+<li>Toggle <a href="https://support.apple.com/en-us/102191">Night Shift</a></li>
+<li>Toggle <a href="https://support.apple.com/en-us/102147">True Tone</a></li>
+<li>Toggle low power mode</li>
+<li>Toggle grayscale mode<sup><a href="#user-content-fn-grayscale" id="user-content-fnref-grayscale" data-footnote-ref="" aria-describedby="footnote-label">3</a></sup></li>
+<li>Toggle desktop icons and widgets visibility</li>
+<li>Toggle function keys (switch between using F1, F2, etc., as standard function keys or media keys)
+<span class="list-description">Only supported for the built-in MacBook keyboard and Magic Keyboard.</span></li>
+<li>Toggle iOS notifications
+<span class="list-description">Only works if your Mac supports notifications from iOS.</span></li>
+<li>Control keyboard brightness with customizable keyboard shortcuts
+<span class="list-description">Only supported for the built-in MacBook keyboard.</span></li>
+<li>Clear clipboard</li>
+<li>Empty trash keyboard shortcut</li>
+<li><a href="#dock-folder-click">Clicking a Dock folder reveals it in Finder instead of showing its contents</a></li>
+<li>Open system settings directly (usually requires a lot of clicks):
+<ul>
+<li>Hide My Email</li>
+<li>Private Relay</li>
+<li>VPN &#x26; Filters</li>
+</ul>
+</li>
+<li><a href="https://github.com/user-attachments/assets/10447e39-f288-406b-a504-6ab7b8fcf261">Only show sound menu bar icon when either muted or unmuted</a></li>
+<li><a href="#keyboard-shortcut-inspector">Keyboard shortcut inspector</a></li>
+<li>Add <a href="#dock-spacers">Dock spacers</a></li>
+<li>Add <a href="#finder-sidebar-spacers">Finder sidebar spacers</a></li>
+<li>Disable Command+Tab app switcher
+<span class="list-description">Useful to prevent accidental activation if you don’t use the app switcher.</span></li>
+<li>Remove Caps Lock activation delay
+<span class="list-description">Makes Caps Lock respond instantly.</span></li>
+<li>Reset <a href="https://support.apple.com/en-vn/guide/mac-help/mchl211c911f/mac">privacy permissions</a> for any apps</li>
+<li>Flush DNS cache</li>
+<li>Shortcuts actions</li>
+</ul>
+<!-- - [Show seconds hand in the Clock app's Dock icon](https://github.com/user-attachments/assets/b1d025dc-0465-4d0f-adf8-48bc079ad438) -->
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hp-WMYZQ75U"><strong>Video review</strong></a>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=srZH0eTjylU">Follow-up</a></li>
+</ul>
+</li>
+<li><a href="https://todayonmac.com/supercharge/"><strong>Article about the app</strong></a></li>
+</ul>
+<hr>
+<h3 id="features-explained">Features explained</h3>
+<br>
+<!-- ##### Hyper key {#hyper-key}
+
+Remaps <kbd>Caps Lock</kbd> to function as a Hyper key—a single key that simultaneously activates all standard modifiers (Control + Option + Shift + Command). This enables the creation of highly unique shortcuts that are unlikely to conflict with existing ones, making them both easy to remember and quick to use. -->
+<h4 id="run-shortcuts">Run shortcuts</h4>
+<p>Add shortcuts from the <a href="https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac">Shortcuts</a> app to the menu for quick access. Show them in the main menu or a submenu. This is especially powerful as shortcuts can run AppleScript and shell scripts.</p>
+<p>You can even configure shortcuts to only show up when specific apps are active.</p>
+<p>Launch apps, run scripts, automate tasks — anything Shortcuts can do, now just one click away.</p>
+<p><a href="https://www.dropbox.com/scl/fi/ny886w93chpav0b325ioi/441329057-67290c47-4d78-490f-b0b8-f263ebc1022d-1748012141.png?rlkey=kf2ha9ygkvd4iu3zme8a0wo07&#x26;raw=1">Screenshot</a></p>
+<p>Example shortcuts:</p>
+<ul>
+<li><a href="https://www.icloud.com/shortcuts/c559563486a74b1dafb6ca2cb05e2cb5">Presentation Mode</a> - Turns on “Do Not Disturb”, keeps screen awake, and hides desktop icons.</li>
+<li><a href="https://www.icloud.com/shortcuts/17a79c58e70446c5a0f1c1c89653a4aa">Toggle “Do Not Disturb”</a></li>
+<li><a href="https://www.icloud.com/shortcuts/a91b36f037d74cd7a647284e8c376f3d">Flush DNS cache</a></li>
+</ul>
+<p><strong>How is this better than the built-in Shortcuts menu bar item?</strong></p>
+<ul>
+<li>One less menu bar item.</li>
+<li>Closes the menu when running a shortcut.</li>
+<li>Shortcuts can be configured to only show up for specific apps.</li>
+<li>Shortcuts can be shown in a submenu.</li>
+<li>Visually less noisy.</li>
+</ul>
+<h4 id="keep-awake">Keep awake</h4>
+<p>Prevent your Mac from sleeping and optionally prevent your screen from dimming.</p>
+<p>A menu bar icon can be shown when active for visual indication.</p>
+<p>For advanced features like timing, check out <a href="/lungo">Lungo</a>.</p>
+<p><strong>Important:</strong> It will not prevent your computer from sleeping if you close the lid (except when connected to power and an external display). This is a macOS safety precaution and out of my control.</p>
+<p><strong>Note:</strong> This will not prevent you from appearing idle in apps like Slack, Teams, or Discord, which track mouse movement to determine activity.</p>
+<h4 id="dock-icon-click-behavior">Dock icon click behavior</h4>
+<p>By default, clicking an app’s Dock icon when the app is active does nothing. With Supercharge, you can make it either hide the app, minimize all its windows, or cycle through the app’s windows. This can be particularly useful for quickly clearing your workspace or navigating between windows.</p>
+<p>You can also choose to unminimize all windows instead of just one when clicking a Dock icon of an app with minimized windows.</p>
+<h4 id="green-traffic-light-button-fill">Clicking green traffic light button fills window instead of entering fullscreen</h4>
+<p>Makes clicking the green traffic light button fill the window to fit the screen instead of entering fullscreen mode. Hold <kbd>Option</kbd> while clicking for the default fullscreen behavior. Click again to restore the previous window size.</p>
+<p><a href="https://github.com/user-attachments/assets/41dd0f46-05f7-46f2-b9a5-a5ae441da8a9">Screenshot</a></p>
+<p><em>It requires the “Displays have separate Spaces” system setting to be enabled because it relies on the window tile functionality, which is only available then.</em></p>
+<h4 id="yellow-traffic-light-button-hide">Clicking yellow traffic light button hides app instead of minimizing window</h4>
+<p>Makes clicking the yellow traffic light button hide the app instead of minimizing the window. Hold <kbd>Option</kbd> while clicking for the default minimize behavior.</p>
+<h4 id="prevent-accidental-window-closing">Prevent accidental window closing for certain apps</h4>
+<p>Disables the red traffic light button for selected apps to prevent accidentally closing windows. This is particularly useful for apps where you want to be extra careful about not losing your work.</p>
+<p>You can hold <kbd>Option</kbd> while clicking the red traffic light button to close the window.</p>
+<h4 id="keyboard-shortcut-inspector">Keyboard shortcut inspector</h4>
+<p>Detects which apps are listening to or have registered a certain global keyboard shortcut. This is useful for troubleshooting keyboard shortcut conflicts between apps. Simply press any keyboard shortcut combination to see which apps are handling it.</p>
+<p><a href="https://github.com/user-attachments/assets/0f3ddfaa-caf5-471d-a880-93c97952dada">Screenshot</a></p>
+<h4 id="automatic-clipboard-clearing">Automatic clipboard clearing</h4>
+<p>The clipboard is a common privacy risk as it can retain sensitive content (passwords, credit card numbers, private messages) long after you’ve copied it. Any app on your Mac can silently read the clipboard at any time.</p>
+<p>When enabled, it automatically clears the clipboard:</p>
+<ul>
+<li>About one minute after copying (timer restarts on new copy)</li>
+<li>When your Mac sleeps or locks</li>
+</ul>
+<!-- - 10 seconds after pasting with Command+V -->
+<p>This ensures sensitive data doesn’t linger in your clipboard longer than needed, protecting you from both accidental exposure and malicious apps.</p>
+<h4 id="isolate-window">Isolate window</h4>
+<p>Hides all other apps and minimizes all other windows of the current app, leaving only the frontmost window visible. It’s like a turbocharged “Hide Others”, but also minimizes your extra windows in the current app, so you see just the one you care about.</p>
+<p>Perfect for quickly clearing away distractions when you have many windows open (for example, multiple Safari windows across profiles).</p>
+<p>Available as a menu action, a customizable keyboard shortcut, and as a Shortcuts action for automations.</p>
+<h4 id="finder-sidebar-spacers">Add spacers to the Finder sidebar</h4>
+<p>Creates visual separators in the Finder sidebar to help organize your folders into groups. Simply drag the spacer between two folders in the sidebar. The spacer appears as an invisible folder.</p>
+<p><em>NOTE: The spacer still shows a folder icon. It’s not possible to hide this.</em></p>
+<p><a href="https://www.dropbox.com/scl/fi/7ndp0sdiocgf0n7xdbolz/441615369-d929e3fe-6605-46f6-a99f-6f0f3486a88e-1748012169.png?rlkey=xr7716dr9xiyim0pu80qv6n5x&#x26;raw=1">Screenshot</a></p>
+<h4 id="finder-context-menu">Finder context menu additions</h4>
+<p>Adds the following actions (can be customized) directly in the right-click menu in Finder:</p>
+<ul>
+<li>New Text File
+<span class="list-description">Shown only when right-clicking an empty area in Finder.</span></li>
+<li>New From Template
+<span class="list-description">Creates new files from templates. For example, a Markdown or Excel file. Templates can be organized in subfolders. Click a folder to copy its entire structure, or navigate into it to select individual files. Shown only when right-clicking an empty area in Finder, not a file. Supports dynamic placeholders in filenames (like <code>Diary {datetime-fixed}</code> → <code>Diary 2025-02-14 15.30</code>). And you can even have the file automatically open after naming it. <a href="https://github.com/user-attachments/assets/cb401a0e-2e40-4714-9493-b91563a7b387">Screenshot.</a></span></li>
+<li>Open in New Window
+<span class="list-description">Opens the folder in a new window instead of a tab, even if you have set new windows to open as tabs. This action also shows up in the context menu for sidebar items. Useful when you want to view multiple folders side by side or drag items between locations.</span></li>
+<li>Image/Video Dimensions</li>
+<li>File Size</li>
+<li>Copy Path</li>
+<li>Copy Filename</li>
+<li>Copy File URL
+<span class="list-description">Useful for deep links. Clicking such link reveals it in Finder.</span></li>
+<li>Copy Markdown Link
+<span class="list-description">Useful for deep links. Clicking such link reveals it in Finder.</span></li>
+<li>Copy Contents
+<span class="list-description">Copies the contents of text files to the clipboard.</span></li>
+<li>Open Folder With
+<span class="list-description"><a href="https://sindresorhus.com/supercharge#add-app-open-folder-with">Missing apps?</a></span></li>
+<li>Make Symlink</li>
+<li>Move To
+<span class="list-description">Moves files and folders to a chosen location.</span></li>
+<li>Copy To
+<span class="list-description">Copies files and folders to a chosen location.</span></li>
+<li>Share
+<span class="list-description">Shows the old-style Share item that is a submenu instead of a separate popover, which is faster to access. You can exclude AirDrop, Messages, and Mail from the menu, which are normally forced to be shown. However, there is no way to hide the existing Share item.</span></li>
+<li>Open in App
+<span class="list-description">Adds menu items like “Open in Visual Studio Code” directly to the Finder context menu. Text editors show up for folders and text files, while other apps only show up for types they support. <a href="https://github.com/user-attachments/assets/980340bc-a257-475c-9a02-7b98853df9a7">Screenshot.</a></span></li>
+<li>Open in Terminal
+<span class="list-description">Shown only when right-clicking a folder or an empty area in Finder. Supports Terminal, iTerm, Ghostty, kitty, WezTerm, Alacritty, and Warp.</span></li>
+<li>AirDrop
+<span class="list-description">Shares files via AirDrop.</span></li>
+<li>Email
+<span class="list-description">Creates a new email message in the default email app with the selected files as attachments. Works with Mail, Outlook, Spark, Mimestream, Airmail, Canary Mail, and maybe other apps. Not Thunderbird.</span></li>
+<li>Run Shortcut
+<span class="list-description">Shares files with a shortcut from the Shortcuts app.</span></li>
+<li>Update Modified Date</li>
+<li>Folder Color
+<span class="list-description">Changes the color of folders. <a href="https://github.com/user-attachments/assets/0687455b-61d3-4fdd-a863-1e378a3701d5">Screenshot.</a></span></li>
+<li>Toggle Hidden Files
+<span class="list-description">Toggles visibility of hidden files.</span></li>
+<li>Make Executable
+<span class="list-description">Makes files executable, similar to <code>chmod +x</code> in the terminal. Useful for shell scripts.</span></li>
+<li>Invert Selection
+<span class="list-description">Selects the files and folders in Finder that are not selected.</span></li>
+<li>Delete Immediately
+<span class="list-description">Permanently deletes files and folders without sending them to the Trash.</span></li>
+<li>Copy Checksum
+<span class="list-description">SHA-1, SHA-256, SHA-384, SHA-512, MD5, CRC32</span></li>
+<li>Unquarantine
+<span class="list-description">Removes the quarantine flag that macOS adds to downloaded files and apps. This removes <a href="https://github.com/user-attachments/assets/adbf3c7e-8fee-4cd9-9a90-3958badfa94e">security prompts</a> and restrictions for trusted items.</span></li>
+<li>Scan QR Code
+<span class="list-description">Scans QR codes in images and copies the content to the clipboard. Only shown when right-clicking image files.</span></li>
+<li>Print
+<span class="list-description">Prints files directly with the default printer without showing any dialog.</span></li>
+<li>Remove Location Metadata
+<span class="list-description">Removes GPS location metadata from images to protect your privacy.</span></li>
+<li>Remove All Metadata
+<span class="list-description">Removes all metadata (EXIF, GPS, etc.) from images.</span></li>
+<li>Lock / Unlock
+<span class="list-description">Locks or unlocks files and folders. Locked items cannot be modified, renamed, or deleted until unlocked. Same as “Finder › Get Info › Locked”.</span></li>
+</ul>
+<p><em>They appear at the bottom of the context menu. There is no way to change that. <a href="#finder-context-menu-icloud">They also won’t appear in iCloud, Dropbox, OneDrive or any other sync folder.</a></em></p>
+<h4 id="macos-services">Services</h4>
+<ul>
+<li>Copy Path</li>
+<li>Copy Filename</li>
+<li>Copy File URL
+<span class="list-description">Useful for deep links. Clicking such link reveals it in Finder.</span></li>
+<li>Copy Markdown Link
+<span class="list-description">Useful for deep links. Clicking such link reveals it in Finder.</span></li>
+<li>Copy File Contents
+<span class="list-description">Copies the contents of text files to the clipboard.</span></li>
+<li>Copy Checksum (SHA-1, SHA-256, SHA-384, SHA-512, MD5, CRC32)
+<span class="list-description">Copies checksums of files.</span></li>
+<li>AirDrop
+<span class="list-description">Shares files via AirDrop.</span></li>
+<li>Run Shortcut
+<span class="list-description">Shares files with a shortcut from the Shortcuts app.</span></li>
+<li>Scan QR Code
+<span class="list-description">Scans QR codes from images and copies their content to the clipboard.</span></li>
+<li>Email
+<span class="list-description">Creates a new email message in the default email app with the selected files as attachments. Works with Mail, Outlook, Spark, Mimestream, Airmail, Canary Mail, and maybe other apps. Not Thunderbird.</span></li>
+</ul>
+<!-- - Remove Location Metadata
+	<span class="list-description">Remove GPS location metadata from images.</span>
+- Remove All Metadata
+	<span class="list-description">Remove all metadata (EXIF, GPS, etc.) from images.</span> -->
+<p>Finder-specific services:</p>
+<ul>
+<li>Move To…
+<span class="list-description">Moves files and folders to a chosen location.</span></li>
+<li>Copy To…
+<span class="list-description">Copies files and folders to a chosen location.</span></li>
+<li>Open in Terminal
+<span class="list-description">Shown only when right-clicking a folder in Finder. Supports Terminal, iTerm, Ghostty, kitty, WezTerm, Alacritty, and Warp.</span></li>
+<li>Update Modified Date
+<span class="list-description">Updates the modified date of files and folders to the current time.</span></li>
+<li>Make Symlink</li>
+<li>Unquarantine
+<span class="list-description">Removes the quarantine flag that macOS adds to downloaded files and apps. This removes <a href="https://github.com/user-attachments/assets/adbf3c7e-8fee-4cd9-9a90-3958badfa94e">security prompts</a> and restrictions for trusted items.</span></li>
+<li>Make Executable
+<span class="list-description">Makes files executable, similar to <code>chmod +x</code> in the terminal. Useful for shell scripts.</span></li>
+<li>New Text File in Finder
+<span class="list-description">Creates a new text file in the current folder. You must right-click an existing file or folder to access it.</span></li>
+<li>Invert Selection in Finder
+<span class="list-description">Selects the files and folders in Finder that are not selected.</span></li>
+<li>Toggle Hidden Files in Finder
+<span class="list-description">Toggles visibility of hidden files.</span></li>
+<li>Lock
+<span class="list-description">Locks files and folders. Locked items cannot be modified, renamed, or deleted.</span></li>
+<li>Unlock
+<span class="list-description">Unlocks files and folders, allowing them to be modified, renamed, or deleted.</span></li>
+</ul>
+<!-- - Open in New Finder Window
+	<span class="list-description">Opens the folder in a new window instead of a tab, even if you have set new windows to open as tabs.</span> -->
+<!-- - Delete Immediately
+	<span class="list-description">Permanently delete files and folders without moving to Trash.</span> -->
+<p><em><a href="https://macreports.com/what-is-the-services-menu-in-macos/">macOS Services</a> are built-in quick actions available in right-click and app menus system-wide. They let you perform tasks like copying file info or text without leaving your current app. Supercharge adds extra, genuinely useful services to make these menus even more powerful.</em></p>
+<h4 id="capture-text">Capture text from anywhere on screen</h4>
+<p>Select any region of your screen to instantly copy the text, even if it’s unselectable. Great for extracting text from images, PDFs, presentations, or any other content.</p>
+<p>Powered by macOS’ built-in OCR. Text quality and language support depend on the system, not the app.</p>
+<p><a href="https://www.dropbox.com/scl/fi/6t4hst8wtbnm9k5hvrg1q/Capture-Text-Screen-Shot-2025-09-02-at-21.32.17-1756825559.mp4?rlkey=hztcfyrcba7v7hn7ex34tjy2y&#x26;raw=1">Screenshot</a></p>
+<p><em>Check out my <a href="https://sindresorhus.com/text-lens">Text Lens</a> app for more features.</em></p>
+<p><strong>Supported languages</strong></p>
+<ul>
+<li>English</li>
+<li>French</li>
+<li>Italian</li>
+<li>German</li>
+<li>Spanish</li>
+<li>Portuguese</li>
+<li>Chinese, Simplified</li>
+<li>Chinese, Traditional</li>
+<li>Cantonese, Simplified</li>
+<li>Cantonese, Traditional</li>
+<li>Korean</li>
+<li>Japanese</li>
+<li>Russian</li>
+<li>Ukrainian</li>
+<li>Thai</li>
+<li>Vietnamese</li>
+<li>Arabic</li>
+<li>Arabic, Najdi</li>
+</ul>
+<p>And on macOS 26 and later:</p>
+<ul>
+<li>Turkish</li>
+<li>Indonesian</li>
+<li>Czech</li>
+<li>Danish</li>
+<li>Dutch</li>
+<li>Norwegian Nynorsk</li>
+<li>Norwegian Bokmål</li>
+<li>Malay</li>
+<li>Polish</li>
+<li>Romanian</li>
+<li>Swedish</li>
+</ul>
+<h4 id="capture-translate-text">Capture and translate text from anywhere on screen</h4>
+<p>Select any region of your screen to instantly translate text, even from images or unselectable text.</p>
+<ul>
+<li><a href="https://github.com/user-attachments/assets/e7c6b336-6b70-4dfe-bba1-ba6ca18907c0">Screenshot</a></li>
+<li><a href="https://www.apple.com/macos/feature-availability/#translate-system-wide-translation">Supported languages</a> (except Hindi)</li>
+</ul>
+<h4 id="scan-qr-codes">Scan QR codes and barcodes</h4>
+<p>Select any region of your screen or use an image from your clipboard to instantly scan QR codes and barcodes and copy their content to the clipboard. Supports scanning multiple codes at once.</p>
+<ul>
+<li><a href="https://github.com/user-attachments/assets/caa5aed9-5db2-460e-bbbb-15fae45a5195">Screenshot</a></li>
+<li><a href="https://developer.apple.com/documentation/vision/vnbarcodesymbology#Supported-Symbologies">Supported barcodes</a></li>
+</ul>
+<h4 id="mail-copy-message-link">Copy message link in Mail</h4>
+<p>When you are in the Mail app, you can <a href="https://github.com/user-attachments/assets/5cce205b-6743-4a60-958c-074a308ccc68">open the Supercharge menu</a> to copy a direct link to one or more selected messages. You can also set up a keyboard shortcut for this. Copying a message link can be useful if you want to refer to specific emails in other contexts. The link will look like this: <code>message://%3c66e85e1db33c7_961cfc499cd@lowworker-c6756b946-4rskj.mail%3e</code>.</p>
+<h4 id="notes-copy-note-link">Copy note link in Notes</h4>
+<p>When you are in the Notes app, you can <a href="https://github.com/user-attachments/assets/028c2952-d708-4eda-ad39-613767532eb7">open the Supercharge menu</a> to copy a direct link to one or more selected notes. You can also set up a keyboard shortcut for this. Copying a note link can be useful if you want to refer to specific notes in other contexts, like in a task manager or calendar event. The link will look like this: <code>applenotes:note/933C49CC-04F4-5F21-A3EE-2CA93AFC88DD</code>. When clicked, it opens directly in the Notes app.</p>
+<h4 id="mission-control-improvements">Close and minimize windows and hide and quit apps directly from Mission Control</h4>
+<p>Enhances Mission Control by letting you close windows or quit apps by right-clicking the hovered window and use keyboard shortcuts (⌘W, ⌘Q, ⌘H, ⌘M) on the window you are hovering over. This makes window management more efficient as you don’t have to exit Mission Control to perform these actions. <a href="https://github.com/user-attachments/assets/23c71431-4d3b-4913-b484-3a3f0b7b2b07">Example</a></p>
+<p>Why not add an “X” overlay button on previews? Because right-click is faster and easier: you can click anywhere on the preview instead of hunting a tiny target. It keeps Mission Control visually clean, reduces misclicks, and avoids fighting its animations.</p>
+<h4 id="dock-folder-click">Dock folder click behavior</h4>
+<p>By default, clicking a folder in the Dock shows its contents in a popover. With Supercharge, you can make it directly reveal the folder in Finder instead. Does not work with smart folders.</p>
+<h3 id="from-windows">For Windows switchers</h3>
+<p>Just moved to macOS from Windows? Supercharge helps you feel at home:</p>
+<ul>
+<li>Use <kbd>Command+X</kbd> and <kbd>Command+V</kbd> to move files in Finder — just like Cut and Paste in Windows Explorer.</li>
+<li>Quit apps by closing their last window — like most Windows apps.</li>
+<li>Fill windows to screen size instead of entering fullscreen — matches Windows maximize behavior.</li>
+<li>Hide apps by clicking their Dock icon — like minimizing to the taskbar in Windows.</li>
+<li>Press <kbd>Return</kbd> to open files in Finder (rename with <kbd>F2</kbd> or <kbd>Shift+Return</kbd>).</li>
+<li><kbd>Delete</kbd> moves files to the trash (no need for <kbd>Command+Delete</kbd>).</li>
+<li>Create new text files in Finder with <kbd>Option+N</kbd> or from the right-click menu — Just like in Windows Explorer.</li>
+<li>Add “Move To” and “Copy To” to Finder’s right-click menu — like in Windows.</li>
+<li>Open Terminal from Finder — like “Open in Terminal” in Windows Explorer.</li>
+<li>Restore all app windows when focusing an app — like taskbar behavior in Windows.</li>
+<li>“Delete Immediately” in Finder’s right-click menu — like <kbd>Shift+Delete</kbd> in Windows.</li>
+<li>Minimize all windows or all but the frontmost — same as <kbd>Win+M</kbd> or <kbd>Win+Home</kbd>.</li>
+<li>Shift-click Dock icons to open a new window — just like Shift+clicking taskbar icons.</li>
+<li><kbd>Command+Q</kbd> (kinda) quits Finder — like closing Explorer in Windows.</li>
+<li>Finder shows a new window when activated with no windows open — Windows Explorer always shows a window when launched.</li>
+<li>Click Dock folders to open them in Finder — like clicking taskbar folders in Windows, which opens Explorer.</li>
+<li>Use <kbd>Delete</kbd> / <kbd>Shift+Delete</kbd> in Safari to go back/forward — just like in Windows browsers.</li>
+<li>Invert selection in Finder — matches “Invert Selection” in Windows Explorer.</li>
+<li>Print files from Finder’s right-click menu — like Windows’ right-click “Print”.</li>
+</ul>
+<p>Make macOS feel less foreign — and more powerful.</p>
+<hr>
+<p>You may also like my <a href="/shareful">Shareful</a>, <a href="/menu-bar-spacing">Menu Bar Spacing</a>, and <a href="/pure-paste">Pure Paste</a> apps.</p>
+<hr>
+<h2 id="trial">Trial</h2>
+<p>Try the fully functional trial <a href="https://www.dropbox.com/scl/fi/hpgxfxs6spuhcopqrsmzi/Supercharge-1.20.1-trial-1756974113.zip?rlkey=et4ydvqhmnmhbtj5fg0hxrinj&#x26;raw=1">here</a>. The only limitation is a reminder to buy the app every 12 hours, and no automatic updates. All data and settings carry over if you buy it.</p>
+<p>You can also <a href="https://go.setapp.com/stp181?refAppID=742&#x26;utm_medium=vendor_program&#x26;utm_content=button">try it on Setapp</a> for 7 days for free.</p>
+<p><strong>Requires macOS 15.4</strong></p>
+<h2 id="tips">Tips</h2>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li>Ensure you are on the latest version (click the “Check for Updates” button).</li>
+<li>Restart your computer.</li>
+<li>Try closing any anti-virus app you have running as it may <a href="/apps/faq#secure-input-problem">interfere with the app</a> (or at least disable any Secure Keyboard Entry type setting it may have). And if you don’t have any anti-virus app, try closing down all apps and menu bar items, just to rule out some other app interfering. If it’s a work computer, your company may have something installed that prevents the app from working.</li>
+<li>Try clicking “Reset Permissions” in the Supercharge menu.</li>
+</ul>
+<h4 id="cut-and-paste-files-troubleshooting">Cut and paste files troubleshooting</h4>
+<p>Ensure you pressed <kbd>Command+X</kbd> and not <kbd>Command+C</kbd>.</p>
+<p>To make sure you used the feature correctly, try this: Select a file in Finder, press <kbd>Command+X</kbd>, change to a different folder, press <kbd>Command+V</kbd>. The file should have been moved to this new folder.</p>
+<p><strong>Note:</strong> You cannot cut, highlight a folder, and then paste. You have to actually go into the folder to paste to it. That’s just how Finder works. Same with copy-pasting.</p>
+<p>If it’s still not working, try this: Select a file in Finder, press <kbd>Command+C</kbd>, change to a different folder, press <kbd>Option+Command+V</kbd>. The file should have been moved to this new folder. If this did not work, the problem is not this app, as those are the keyboard shortcuts it simulates.</p>
+<p>As a last resort, try <a href="/apps/faq#mac-reset-permissions">resetting permissions</a> and restarting your computer.</p>
+<p>Also try closing any anti-virus app you have running as it may <a href="/apps/faq#secure-input-problem">interfere with the app</a> (or at least disable any Secure Keyboard Entry type setting it may have). And if you don’t have any anti-virus app, try closing down all apps and menu bar items, just to rule out some other app interfering. If it’s a work computer, your company may have something installed that prevents the app from working.</p>
+<h3 id="launch-browser">Launch browser</h3>
+<p>If you have enabled showing browsers in the menu, you can hold the Option key and click a browser in the menu to open it, rather than setting it as the default.</p>
+<h3 id="tricks">Tricks</h3>
+<p>Some things you can already do that you may not know about:</p>
+<ul>
+<li>Hide an app by <kbd>Option</kbd>-clicking on the app’s Dock icon.</li>
+<li>Show Control Center by pressing <kbd>Fn+C</kbd>.</li>
+<li>Toggle a specific VPN using a keyboard shortcut with Shortcuts. Add <a href="https://www.icloud.com/shortcuts/a0c3171fe98a4379b8197299a84b060e">this shortcut</a> and set the VPN parameter and a keyboard shortcut.</li>
+<li><a href="https://apple.stackexchange.com/a/171274/2363">Make Finder remember its size and position.</a></li>
+<li><a href="https://lapcatsoftware.com/articles/universal-links2.html">Prevent opening apps when clicking links that are Universal Links.</a></li>
+<li><a href="https://support.apple.com/guide/mac-help/create-keyboard-shortcuts-for-apps-mchlp2271/mac">Change the keyboard shortcut for menu item actions a specific app.</a></li>
+<li><a href="https://apple.stackexchange.com/a/125628/2363">Change the keyboard shortcut for menu item actions in all apps.</a></li>
+<li>Set Finder’s default view options: Open a folder, press <kbd>Command+J</kbd>, adjust settings, and click “Use as Defaults”. To reset a folder’s custom settings, press <kbd>Command+J</kbd>, hold <kbd>Option</kbd>, and click “Restore to Defaults”.</li>
+<li><a href="https://apple.stackexchange.com/questions/18728/how-can-i-show-the-dimension-column-in-finder">Show “Dimensions” column in Finder.</a></li>
+<li>Option-click the sound menu bar icon to be able to also choose input device. Or use the tweak in Supercharge to see it by default.</li>
+<li>In open/save dialogs, navigate to a copied absolute path by pressing <kbd>Command+V</kbd>.</li>
+<li><a href="https://www.reddit.com/r/Safari/comments/1auqjjc/how_to_make_safari_full_page_translation_by/">Translate website in Safari using a keyboard shortcut.</a></li>
+<li>In Safari, enter Picture-in-Picture by pressing <kbd>Shift+Command+R</kbd>.</li>
+<li>In Finder, select a file, and then press <kbd>Command+Option+C</kbd> to copy its path.</li>
+</ul>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h4 id="i-have-a-feature-request-bug-report-or-some-feedback">I have a feature request, bug report, or some feedback</h4>
+<p>Click the feedback button in the app or <a href="https://sindresorhus.com/feedback?product=Supercharge&#x26;referrer=Website-FAQ">send it here.</a></p>
+<p>Some things are not possible though:</p>
+<ul>
+<li><a href="https://apple.stackexchange.com/a/454812/2363">Removing the Trash icon in the Dock.</a></li>
+<li>Removing the Finder icon in the Dock.</li>
+<li>Disabling Stage Manager animations.</li>
+<li>Fill the entire row with the file’s tag color in Finder.</li>
+<li>Naming spaces. Check out <a href="https://github.com/Jaysce/Spaceman">this app</a> for showing space names in the menu bar.</li>
+<li>Removing or changing Finder context menu items. It can only add items.</li>
+<li>Colored Finder sidebar icons.</li>
+<li>Moving Stage Manager to the right without having the Dock on the left side.</li>
+</ul>
+<p>Some things are not planned:</p>
+<ul>
+<li>Memory cleaner
+<ul>
+<li>Apps like these are a scam. macOS handles memory efficiently. There is no need for an app like this.</li>
+</ul>
+</li>
+</ul>
+<h4 id="the-app-does-not-show-up-in-the-menu-bar">The app does not show up in the menu bar</h4>
+<p><a href="/apps/faq#app-not-showing-in-menu-bar">Try this</a></p>
+<p>You may also have disabled the “Show menu bar icon” setting, which hides the menu bar icon. Launch the app again to show the main window.</p>
+<h4 id="i-moved-to-a-new-computer-how-can-i-download-the-app-again">I moved to a new computer, how can I download the app again?</h4>
+<p>If you purchased it on Gumroad, you can download the app again from your Gumroad account or the Gumroad receipt email.</p>
+<h4 id="the-tweaks-like-finder-cut--paste-no-longer-work">The tweaks like Finder cut &#x26; paste no longer work</h4>
+<p>This usually happens when an app <a href="/apps/faq#secure-input-problem">blocks keyboard input reading</a>.</p>
+<h4 id="price">Why is Supercharge so expensive?</h4>
+<ul>
+<li><strong>It’s really 10 apps in 1</strong><br>
+Supercharge packs dozens of powerful features that would typically require multiple separate apps.</li>
+<li><strong>One-time purchase, lifetime value</strong><br>
+In a world where everything is subscription-based, Supercharge is a one-time purchase with unlimited free updates forever. No monthly fees, no restrictions on how many personal devices you can use it on.</li>
+<li><strong>Fixes countless macOS annoyances</strong><br>
+Apple leaves many frustrating gaps in macOS functionality. Supercharge addresses dozens of these pain points that users encounter daily but Apple hasn’t fixed.</li>
+<li><strong>Complex engineering under the hood</strong><br>
+The app performs very difficult technical tasks, from low-level system integration to advanced automation features. Each feature requires significant development effort to work reliably across macOS updates.</li>
+<li><strong>Dedicated ongoing support</strong><br>
+You get responsive support and regular feature additions.</li>
+<li><strong>Professional quality and reliability</strong><br>
+I have been obsessively crafting Mac apps for years.</li>
+<li><strong>Small market, high development costs</strong><br>
+Mac power users are a niche market. The development costs must be spread across fewer users compared to mass-market apps.</li>
+<li><strong>Support an indie developer</strong><br>
+Get actual human support, genuine privacy protection, and a developer who listens to your feedback, unlike faceless corporations where you’re just another number. I’m in it for the long haul.</li>
+</ul>
+<p>Try the <a href="#trial">trial</a> and see for yourself.</p>
+<h4 id="i-can-already-do-this-with-the-command-line-bettertouchtool-keyboard-maestro-etc">I can already do this with the command-line, BetterTouchTool, Keyboard Maestro, etc.</h4>
+<p>Supercharge offers a simpler, more user-friendly approach. It’s designed for users who want quick access to useful features without the complexity of scripting or configuring advanced tools. Supercharge provides a curated set of enhancements that work right out of the box, saving you time and effort in setup and maintenance. If you prefer more granular control and don’t mind the setup process, those other tools might be a better fit for you.</p>
+<h4 id="why-commandx-i-can-already-move-files-with-commandc-and-optioncommandv">Why <kbd>Command+X</kbd>? I can already move files with <kbd>Command+C</kbd> and <kbd>Option+Command+V</kbd></h4>
+<ul>
+<li>It’s more logical to cut &#x26; paste than copy &#x26; move.</li>
+<li>Consistency and muscle memory benefits if you also use Linux or Window.</li>
+</ul>
+<h4 id="dock-spacers">What are Dock spacers?</h4>
+<p>Dock spacers are <a href="https://res.cloudinary.com/cpenned/image/upload/f_auto,w_auto/v1636732613/Blog/post-images/20211112-dock.jpg">invisible gaps</a> you can add to your Mac’s Dock. They help organize your apps into groups, improving visual clarity. Supercharge lets you easily add these spacers, giving you better control over your Dock’s layout.</p>
+<h4 id="can-i-add-custom-actions-to-the-app">Can I add custom actions to the app?</h4>
+<p>As of now, the app focuses on providing a curated set of built-in features for enhancing your Mac experience. I’m happy to consider requests.</p>
+<h4 id="can-you-add-a-certain-toggle">Can you add a certain toggle?</h4>
+<p>I’m happy to consider requests, but I don’t intend for this app to turn into a “toggler” app. I have just provided some commonly needed toggles.</p>
+<p>Some toggles I don’t plan to add:</p>
+<ul>
+<li>AirPods</li>
+<li>Keep awake <em>(check out <a href="/lungo">Lungo</a>)</em></li>
+</ul>
+<h4 id="does-the-app-consume-a-lot-of-system-resources">Does the app consume a lot of system resources?</h4>
+<p>No, the app is optimized to run efficiently in the background with minimal CPU, memory, and battery usage. Most features are event-driven and only activate when needed.</p>
+<h4 id="i-cannot-use-controlspace-or-controlshiftspace-as-a-keyboard-shortcut">I cannot use <kbd>Control+Space</kbd> or <kbd>Control+Shift+Space</kbd> as a keyboard shortcut</h4>
+<p>Go to “System Settings › Keyboard › Keyboard Shortcuts › Input Sources” and disable them all.</p>
+<h4 id="why-would-i-want-to-clear-my-clipboard">Why would I want to clear my clipboard?</h4>
+<p>Clearing the clipboard helps protect privacy by removing potentially sensitive information (like passwords or personal data) that might otherwise remain available for pasting. Any app can silently read the clipboard. And you could also accidentally paste it somewhere you didn’t intend to.</p>
+<h4 id="finder-context-menu-icloud">Why don’t the Finder context menu items show up in iCloud, Dropbox, and OneDrive folders?</h4>
+<p>Finder Sync extensions, which power these context menu items, are intended to add sync functionality for third-party services in Finder. Since iCloud, Dropbox, and OneDrive folders have their own built-in sync, macOS doesn’t allow the Supercharge extension in these locations to prevent conflicts.</p>
+<p>Some of the Finder context menu items are also available as <a href="#macos-services">macOS services</a>, which do show up in synced folders.</p>
+<h4 id="i-am-seeing-incorrect-icons-for-external-drives-in-the-finder-sidebar-when-enabling-context-menu-items">I am seeing incorrect icons for external drives in the Finder sidebar when enabling context menu items</h4>
+<p>This is a macOS bug and out of my control. When context menu items are enabled for external volumes, macOS shows document icons instead of drive icons in the Finder sidebar. As a workaround, you can disable showing the context menu items on external drives.</p>
+<h4 id="add-app-open-folder-with">How can I add my preferred apps to the “Open Folder With” Finder context menu?</h4>
+<p>The menu shows apps that declare support for opening folders. This is controlled by app developers, not by Supercharge. To get your preferred apps to appear in this menu, contact the developers of those apps and request them to add folder opening support.</p>
+<p>The developer will need to add <code>public.folder</code> to <code>LSItemContentTypes</code> in their app’s Info.plist:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">key</span><span style="color:#E1E4E8">>LSItemContentTypes&#x3C;/</span><span style="color:#85E89D">key</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">array</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">		&#x3C;</span><span style="color:#85E89D">string</span><span style="color:#E1E4E8">>public.folder&#x3C;/</span><span style="color:#85E89D">string</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">array</span><span style="color:#E1E4E8">></span></span></code></pre>
+<p><em>(If the app already contains <code>public.directory</code>, it will still have to add <code>public.folder</code>)</em></p>
+<p><a href="https://github.com/coteditor/CotEditor/issues/1809">Example report.</a></p>
+<p>If you know the app supports opening folders but it doesn’t show up, it may be that the app has not properly declared support for it. Contact the app developer about adding the above. You could also <a href="https://sindresorhus.com/feedback?product=Supercharge">contact me</a>, and I can manually add the app.</p>
+<h4 id="can-you-add-support-keyboard-shortcuts-to-change-default-browser">Can you add support keyboard shortcuts to change default browser?</h4>
+<p>Maybe. For now, you can make a shortcut in the Shortcuts app, give it a keyboard shortcut, and use the “Set Default Browser” Shortcuts action that comes with Supercharge.</p>
+<h4 id="can-you-add-more-features-to-changing-the-default-browser-like-rules">Can you add more features to changing the default browser, like rules?</h4>
+<p>Features like rules require the app to intercept and forward URLs by acting as the default browser. This is out of scope for this app. Check out my <a href="/velja">Velja</a> app for that.</p>
+<h4 id="why-do-some-tweaks-have-a-list-of-pre-defined-keyboard-shortcuts-instead-of-a-shortcut-recorder">Why do some tweaks have a list of pre-defined keyboard shortcuts instead of a shortcut recorder?</h4>
+<p>The pre-defined shortcuts are intentionally curated to help users quickly select sensible shortcuts that won’t conflict with built-in app shortcuts. This approach reduces potential support issues. Missing a useful key combination? Let me know, and I will consider adding it.</p>
+<h4 id="can-you-add-a-finder-keyboard-shortcut-to-move-selected-items-into-a-new-folder">Can you add a Finder keyboard shortcut to move selected items into a new folder?</h4>
+<p>This is already supported natively. See the “File › New Folder with Selection” menu item. Select some items and then press <kbd>Control+Command+N</kbd>. You can change the keyboard shortcut in the <a href="https://support.apple.com/guide/mac-help/create-keyboard-shortcuts-for-apps-mchlp2271/mac">System Settings</a>.</p>
+<h4 id="pure-paste">Can the app support clearing clipboard formatting?</h4>
+<p>Check out my <a href="/pure-paste">Pure Paste</a> app for this. I think it makes more sense as a separate app.</p>
+<h4 id="how-can-i-copy-the-original-text-in-the-translate-popover">How can I copy the original text in the translate popover?</h4>
+<p>The translate popover is provided by macOS and does not support copying the original text. As a workaround, select the same language as the destination language, and then click “Copy Translation”.</p>
+<h4 id="how-can-i-run-the-actions-from-raycast-or-alfred">How can I run the actions from Raycast or Alfred?</h4>
+<p>Most of the actions are exposed as Shortcuts actions, so create a shortcut with the action and run it from Raycast or Alfred.</p>
+<h4 id="can-i-trigger-the-actions-using-a-custom-url-scheme">Can I trigger the actions using a custom URL scheme?</h4>
+<p>It’s something I plan to support at some point, but for now, you can use Shortcuts, as mentioned above.</p>
+<h4 id="can-the-app-support-hiding-menu-bar-items">Can the app support hiding menu bar items?</h4>
+<p>No, that’s out of scope for this app. I recommend <a href="https://icemenubar.app">Ice</a>.</p>
+<h4 id="can-you-add-alt-tab-functionality-like-windows">Can you add Alt-Tab functionality like Windows?</h4>
+<p>No, this would be very complex to implement well and there is already an excellent free app called <a href="https://alt-tab-macos.netlify.app">AltTab</a> that does exactly this.</p>
+<h4 id="supercharge-and-shortcutie-seem-to-have-some-of-the-same-actions-for-shortcuts">Supercharge and Shortcutie seem to have some of the same actions for Shortcuts</h4>
+<p>There is some overlap, but <a href="/shortcutie">Shortcutie</a> includes many more actions. Supercharge only includes actions for its own features.</p>
+<h4 id="why-is-this-not-in-the-app-store">Why is this not in the App Store?</h4>
+<p>Much of the functionality would not be possible in the App Store because of <a href="/apps/faq#macos-sandbox">sandboxing</a>.</p>
+<h4 id="more-faqs"><a href="/apps/faq">More FAQs…</a></h4>
+<!-- Intentionally using the wrong header level so it doesn't show up as a main thing. -->
+<h3 id="scripting">Scripting</h3>
+<h4 id="events">Events</h4>
+<p>The <a href="/apps/faq#distributed-notifications">distributed notification</a> <code>com.sindresorhus.defaultBrowserDidChange</code> is emitted when the default browser is changed from the app or the Shortcuts action.</p>
+<!-- ## Older Versions
+
+- [] for macOS 15
+
+These are free for everyone but they will not run on newer macOS versions.
+-->
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-quit">
+<p>The <kbd>Q</kbd> key is next to <kbd>W</kbd>, making it easy to accidentally hit <kbd>Command+Q</kbd> (quit) when reaching for <kbd>Command+W</kbd> (close window). <a href="#user-content-fnref-quit" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-commandx">
+<p>Without this feature, you have to first copy (<kbd>Command+C</kbd>) and then remember to move (<kbd>Option+Command+V</kbd>). The feature works by overriding the normal cut <kbd>⌘X</kbd> keyboard shortcut when Finder is active and executes a copy <kbd>⌘C</kbd> instead. When you then paste <kbd>⌘V</kbd>, it executes the native move <kbd>⌥⌘V</kbd> keyboard shortcut. So really, it’s Finder moving the files. This app just makes the keyboard shortcuts more intuitive. If you don’t paste, the files just stay in place. This feature also works with the Forklift app. <a href="#user-content-fnref-commandx" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-grayscale">
+<p>Grayscale mode on macOS can be a useful tool for various purposes. It can help reduce eye strain during long work sessions, especially in low-light environments. For designers and developers, it’s valuable for checking contrast and readability of user interfaces without the influence of color. Content creators may use it to evaluate the tonal balance of images or videos. Additionally, some users find that grayscale helps minimize distractions and improve focus by reducing the visual appeal of non-work-related apps and websites. While initially an adjustment, many users report increased productivity and a more mindful approach to computer usage when employing grayscale mode periodically. <a href="#user-content-fnref-grayscale" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section> </div> </article> </section> <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"applicationCategory": "UtilitiesApplication",
+	"name": "Supercharge",
+	"operatingSystem": "macOS",
+	"author": {
+		"@type": "Person",
+		"givenName": "Sindre",
+		"familyName": "Sorhus",
+		"url": "https://sindresorhus.com",
+		"sameAs": [
+			"https://github.com/sindresorhus",
+			"https://x.com/sindresorhus",
+			"https://mastodon.social/@sindresorhus",
+			"https://bsky.app/profile/sindresorhus.com"
+		]
+	},
+	"datePublished": "2024-09-29",
+	"description": "Elevate your Mac experience",
+	"url": "https://sindresorhus.com/supercharge",
+	"image": "https://sindresorhus.com/apps/supercharge/icon.png",
+	"screenshot": [
+		"https://sindresorhus.com/_astro/screenshot1.P8PAKe8V.jpg",
+		"https://sindresorhus.com/_astro/screenshot2.DFV1aVbJ.jpg"
+	]
+}</script>  </main> <footer class="border-t border-gray-200 dark:border-slate-800" data-nosnippet> <div class="max-w-6xl mx-auto px-4 sm:px-6"> <div class="md:flex md:items-center md:justify-between py-6 md:py-8"> <ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"> <li> <a href="https://x.com/sindresorhus" rel="me" aria-label="X (Twitter)" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-x"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4 11.733 16H20L8.267 4zm0 16 6.768-6.768m2.46-2.46L20 4"/></svg> </a> </li> <li> <a href="https://mastodon.social/@sindresorhus" rel="me" aria-label="Mastodon" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-mastodon"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.648 15.254C16.832 17.017 12 16.88 12 16.88a18.3 18.3 0 0 1-3.288-.256q1.69 2.977 8.982 2.475c-1.945 2.013-13.598 5.257-13.668-7.636L4 10.309c0-3.036.023-4.115 1.352-5.633C7.023 2.766 12 3.01 12 3.01s4.977-.243 6.648 1.667C19.977 6.195 20 7.274 20 10.31s-.456 4.074-1.352 4.944"/><path d="M12 11.204V8.278C12 7.02 11.105 6 10 6S8 7.02 8 8.278V13m4-4.722C12 7.02 12.895 6 14 6s2 1.02 2 2.278V13"/></g></svg> </a> </li> <li> <a href="https://bsky.app/profile/sindresorhus.com" rel="me" aria-label="Bluesky" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-bluesky"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856"/></svg> </a> </li> <li> <a href="https://instagram.com/sindresorhus" rel="me" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></g></svg> </a> </li> <li> <a href="https://unsplash.com/@sindresorhus" rel="me" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z"/></svg> </a> </li> <li> <a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/ajaygtm"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> </a> </li> </ul> <div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400"> <q>The people who are crazy enough to think they can change the world are the ones who do</q> </div> </div> </div> </footer>  <script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>  </body> </html> <script type="module">const appTitle = "Supercharge";
+const appStoreUrl = undefined;
+
+	const shareData = {
+		title: appTitle,
+		url: appStoreUrl
+	};
+
+	if (navigator.canShare(shareData)) {
+		const shareButton = document.querySelector('#share-button');
+
+		shareButton.style.display = 'block';
+
+		shareButton.addEventListener('click', async () => {
+			try {
+				await navigator.share(shareData);
+			} catch (error) {
+				console.error('Share failed:', error.message);
+			}
+		});
+	}
+</script> <script type="module">
+	if (document.referrer.endsWith('/apps/random')) {
+		document.querySelector('#another-random-app').style.display = 'flex';
+	}
+</script>

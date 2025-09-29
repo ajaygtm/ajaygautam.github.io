@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ajay Gautam"><meta name="twitter:site" content="@sindresorhus"><meta name="twitter:creator" content="@sindresorhus"><meta name="twitter:description" content><meta name="fediverse:creator" content="@sindresorhus@mastodon.social"><meta name="x-build-time" content="Mon, 29 Sep 2025 20:07:44 GMT"><meta name="twitter:card" content="summary"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — Blog" href="/rss.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Apps" href="/rss-apps.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Repos" href="/rss-repos.xml"><link rel="alternate" type="application/rss+xml" title="Supercharge Release Notes" href="/supercharge/rss.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>"><script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script><!-- <ViewTransitions/> --><title>Release Notes — Supercharge</title>
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ajaygtm.github.io/supercharge/release-notes">
+<meta property="og:title" content="Release Notes — Supercharge">
+<meta property="og:url" content="https://ajaygtm.github.io/supercharge/release-notes">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US"><link rel="stylesheet" href="/_astro/_page_.255jGt1i.css"></head> <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-950">  <style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style><header data-nosnippet class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-950 dark:md:bg-slate-950/90 md:backdrop-blur-md border-b dark:border-b-0"> <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"> Ajay Gautam </span> </a> <div class="flex items-center md:hidden"> <button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg> </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Primary navigation" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement"> <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"> <li> <a href="/projects" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Projects</span> </a> </li> <li> <a href="/certifications" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Certifications</span> </a> </li> <li> <a href="/experience" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Experience</span> </a> </li> <li> <a href="/about" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">About</span> </a> </li> <li> <a href="/blog" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Blog</span> </a> </li> <li> <a href="/contact" class="md:hidden font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Contact</span> </a> </li> </ul> <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"> <div class="hidden items-center md:flex"> <a href="/feeds" aria-label="RSS Feeds" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> <a href="/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></g></svg> </a> </div> </div> </nav> </div> </header> <main>  <section class="md:min-h-screen sm:px-6 mb-20 mx-auto max-w-3xl">  <header> <h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">  </h1> </header>  <main class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-img:rounded-md prose-img:shadow-lg mt-8 prose-a:text-black/75 dark:prose-a:text-white/90 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary-500 prose-a:hover:decoration-primary-600 prose-a:decoration-2 prose-a:hover:decoration-4 prose-a:hover:text-black dark:prose-a:hover:text-white break-words tracking-normal prose-h4:tracking-normal prose-h5:tracking-normal prose-h6:tracking-normal prose-code:before:hidden prose-code:after:hidden prose-h2:mt-24">  <section class="pb-16"> <div class="flex justify-between items-center mb-6"> <a href="/supercharge" class="text-primary-600 hover:underline text-sm">
+← Back to Supercharge </a> <a href="/supercharge/rss.xml" title="RSS feed for release notes" aria-label="Supercharge Release Notes RSS Feed" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-4 h-4" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> </div> <h1 class="text-3xl font-bold">Release Notes for Supercharge</h1> <article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.21.0" class="text-2xl font-bold">1.21.0</h2> <time class="text-gray-600 text-sm" datetime="2025-09-23T21:11:38Z"> September 23, 2025 </time> </div> <div><ul>
+<li>Improved compatibility with macOS 26.</li>
+<li>Added keyboard shortcuts to open Spotlight tabs (clipboard history, actions, files) directly. <em>(macOS 26 only)</em></li>
+<li>Added tweaks:
+<ul>
+<li>Override Maps app language.</li>
+<li>Make TextEdit show blank document instead of open dialog at launch.</li>
+</ul>
+</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.20.1" class="text-2xl font-bold">1.20.1</h2> <time class="text-gray-600 text-sm" datetime="2025-09-04T08:16:35Z"> September 4, 2025 </time> </div> <div><ul>
+<li>Fixed an issue with the “Quit an app when closing its last window” tweak making the red traffic light button not work in some cases.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.20.0" class="text-2xl font-bold">1.20.0</h2> <time class="text-gray-600 text-sm" datetime="2025-08-31T10:30:25Z"> August 31, 2025 </time> </div> <div><ul>
+<li>Added actions:
+<ul>
+<li>Capture Text — Extract text from any area of the screen.</li>
+<li>Cat Mode — Disable keyboard and mouse to stop pets from accidentally typing.</li>
+</ul>
+</li>
+<li>Added tweaks:
+<ul>
+<li>Auto-copy screenshots to clipboard.</li>
+<li>Remove Caps Lock activation delay.</li>
+<li>Disable the Command+Tab app switcher.</li>
+</ul>
+</li>
+<li>Added Finder context menu action to create a new email with selected files attached.</li>
+<li>Fixed the “Quit an app when closing its last window” tweak.
+<ul>
+<li>Note: It may change the behavior on some apps that worked before. For example, some apps show both a Dock icon and a menu bar icon, and those will be classified as a normal app and quit when you click the traffic light button. You can add those to the ignore list if needed.</li>
+</ul>
+</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.19.0" class="text-2xl font-bold">1.19.0</h2> <time class="text-gray-600 text-sm" datetime="2025-07-25T16:37:24Z"> July 25, 2025 </time> </div> <div><ul>
+<li>Added actions:
+<ul>
+<li>Keep Awake</li>
+<li>Mute Microphone</li>
+<li>Isolate Window</li>
+<li>Sleep Displays</li>
+</ul>
+</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.18.2" class="text-2xl font-bold">1.18.2</h2> <time class="text-gray-600 text-sm" datetime="2025-06-14T14:49:16Z"> June 14, 2025 </time> </div> <div><ul>
+<li>Fixed the “Move files to trash with ⌫ instead of ⌘⌫” tweak not working when used on the desktop.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.18.1" class="text-2xl font-bold">1.18.1</h2> <time class="text-gray-600 text-sm" datetime="2025-06-12T23:58:31Z"> June 12, 2025 </time> </div> <div><ul>
+<li>Fixed an issue that caused the accidental quit prevention feature to not work in some cases.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.18.0" class="text-2xl font-bold">1.18.0</h2> <time class="text-gray-600 text-sm" datetime="2025-06-11T18:08:20Z"> June 11, 2025 </time> </div> <div><ul>
+<li>Allow assigning shortcuts from the Shortcuts app to only show in the Supercharge menu when specific apps are frontmost.</li>
+<li>Added tweak to make Command+Q in Finder close all windows and hide Finder.</li>
+<li>Added actions:
+<ul>
+<li>Quit All Apps Except Frontmost</li>
+<li>Minimize App Windows Except Frontmost</li>
+<li>Minimize All Windows</li>
+<li>Minimize All Windows Except Frontmost</li>
+</ul>
+</li>
+<li>Added ability to open a new window by Shift-clicking an app in the Dock.</li>
+<li>Added customizable keyboard shortcut to unminimize windows of the active app.</li>
+<li>Added macOS Services equivalent to many Finder context menu actions.
+<ul>
+<li>Works in places where context menu items don’t, like iCloud and Dropbox folders.</li>
+</ul>
+</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.17.1" class="text-2xl font-bold">1.17.1</h2> <time class="text-gray-600 text-sm" datetime="2025-05-12T05:00:34Z"> May 12, 2025 </time> </div> <div><ul>
+<li>Fixed a performance issue with using Return key to open items in Finder.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.17.0" class="text-2xl font-bold">1.17.0</h2> <time class="text-gray-600 text-sm" datetime="2025-05-07T15:27:08Z"> May 7, 2025 </time> </div> <div><ul>
+<li>Added ability to reorder items and sections in the Supercharge menu.</li>
+<li>Added feature to run shortcuts from the Shortcuts app directly from the Supercharge menu.</li>
+<li>Added tweaks:
+<ul>
+<li>Prevent accidental window closing for certain apps by disabling the red traffic light button.</li>
+<li>Prevent Dock from showing when moving mouse to screen edge.</li>
+<li>Customize Dock show delay.</li>
+<li>Use Delete key for Safari back navigation.</li>
+</ul>
+</li>
+<li>Added Finder context menu actions:
+<ul>
+<li>Remove All Image Metadata</li>
+<li>Remove Image Location Metadata</li>
+</ul>
+</li>
+<li>Fixed using “Eject All Disks” with Time Machine.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.16.0" class="text-2xl font-bold">1.16.0</h2> <time class="text-gray-600 text-sm" datetime="2025-04-15T11:36:46Z"> April 15, 2025 </time> </div> <div><ul>
+<li>Added cleaning mode feature that temporarily disables keyboard and mouse to let you clean.</li>
+<li>Added tweak to lowercase file extensions in Downloads folders.</li>
+<li>Added tweak to center mouse pointer on primary display when coming back to your Mac.</li>
+<li>Added keyboard shortcut to click top notification.</li>
+<li>Added keyboard shortcut to hide mouse pointer until moved.</li>
+<li>Added “Open in New Window” Finder context menu action for folders.</li>
+<li>Added “Print” Finder context menu action.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.15.1" class="text-2xl font-bold">1.15.1</h2> <time class="text-gray-600 text-sm" datetime="2025-03-27T15:09:30Z"> March 27, 2025 </time> </div> <div><ul>
+<li>Fixed the automatic clipboard clearing feature accidentally being enabled by default.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.15.0" class="text-2xl font-bold">1.15.0</h2> <time class="text-gray-600 text-sm" datetime="2025-03-27T10:16:28Z"> March 27, 2025 </time> </div> <div><ul>
+<li>Added tweak to move files received through AirDrop to a different folder.</li>
+<li>Added tweak to automatically archive old files and folders in the Downloads folder.</li>
+<li>Added tweak to automatically clear clipboard for improved privacy.</li>
+<li>Added tweak to toggle Stage Manager directly from its menu bar item.</li>
+<li>Added toggle for hiding Desktop icons.</li>
+<li>Added toggle for iOS notifications (if supported by your Mac).</li>
+<li>Added app exclusion support to “Quit All Apps” feature.</li>
+<li>Added setting to remove alarms from auto-opened calendar events.</li>
+<li>Added setting to specify app for opening newly created text files in Finder.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.14.0" class="text-2xl font-bold">1.14.0</h2> <time class="text-gray-600 text-sm" datetime="2025-03-14T10:27:37Z"> March 14, 2025 </time> </div> <div><ul>
+<li>Added tweak to show input devices in the system Sound menu bar item menu.</li>
+<li>Added tweak to auto-open and trash downloaded (to the local Downloads folder) calendar event (<code>.ics</code>) files.</li>
+<li>Added keyboard shortcuts for controlling keyboard brightness.</li>
+<li>Added tool to detect conflicting keyboard shortcuts.</li>
+<li>Added file size Finder context menu action.</li>
+<li>Added setting to choose color format for “Pick Color”.</li>
+<li>Added support for half step size for the volume adjustment tweak.</li>
+<li>Added setting to allow excluding certain disks from the “Eject all disks” feature.</li>
+<li>Added “VPN &amp; Filters” menu action which opens that system setting directly.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.13.0" class="text-2xl font-bold">1.13.0</h2> <time class="text-gray-600 text-sm" datetime="2025-02-25T10:44:10Z"> February 25, 2025 </time> </div> <div><ul>
+<li>Added tweak to show markup tools by default in screenshot preview.</li>
+<li>Added tweak to auto-open screenshot preview after capturing.</li>
+<li>Added “Clear top visible notification” keyboard shortcut.</li>
+<li>Added True Tone toggle action.</li>
+<li>Added Night Shift toggle action.</li>
+<li>Added “Scan QR Code” Finder context menu item.</li>
+<li>Added “Toggle Hidden Files” Finder context menu item.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.12.0" class="text-2xl font-bold">1.12.0</h2> <time class="text-gray-600 text-sm" datetime="2025-02-16T11:25:26Z"> February 16, 2025 </time> </div> <div><ul>
+<li>Added action to scan QR codes from clipboard.</li>
+<li>Added feature to use finer volume adjustments.</li>
+<li>New Finder context menu items:
+<ul>
+<li>Open in App - Add menu items like “Open in Visual Studio Code” directly to the context menu.</li>
+<li>New From Template - Create new files from templates. For example, a Markdown file.</li>
+<li>Folder Color - Change the color of folders.</li>
+</ul>
+</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.11.1" class="text-2xl font-bold">1.11.1</h2> <time class="text-gray-600 text-sm" datetime="2025-01-31T08:25:46Z"> January 31, 2025 </time> </div> <div><ul>
+<li>Fixed a compatibility issue where Adobe Illustrator’s slow response times could cause missed clicks.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.11.0" class="text-2xl font-bold">1.11.0</h2> <time class="text-gray-600 text-sm" datetime="2025-01-28T06:31:48Z"> January 28, 2025 </time> </div> <div><ul>
+<li>Added QR code and barcode scanning.</li>
+<li>Hide app when clicking the yellow traffic light button.</li>
+<li>Customize system Share menu by excluding AirDrop, Messages, and Mail items.</li>
+<li>New “Share” option in the Finder context menu that brings back the old share menu.</li>
+<li>Added “Copy Contents” in the Finder context menu to quickly copy the contents of text files.</li>
+<li>Quick sound mute toggle available in the menu.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.10.0" class="text-2xl font-bold">1.10.0</h2> <time class="text-gray-600 text-sm" datetime="2025-01-22T05:39:57Z"> January 22, 2025 </time> </div> <div><ul>
+<li>You can now make the green traffic light button fill the window to the screen instead of going fullscreen by default.</li>
+<li>Added the ability to launch apps using customizable keyboard shortcuts (in the “Shortcuts” settings tab).</li>
+<li>Added “Capture &amp; Translate” feature that lets you capture an area on screen and have it translated (see the setting for supported languages).</li>
+<li>Added “Pick Color” action (basic color sampler).</li>
+<li>Added customizable keyboard shortcut to toggle the Now Playing menu bar item window.</li>
+<li>The Mission Control improvements feature now supports a middle-click action.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.9.3" class="text-2xl font-bold">1.9.3</h2> <time class="text-gray-600 text-sm" datetime="2025-01-09T16:39:35Z"> January 9, 2025 </time> </div> <div><ul>
+<li>Fixed an issue that could cause the “go back using Delete key in Finder” feature to beep.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.9.2" class="text-2xl font-bold">1.9.2</h2> <time class="text-gray-600 text-sm" datetime="2025-01-01T15:36:10Z"> January 1, 2025 </time> </div> <div><ul>
+<li>Fixed an issue with using the minimize on Dock click feature together with Stage Manager.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.9.1" class="text-2xl font-bold">1.9.1</h2> <time class="text-gray-600 text-sm" datetime="2024-12-20T15:21:08Z"> December 20, 2024 </time> </div> <div><ul>
+<li>Fixed an issue with the accidental quit feature.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.9.0" class="text-2xl font-bold">1.9.0</h2> <time class="text-gray-600 text-sm" datetime="2024-12-14T11:21:48Z"> December 14, 2024 </time> </div> <div><ul>
+<li>Close and minimize windows and hide and quit apps directly from Mission Control.</li>
+<li>Copy direct links to notes in the Notes app, either from the Supercharge menu or with a keyboard shortcut.</li>
+<li>Show the menu bar window for the Weather app with a keyboard shortcut.</li>
+<li>Added setting to open Dock folders directly in Finder on click.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.8.2" class="text-2xl font-bold">1.8.2</h2> <time class="text-gray-600 text-sm" datetime="2024-12-02T23:09:31Z"> December 2, 2024 </time> </div> <div><ul>
+<li>Fixed a crash that could happen when using the “prevent accidental quit” feature.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.8.1" class="text-2xl font-bold">1.8.1</h2> <time class="text-gray-600 text-sm" datetime="2024-11-30T09:16:34Z"> November 30, 2024 </time> </div> <div><ul>
+<li>Fixed the “quit after last window” feature no longer working reliably.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.8.0" class="text-2xl font-bold">1.8.0</h2> <time class="text-gray-600 text-sm" datetime="2024-11-28T09:04:58Z"> November 28, 2024 </time> </div> <div><ul>
+<li>Quickly change the system default browser (without a prompt).</li>
+<li>More ways to prevent accidental quit; you can now double tap Q while holding Command, or press and hold Command+Q.</li>
+<li>Keyboard shortcut to clear all notifications, not just visible.</li>
+<li>“Unquarantine” Finder context menu action.</li>
+<li>Copy checksum Finder context menu actions (SHA-256, SHA-512, MD5, CRC32, etc.).</li>
+<li>Eject all disks (menu action and keyboard shortcut).</li>
+<li>Menu bar icon setting.</li>
+<li>Toggle function keys (switch between using F1, F2, etc., as standard function keys or media keys).</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.7.1" class="text-2xl font-bold">1.7.1</h2> <time class="text-gray-600 text-sm" datetime="2024-11-23T09:47:02Z"> November 23, 2024 </time> </div> <div><ul>
+<li>Fixed an issue where it would miss some apps in the app picker in the settings.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.7.0" class="text-2xl font-bold">1.7.0</h2> <time class="text-gray-600 text-sm" datetime="2024-11-21T12:39:28Z"> November 21, 2024 </time> </div> <div><ul>
+<li>Added a feature to quit apps when their last window is closed (like Swift Quit and RedQuits).</li>
+<li>Added an option to move some Finder actions into an overflow submenu.</li>
+<li>Added a “Delete Immediately” context menu action in Finder.</li>
+<li>Added a keyboard shortcut for “Empty Trash”.</li>
+<li>Added a menu action and keyboard shortcut to quit all apps.</li>
+<li>Added a keyboard shortcut to invert selection in Finder.</li>
+<li>Added a keyboard shortcut to copy message links in Mail.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.6.0" class="text-2xl font-bold">1.6.0</h2> <time class="text-gray-600 text-sm" datetime="2024-11-15T08:57:04Z"> November 15, 2024 </time> </div> <div><ul>
+<li>Added some more Finder context menu actions: Invert Selection, Update Modified Date, Make Executable.</li>
+<li>Added customizable keyboard shortcut to toggle the Terminal app.</li>
+<li>Added “Show desktop” action in the Supercharge menu.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.5.0" class="text-2xl font-bold">1.5.0</h2> <time class="text-gray-600 text-sm" datetime="2024-11-11T18:10:43Z"> November 11, 2024 </time> </div> <div><ul>
+<li>Added a customizable global keyboard shortcut to clear visible system notifications.</li>
+<li>Added the ability to hide an app when clicking its Dock icon when the app has a focused window.</li>
+<li>Added lots of useful actions to the Finder context menu: copy path, move to, open folder with, AirDrop, etc. Can be customized in the settings.</li>
+</ul>
+</div> </article><article class="pb-4 pt-4"> <div class="flex items-baseline gap-4"> <h2 id="1.4.0" class="text-2xl font-bold">1.4.0</h2> <time class="text-gray-600 text-sm" datetime="2024-10-27T16:33:19Z"> October 27, 2024 </time> </div> <div><ul>
+<li>Added feature to only show the system sound menu bar icon when muted.</li>
+<li>Added setting to only unminimize windows when an app is activated if all windows are minimized.</li>
+<li>Added button to the Supercharge menu to copy message link in the Mail app.</li>
+<li>Added a tool to reset privacy permissions for any app.</li>
+</ul>
+</div> </article> </section>  </main> </section>  </main> <footer class="border-t border-gray-200 dark:border-slate-800" data-nosnippet> <div class="max-w-6xl mx-auto px-4 sm:px-6"> <div class="md:flex md:items-center md:justify-between py-6 md:py-8"> <ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"> <li> <a href="https://x.com/sindresorhus" rel="me" aria-label="X (Twitter)" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-x"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4 11.733 16H20L8.267 4zm0 16 6.768-6.768m2.46-2.46L20 4"/></svg> </a> </li> <li> <a href="https://mastodon.social/@sindresorhus" rel="me" aria-label="Mastodon" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-mastodon"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.648 15.254C16.832 17.017 12 16.88 12 16.88a18.3 18.3 0 0 1-3.288-.256q1.69 2.977 8.982 2.475c-1.945 2.013-13.598 5.257-13.668-7.636L4 10.309c0-3.036.023-4.115 1.352-5.633C7.023 2.766 12 3.01 12 3.01s4.977-.243 6.648 1.667C19.977 6.195 20 7.274 20 10.31s-.456 4.074-1.352 4.944"/><path d="M12 11.204V8.278C12 7.02 11.105 6 10 6S8 7.02 8 8.278V13m4-4.722C12 7.02 12.895 6 14 6s2 1.02 2 2.278V13"/></g></svg> </a> </li> <li> <a href="https://bsky.app/profile/sindresorhus.com" rel="me" aria-label="Bluesky" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-bluesky"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856"/></svg> </a> </li> <li> <a href="https://instagram.com/sindresorhus" rel="me" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></g></svg> </a> </li> <li> <a href="https://unsplash.com/@sindresorhus" rel="me" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z"/></svg> </a> </li> <li> <a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/ajaygtm"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> </a> </li> </ul> <div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400"> <q>The people who are crazy enough to think they can change the world are the ones who do</q> </div> </div> </div> </footer>  <script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>  </body> </html>

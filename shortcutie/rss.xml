@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Shortcutie Release Notes</title><description>Latest releases of Shortcutie</description><link>https://ajaygtm.github.io/</link><item><title>1.4.0</title><link>https://ajaygtm.github.io/shortcutie/release-notes#1.4.0</link><guid isPermaLink="true">https://ajaygtm.github.io/shortcutie/release-notes#1.4.0</guid><pubDate>Sat, 06 Sep 2025 07:19:16 GMT</pubDate><content:encoded>&lt;p&gt;New actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get Document of App
+Return the file of the frontmost document in the active or chosen app&lt;/li&gt;
+&lt;li&gt;Get/Set Current Folder in Finder
+Get or set the frontmost Finder folder&lt;/li&gt;
+&lt;li&gt;Get/Set Finder New Window Target
+Get or set Finder’s default new-window folder&lt;/li&gt;
+&lt;li&gt;Get/Set Audio Device Volume
+Get or set an audio device’s volume&lt;/li&gt;
+&lt;li&gt;Get/Set Audio Device Mute State
+Get or set an audio device’s mute state&lt;/li&gt;
+&lt;li&gt;Toggle Dock Folder
+Expand or collapse a Dock folder&lt;/li&gt;
+&lt;li&gt;Get/Set Dock Position
+View or change the Dock position&lt;/li&gt;
+&lt;li&gt;Get/Set Accent Color
+Get or set the system accent color&lt;/li&gt;
+&lt;li&gt;Get/Set Night Shift Color Temperature
+Get or set Night Shift color temperature&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>1.3.1</title><link>https://ajaygtm.github.io/shortcutie/release-notes#1.3.1</link><guid isPermaLink="true">https://ajaygtm.github.io/shortcutie/release-notes#1.3.1</guid><pubDate>Sat, 07 Jun 2025 22:13:12 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Fixed the “Run JavaScript on Active Browser Tab” action not working in some cases.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>1.3.0</title><link>https://ajaygtm.github.io/shortcutie/release-notes#1.3.0</link><guid isPermaLink="true">https://ajaygtm.github.io/shortcutie/release-notes#1.3.0</guid><pubDate>Tue, 20 May 2025 15:37:14 GMT</pubDate><content:encoded>&lt;p&gt;New actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Show Alert (Extended)&lt;br /&gt;
+Shows an alert dialog with multiple buttons and returns which button was clicked.&lt;/li&gt;
+&lt;li&gt;Click Top Notification&lt;br /&gt;
+Activates the top visible system notification.&lt;/li&gt;
+&lt;li&gt;Unminimize Windows of Active App&lt;br /&gt;
+Unminimizes all windows or the first window of the currently active app.&lt;/li&gt;
+&lt;li&gt;Get/Set Desktop Icons Visibility&lt;br /&gt;
+Show, hide, or check visibility status of desktop icons.&lt;/li&gt;
+&lt;li&gt;Get/Set Mouse Pointer Visibility&lt;br /&gt;
+Get or set the visibility of the mouse pointer.&lt;/li&gt;
+&lt;li&gt;Center Mouse Pointer&lt;br /&gt;
+Centers the mouse pointer on the primary display.&lt;/li&gt;
+&lt;li&gt;Get/Set iOS Notifications Enabled&lt;br /&gt;
+Control whether notifications from your iOS device appear on your Mac, if supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you encounter any problems after updating, restart your computer. The Shortcuts app can be a bit buggy.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;If you have a Magic Trackpad or Magic Keyboard, it would be amazing if you could run the “Debug” action and send me the output.&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>1.2.0</title><link>https://ajaygtm.github.io/shortcutie/release-notes#1.2.0</link><guid isPermaLink="true">https://ajaygtm.github.io/shortcutie/release-notes#1.2.0</guid><pubDate>Thu, 20 Mar 2025 16:45:33 GMT</pubDate><content:encoded>&lt;p&gt;New actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open URLs in Private Browser Window&lt;br /&gt;
+Opens URLs in a private/incognito browser window&lt;/li&gt;
+&lt;li&gt;Get/Set Network Location&lt;br /&gt;
+Switch between different &lt;a href=&quot;https://support.apple.com/105129&quot;&gt;network configurations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join Wi-Fi&lt;br /&gt;
+Connects to a specified Wi-Fi network&lt;/li&gt;
+&lt;li&gt;Clear Top Notification&lt;br /&gt;
+Clears the top visible system notification&lt;/li&gt;
+&lt;li&gt;Get Latest Screenshots&lt;br /&gt;
+Returns the most recent screenshots taken with the system screenshot tool&lt;/li&gt;
+&lt;li&gt;Get Slack Workspace&lt;br /&gt;
+Retrieves the name of the current Slack workspace&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>1.1.0</title><link>https://ajaygtm.github.io/shortcutie/release-notes#1.1.0</link><guid isPermaLink="true">https://ajaygtm.github.io/shortcutie/release-notes#1.1.0</guid><pubDate>Mon, 17 Feb 2025 10:54:02 GMT</pubDate><content:encoded>&lt;p&gt;New actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get Default Sound Device&lt;br /&gt;
+Retrieves the current default sound input or output device&lt;/li&gt;
+&lt;li&gt;Set Default Sound Device&lt;br /&gt;
+Changes the default sound input or output device&lt;/li&gt;
+&lt;li&gt;Find Sound Device&lt;br /&gt;
+Lists all available sound devices with detailed information&lt;/li&gt;
+&lt;li&gt;Toggle Mission Control&lt;br /&gt;
+Shows or hides Mission Control&lt;/li&gt;
+&lt;li&gt;Toggle App Exposé&lt;br /&gt;
+Shows or hides all windows of the current app&lt;/li&gt;
+&lt;li&gt;Toggle Launchpad&lt;br /&gt;
+Shows or hides the Launchpad app launcher&lt;/li&gt;
+&lt;li&gt;Get Apps Using Secure Input&lt;br /&gt;
+Identifies apps that may be blocking keyboard input by not releasing Secure Input mode&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item></channel></rss>

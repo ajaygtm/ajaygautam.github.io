@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ajay Gautam"><meta name="twitter:site" content="@sindresorhus"><meta name="twitter:creator" content="@sindresorhus"><meta name="twitter:description" content="It's time to move from Buffer to Uint8Array."><meta name="fediverse:creator" content="@sindresorhus@mastodon.social"><meta name="x-build-time" content="Mon, 29 Sep 2025 20:07:49 GMT"><meta name="twitter:card" content="summary"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — Blog" href="/rss.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Apps" href="/rss-apps.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Repos" href="/rss-repos.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>"><script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script><!-- <ViewTransitions/> --><title>Goodbye, Node.js Buffer — Ajay Gautam</title>
+<meta name="description" content="It&#39;s time to move from Buffer to Uint8Array.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ajaygtm.github.io/blog/goodbye-nodejs-buffer">
+<meta property="og:title" content="Goodbye, Node.js Buffer">
+<meta property="og:description" content="It&#39;s time to move from Buffer to Uint8Array.">
+<meta property="og:url" content="https://ajaygtm.github.io/blog/goodbye-nodejs-buffer">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US"><link rel="stylesheet" href="/_astro/_page_.255jGt1i.css"></head> <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-950">  <style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style><header data-nosnippet class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-950 dark:md:bg-slate-950/90 md:backdrop-blur-md border-b dark:border-b-0"> <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"> Ajay Gautam </span> </a> <div class="flex items-center md:hidden"> <button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg> </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Primary navigation" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement"> <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"> <li> <a href="/projects" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Projects</span> </a> </li> <li> <a href="/certifications" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Certifications</span> </a> </li> <li> <a href="/experience" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Experience</span> </a> </li> <li> <a href="/about" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">About</span> </a> </li> <li> <a href="/blog" class="underline underline-offset-[7px] decoration-[3px] decoration-secondary-500 font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Blog</span> </a> </li> <li> <a href="/contact" class="md:hidden font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Contact</span> </a> </li> </ul> <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"> <div class="hidden items-center md:flex"> <a href="/feeds" aria-label="RSS Feeds" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> <a href="/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></g></svg> </a> </div> </div> </nav> </div> </header> <main>  <section class="py-8 sm:py-16 lg:py-20 mx-auto"> <article> <header> <p class="max-w-3xl mx-auto mb-3 text-center text-sm opacity-80"> <time datetime="Tue Oct 24 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">October 24, 2023</time> — 4 min read
+</p> <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-8 font-heading"> Goodbye, Node.js Buffer </h1> <h2 class="px-4 sm:px-6 mt-[-4px] max-w-3xl mx-auto text-center text-xl md:text-2xl opacity-80"> It&#39;s time to move from Buffer to Uint8Array. </h2> </header> <div id="post-container" class="mx-auto px-6 sm:px-6 py-6 pb-20 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-code:before:hidden prose-code:after:hidden prose-a:text-black/75 dark:prose-a:text-white/90 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary-500 prose-a:hover:decoration-primary-600 prose-a:decoration-2 prose-a:hover:decoration-4 prose-a:hover:text-black dark:prose-a:hover:text-white"> <p>The <a href="https://nodejs.org/api/buffer.html"><code>Buffer</code></a> type has been the cornerstone for binary data handling in Node.js since the beginning. However, these days we have <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>, which is a native JavaScript type and works cross-platform. While <code>Buffer</code> is an instance of <code>Uint8Array</code>, it introduces numerous methods that are not available in other JavaScript environments. Consequently, code leveraging Buffer-specific methods needs polyfilling, preventing many valuable packages from being browser-compatible.</p>
+<p><code>Buffer</code> also comes with additional caveats. While <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice"><code>Uint8Array#slice()</code></a> creates an immutable copy, <a href="https://nodejs.org/api/buffer.html#bufslicestart-end"><code>Buffer#slice()</code></a> creates a mutable segment linked to the original Buffer, resulting in possible unpredictable behavior. The problem is not the behavior of the <code>Buffer#slice()</code> method, but the fact that <code>Buffer</code> is a subclass of <code>Uint8Array</code> and completely changes the behavior of an inherited method. Instead of <code>Buffer#slice()</code>, use <code>Uint8Array#subarray()</code> or <code>Buffer#subarray()</code>. Furthermore, <a href="https://github.com/nodejs/node/issues/41588#issuecomment-1016269584">buffers expose private information</a> through global variables, a potential security risk.</p>
+<p>It is time to move on.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>I intend to move <a href="https://github.com/search?q=owner%3Asindresorhus+%22node%3Abuffer%22&#x26;type=code">all my packages</a> from using <code>Buffer</code> to <code>Uint8Array</code>. If you are a maintainer of a JavaScript package, I encourage you to do the same.</p>
+<p><code>Buffer</code> will never be removed, and probably never even deprecated, but at least the community can slowly move away from it. My hope is that the Node.js team will at least start discouraging the use of <code>Buffer</code>.</p>
+<h2 id="how">How</h2>
+<p>First, familiarize yourself with the <a href="https://nodejs.org/api/buffer.html#buffers-and-typedarrays">subtle incompatibilities</a> between <code>Uint8Array</code> and <code>Buffer</code>.</p>
+<p>I have made the <a href="https://github.com/sindresorhus/uint8array-extras"><code>uint8array-extras</code> package</a> to make the transition easier. Pull requests are welcome for additional utilities.</p>
+<p>If your code accepts a <code>Buffer</code> and doesn’t use any <code>Buffer</code>-specific methods, you can simply update your docs and types to <code>Uint8Array</code>. Changing the input type from <code>Buffer</code> to <code>Uint8Array</code> is a non-breaking change since <code>Buffer</code> is an instance of <code>Uint8Array</code>.</p>
+<p>Changing the return type from <code>Buffer</code> to <code>Uint8Array</code> is a breaking change, because consumers may use <code>Buffer</code>-specific methods.</p>
+<p>If you absolutely need to convert a <code>Uint8Array</code> to a <code>Buffer</code>, you can use <code>Buffer.from(uint8Array)</code> (copies the data) or <code>Buffer.from(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength)</code> (does not copy). However, there is usually a better way.</p>
+<p>The primary transition steps are:</p>
+<ul>
+<li>Remove all <code>import {Buffer} from 'node:buffer'</code> imports.</li>
+<li>Remove all occurrences of the <code>Buffer</code> global.</li>
+<li>Stop using <code>Buffer</code>-specific methods.</li>
+<li>Replace <code>Buffer</code> reading/writing methods, like <a href="https://nodejs.org/api/buffer.html#bufreadint32beoffset"><code>Buffer#readInt32BE()</code></a>, with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code>DataView</code></a>.</li>
+</ul>
+<h2 id="questions">Questions</h2>
+<h4 id="why-did-buffer-exist-in-the-first-place">Why did <code>Buffer</code> exist in the first place?</h4>
+<p><code>Buffer</code> was created long before <code>Uint8Array</code> existed.</p>
+<h4 id="how-can-i-convert-to-and-from-base64-with-uint8array">How can I convert to and from Base64 with <code>Uint8Array</code>?</h4>
+<p>You can use my <a href="https://github.com/sindresorhus/uint8array-extras"><code>uint8array-extras</code> package</a> for now. It will most likely eventually be <a href="https://github.com/tc39/proposal-arraybuffer-base64/issues">supported natively</a> in JavaScript.</p>
+<h4 id="how-do-i-handle-nodejs-apis-that-return-a-buffer-like-the-fs-methods">How do I handle Node.js APIs that return a <code>Buffer</code>, like the <code>fs</code> methods?</h4>
+<p>Since <code>Buffer</code> is a subclass of <code>Uint8Array</code>, you can just treat it like a <code>Uint8Array</code>. Just make sure you don’t use <code>.slice()</code> (which differs in behavior) or any Buffer-specific methods.</p>
+<h2 id="examples">Examples</h2>
+<h4 id="javascript">JavaScript</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="diff"><code><span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>import {stringToBase64} from 'uint8array-extras';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>Buffer.from(string).toString('base64');</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>stringToBase64(string);</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="diff"><code><span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>import {uint8ArrayToHex} from 'uint8array-extras';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>buffer.toString('hex');</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>uint8ArrayToHex(uint8Array);</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="diff"><code><span class="line"><span style="color:#E1E4E8"> const bytes = getBytes();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>const view = new DataView(bytes.buffer);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>const value = bytes.readInt32BE(1);</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>const value = view.getInt32(1);</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="diff"><code><span class="line"><span style="color:#E1E4E8"> import crypto from 'node:crypto';</span></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>import {Buffer} from 'node:buffer';</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>import {isUint8Array} from 'uint8array-extras';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> export default function hash(data) {</span></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>	if (!(typeof data === 'string' || Buffer.isBuffer(data))) {</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>	if (!(typeof data === 'string' || isUint8Array(data))) {</span></span>
+<span class="line"><span style="color:#E1E4E8"> 		throw new TypeError('Incorrect type.');</span></span>
+<span class="line"><span style="color:#E1E4E8"> 	}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8"> 	return crypto.createHash('md5').update(data).digest('hex');</span></span>
+<span class="line"><span style="color:#E1E4E8"> }</span></span></code></pre>
+<p>Most Node.js APIs accept <code>Uint8Array</code> too, so no extra work was required. Ideally, this code should also transition to <a href="https://nodejs.org/api/webcrypto.html">Web Crypto</a>, but that’s not relevant to this example.</p>
+<h5 id="typescript">TypeScript</h5>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="diff"><code><span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>import {Buffer} from 'node:buffer';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7"><span style="user-select: none;">-</span>export function getSize(input: string | Buffer): number { … }</span></span>
+<span class="line"><span style="color:#85E89D"><span style="user-select: none;">+</span>export function getSize(input: string | Uint8Array): number { … }</span></span></code></pre>
+<h2 id="enforcement">Enforcement</h2>
+<p>I recommend enforcing <code>Uint8Array</code> over <code>Buffer</code> with linting.</p>
+<p>Add this to your ESLint config:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">	'no-restricted-globals'</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#9ECBFF">		'error'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		{</span></span>
+<span class="line"><span style="color:#E1E4E8">			name: </span><span style="color:#9ECBFF">'Buffer'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			message: </span><span style="color:#9ECBFF">'Use Uint8Array instead.'</span></span>
+<span class="line"><span style="color:#E1E4E8">		}</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#9ECBFF">	'no-restricted-imports'</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#9ECBFF">		'error'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		{</span></span>
+<span class="line"><span style="color:#E1E4E8">			name: </span><span style="color:#9ECBFF">'buffer'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			message: </span><span style="color:#9ECBFF">'Use Uint8Array instead.'</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"><span style="color:#E1E4E8">		{</span></span>
+<span class="line"><span style="color:#E1E4E8">			name: </span><span style="color:#9ECBFF">'node:buffer'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			message: </span><span style="color:#9ECBFF">'Use Uint8Array instead.'</span></span>
+<span class="line"><span style="color:#E1E4E8">		}</span></span>
+<span class="line"><span style="color:#E1E4E8">	]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>And if you use TypeScript, add this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">	'@typescript-eslint/ban-types'</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#9ECBFF">		'error'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		{</span></span>
+<span class="line"><span style="color:#E1E4E8">			types: {</span></span>
+<span class="line"><span style="color:#E1E4E8">				Buffer: {</span></span>
+<span class="line"><span style="color:#E1E4E8">					message: </span><span style="color:#9ECBFF">'Use Uint8Array instead.'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">					suggest: [</span></span>
+<span class="line"><span style="color:#9ECBFF">						'Uint8Array'</span></span>
+<span class="line"><span style="color:#E1E4E8">					]</span></span>
+<span class="line"><span style="color:#E1E4E8">				}</span></span>
+<span class="line"><span style="color:#E1E4E8">			}</span></span>
+<span class="line"><span style="color:#E1E4E8">		}</span></span>
+<span class="line"><span style="color:#E1E4E8">	]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>If you use <a href="https://github.com/xojs/xo">XO</a>, it comes with this config by default.</p>
+<h2 id="how-can-i-help">How Can I Help?</h2>
+<p><a href="https://github.com/nodejs/node/issues/41588">Voice your support</a> for Node.js using <code>Uint8Array</code> for new APIs.</p>
+<p>Help me move <a href="https://github.com/search?q=owner%3Asindresorhus+%22node%3Abuffer%22&#x26;type=code">my packages</a> to <code>Uint8Array</code>. Pick one and give it a go.</p>
+<p>Help us make a <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1808">lint rule</a> to prevent the use of <code>Buffer</code> methods.</p>
+<h2 id="future">Future</h2>
+<p><code>Uint8Array</code> (or rather <code>TypedArray</code>) need more utility methods!</p>
+<p>For example, there is currently no good built-in way to convert a <code>Uint8Array</code> to Base64 or Hex. Although, it looks like this is <a href="https://github.com/tc39/proposal-arraybuffer-base64">most likely coming</a>.</p>
+<p>Consider proposing missing bits to <a href="https://github.com/tc39/proposals">TC39</a>.</p>
+<h2 id="the-end">The End</h2>
+<p>Let’s make the JavaScript package ecosystem more cross-platform. Thanks for reading.</p>
+<p><a href="https://github.com/sindresorhus/meta/discussions/22">Discuss</a></p> </div> <!-- <div class="mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+			<PostTags tags={post.tags} />
+		</div> --> </article> </section> <style>
+/* If the first element in the blog post is an image, we remove some of its top padding to make the gap from the header to the post body the same as if it had just been text. */
+#post-container:has(> p:first-child > img) {
+	margin-top: -16px;
+}
+</style>  </main> <footer class="border-t border-gray-200 dark:border-slate-800" data-nosnippet> <div class="max-w-6xl mx-auto px-4 sm:px-6"> <div class="md:flex md:items-center md:justify-between py-6 md:py-8"> <ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"> <li> <a href="https://x.com/sindresorhus" rel="me" aria-label="X (Twitter)" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-x"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4 11.733 16H20L8.267 4zm0 16 6.768-6.768m2.46-2.46L20 4"/></svg> </a> </li> <li> <a href="https://mastodon.social/@sindresorhus" rel="me" aria-label="Mastodon" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-mastodon"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.648 15.254C16.832 17.017 12 16.88 12 16.88a18.3 18.3 0 0 1-3.288-.256q1.69 2.977 8.982 2.475c-1.945 2.013-13.598 5.257-13.668-7.636L4 10.309c0-3.036.023-4.115 1.352-5.633C7.023 2.766 12 3.01 12 3.01s4.977-.243 6.648 1.667C19.977 6.195 20 7.274 20 10.31s-.456 4.074-1.352 4.944"/><path d="M12 11.204V8.278C12 7.02 11.105 6 10 6S8 7.02 8 8.278V13m4-4.722C12 7.02 12.895 6 14 6s2 1.02 2 2.278V13"/></g></svg> </a> </li> <li> <a href="https://bsky.app/profile/sindresorhus.com" rel="me" aria-label="Bluesky" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-bluesky"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856"/></svg> </a> </li> <li> <a href="https://instagram.com/sindresorhus" rel="me" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></g></svg> </a> </li> <li> <a href="https://unsplash.com/@sindresorhus" rel="me" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z"/></svg> </a> </li> <li> <a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/ajaygtm"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> </a> </li> </ul> <div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400"> <q>The people who are crazy enough to think they can change the world are the ones who do</q> </div> </div> </div> </footer>  <script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>  </body> </html>

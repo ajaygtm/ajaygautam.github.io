@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Default Browser Release Notes</title><description>Latest releases of Default Browser</description><link>https://ajaygtm.github.io/</link><item><title>1.0.3</title><link>https://ajaygtm.github.io/default-browser/release-notes#1.0.3</link><guid isPermaLink="true">https://ajaygtm.github.io/default-browser/release-notes#1.0.3</guid><pubDate>Sun, 17 Aug 2025 09:39:31 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Minor user-interface improvements.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>1.0.2</title><link>https://ajaygtm.github.io/default-browser/release-notes#1.0.2</link><guid isPermaLink="true">https://ajaygtm.github.io/default-browser/release-notes#1.0.2</guid><pubDate>Mon, 20 Jan 2025 08:14:33 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Fixed an issue (macOS bug) where a few browsers would be missing in the settings.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>1.0.1</title><link>https://ajaygtm.github.io/default-browser/release-notes#1.0.1</link><guid isPermaLink="true">https://ajaygtm.github.io/default-browser/release-notes#1.0.1</guid><pubDate>Tue, 14 Jan 2025 17:36:43 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item></channel></rss>

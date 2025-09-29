@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ajay Gautam"><meta name="twitter:site" content="@sindresorhus"><meta name="twitter:creator" content="@sindresorhus"><meta name="twitter:description" content="Switch default browser from your menu bar"><meta name="fediverse:creator" content="@sindresorhus@mastodon.social"><meta name="x-build-time" content="Mon, 29 Sep 2025 20:07:49 GMT"><meta name="twitter:card" content="summary"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — Blog" href="/rss.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Apps" href="/rss-apps.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Repos" href="/rss-repos.xml"><link rel="alternate" type="application/rss+xml" title="Default Browser Release Notes" href="/default-browser/rss.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>"><script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script><!-- <ViewTransitions/> --><title>Default Browser — Ajay Gautam</title>
+<meta name="description" content="Switch default browser from your menu bar">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ajaygtm.github.io/default-browser">
+<meta property="og:title" content="Default Browser">
+<meta property="og:description" content="Switch default browser from your menu bar">
+<meta property="og:url" content="https://ajaygtm.github.io/default-browser">
+<meta property="og:type" content="product">
+<meta property="og:image" content="https://ajaygtm.github.io/apps/default-browser/icon.png">
+
+<meta property="og:locale" content="en_US"><link rel="stylesheet" href="/_astro/_page_.255jGt1i.css"></head> <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-950">  <style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style><header data-nosnippet class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-950 dark:md:bg-slate-950/90 md:backdrop-blur-md border-b dark:border-b-0"> <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"> Ajay Gautam </span> </a> <div class="flex items-center md:hidden"> <button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg> </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Primary navigation" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement"> <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"> <li> <a href="/projects" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Projects</span> </a> </li> <li> <a href="/certifications" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Certifications</span> </a> </li> <li> <a href="/experience" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Experience</span> </a> </li> <li> <a href="/about" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">About</span> </a> </li> <li> <a href="/blog" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Blog</span> </a> </li> <li> <a href="/contact" class="md:hidden font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Contact</span> </a> </li> </ul> <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"> <div class="hidden items-center md:flex"> <a href="/feeds" aria-label="RSS Feeds" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> <a href="/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></g></svg> </a> </div> </div> </nav> </div> </header> <main>  <section class="max-w-3xl py-8 sm:py-16 lg:py-20 mx-auto lg:-mt-10 mb-10"> <article itemscope itemtype="https://schema.org/SoftwareApplication"> <header class="flex flex-col items-center text-center px-4 sm:px-6 mb-40"> <img src="/apps/default-browser/icon.png" width="256" height="256" alt="Default Browser app icon" class=" mb-3"> <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 font-heading" itemprop="name"> Default Browser </h1> <h2 class="text-2xl md:text-4xl tracking-tight mb-8" itemprop="description"> Switch default browser from your menu bar </h2> <div id="another-random-app" class="flex justify-center hidden instapaper_ignore"> <a href="/apps/random" class="flex items-center gap-2 px-4 py-2 mb-6 font-semibold text-white bg-linear-to-r from-primary-500 to-secondary-500 rounded-full shadow-xs hover:shadow-md hover:from-primary-600 hover:to-secondary-600 focus:outline-hidden focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5" astro-icon="tabler:arrows-shuffle"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 4 3 3-3 3m0 10 3-3-3-3"/><path d="M3 7h3a5 5 0 0 1 5 5 5 5 0 0 0 5 5h5m0-10h-5a4.98 4.98 0 0 0-3 1m-4 8a5 5 0 0 1-3 1H3"/></g></svg>
+Another Random App
+</a> </div>  <nav class="flex flex-col sm:flex-row gap-x-4 gap-y-8 mt-2 instapaper_ignore" aria-label="Download options">     <a href="https://sindresorhus.gumroad.com/l/default-browser?wanted=true" class="text-white bg-primary-700 hover:bg-primary-600 focus:ring-4 focus:outline-hidden focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-lg text-xl px-6 text-center mb-2 flex justify-center items-center whitespace-nowrap px-10 py-4" style="width: 180px; height: 60px;">Buy</a> </nav> <nav class="flex flex-wrap gap-4 max-w-md justify-center mt-8 font-semibold text-xl text-primary-600 instapaper_ignore" aria-label="App links"> <a href="#tips" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Tips</a><a href="#faq" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">FAQ</a><a href="#scripting" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Scripting</a><a href="/feedback?product=Default%20Browser" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Support</a> <div class="relative flex items-center" style="padding-top:2px"> <select aria-label="Overflow menu" class="overflow-menu-component absolute inset-0 w-full h-full opacity-0 cursor-pointer" style="font-weight: initial; font-family: system-ui;"> <option value="" disabled selected>…</option>  <option value="/default-browser/release-notes">Release Notes</option><option value="/default-browser/privacy-policy">Privacy Policy</option><option value="/apps/terms">Terms of Use</option> <option value="/apps/discounts">Discounts</option><hr> <option value="/apps/random">Show Random App</option>  </select> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 text-primary-600 dark:text-primary-400 pointer-events-none" astro-icon="tabler:dots-circle-horizontal"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0m5 0v.01m4-.01v.01m4-.01v.01"/></svg> </div> <script>
+document.addEventListener('change', event => {
+	if (event.target?.matches('.overflow-menu-component')) {
+		const selectedValue = event.target.value;
+		if (selectedValue) {
+			event.target.value = ''; // Clear selection
+			window.location.href = selectedValue;
+		}
+	}
+});
+</script> </nav> </header> <div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-img:rounded-md prose-img:shadow-lg mt-8 prose-a:text-black/75 dark:prose-a:text-white/90 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary-500 prose-a:hover:decoration-primary-600 prose-a:decoration-2 prose-a:hover:decoration-4 prose-a:hover:text-black dark:prose-a:hover:text-white break-words tracking-normal prose-h4:tracking-normal prose-h5:tracking-normal prose-h6:tracking-normal prose-code:before:hidden prose-code:after:hidden prose-h2:mt-24"> <section class="mb-20" aria-label="App media">  <img src="/_astro/screenshot1.FGMLqJbW.jpg" width="2000" height="1250" alt="Default Browser screenshot 1" loading="lazy"><img src="/_astro/screenshot2.CmOaNujV.jpg" width="2000" height="1250" alt="Default Browser screenshot 2" loading="lazy"><img src="/_astro/screenshot3.CosmL0yB.jpg" width="2000" height="1251" alt="Default Browser screenshot 3" loading="lazy"> </section> <p><sup>Requires macOS 15.4 or later</sup></p>
+<p>Seamlessly switch between browsers directly from your menu bar, keyboard shortcut, Focus mode, or using Shortcuts. Perfect for users who work with multiple browsers.</p>
+<p>Unlike similar apps, this one actually changes the system default browser (and without a prompt).</p>
+<p><a href="https://www.macstories.net/reviews/default-browser-a-mac-menu-bar-utility-for-quickly-switching-browsers/"><strong>Review in MacStories</strong></a></p>
+<p><strong>Features</strong></p>
+<ul>
+<li>Set the system default browser</li>
+<li>Choose which browsers are shown in the menu</li>
+<li>Hide menu bar icon</li>
+<li>Show the default browser’s icon in the menu bar</li>
+<li>Keyboard shortcut to show the menu</li>
+<li><a href="#shortcuts">Shortcuts app integration</a></li>
+<li><a href="#focus-filter">Focus filter</a> to automatically switch browser based on <a href="https://support.apple.com/guide/mac-help/mchl613dc43f/mac#mchl49b73d04">Focus mode</a></li>
+</ul>
+<hr>
+<p><strong>💡 Also available in the <a href="https://sindresorhus.gumroad.com/l/power-user">Power User Bundle</a> - Get 3 of my power user apps for 26% off normal price.</strong></p>
+<hr>
+<p><em>Switching the default browser is also a feature of my <a href="/supercharge">Supercharge</a> app.</em></p>
+<hr>
+<h2 id="tips">Tips</h2>
+<h3 id="browser-selector">Browser selector</h3>
+<p>Set a keyboard shortcut to open the menu. Once open, select a browser by pressing its number key or navigate using the arrow keys.</p>
+<h3 id="launch-browser">Launch browser</h3>
+<p>Hold the Option key and click a browser in the menu to open it, rather than setting it as the default.</p>
+<h3 id="keyboard-shortcut-set-browser">Switch to specific browser with keyboard shortcut</h3>
+<p>Create a <a href="https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac">shortcut in the Shortcuts app</a> for each browser using the “Set Default Browser” action, then assign a keyboard shortcut to the shortcut.</p>
+<h3 id="auto-switch-browser">Automatically switch browser based a trigger</h3>
+<p>The triggers could be: time, location, active app, Wi-Fi network, etc.</p>
+<p>For example, set up automatic browser switching between work and personal use through the Shortcuts app. Create two shortcuts using the “Set Default Browser” action - one for each browser. Then use <a href="https://apps.apple.com/app/id1594183810">Shortery</a> to automatically trigger these shortcuts based on time of day or Wi-Fi network. The Wi-Fi trigger is particularly useful for office workers, as it switches browsers automatically when you connect to your work network.</p>
+<p>Use the <a href="#focus-filter">Focus filter</a> to switch browser based on the active Focus mode.</p>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h4 id="i-have-a-feature-request-bug-report-or-some-feedback">I have a feature request, bug report, or some feedback</h4>
+<p>Click the feedback button in the app or <a href="https://sindresorhus.com/feedback?product=Default%20Browser&#x26;referrer=Website-FAQ">send it here.</a></p>
+<h4 id="the-app-does-not-show-up-in-the-menu-bar">The app does not show up in the menu bar</h4>
+<p><a href="/apps/faq#app-not-showing-in-menu-bar">Try this</a></p>
+<p>You may also have disabled the “Show menu bar icon” setting, which hides the menu bar icon. Launch the app again to show the menu bar icon.</p>
+<h4 id="rules-support">Can it support rules for which browser to use for certain URLs?</h4>
+<p>Features like rules require the app to intercept and forward URLs by acting as the default browser. This app simply changes the default browser. Check out my <a href="/velja">Velja</a> app for rules and more.</p>
+<h4 id="browser-profiles">Can it support browser profiles?</h4>
+<p>Same answer as the above.</p>
+<p>With the exception of Orion, which implements profiles as separate apps.</p>
+<h4 id="how-is-it-different-from-your-velja-app">How is it different from your <a href="/velja">Velja</a> app?</h4>
+<p>Velja works by acting as a browser and forwarding URLs to other browsers, enabling features like rules, interactive browser prompt, desktop app handling, and URL tracking parameter cleaning. This app is simpler - it just changes the system default browser directly.</p>
+<h4 id="supercharge">I already own <a href="/supercharge">Supercharge</a>. Does this offer any benefits over its browser switcher feature?</h4>
+<ul>
+<li>Default browser app icon in the menu bar.</li>
+<li>Larger app icons in the menu.</li>
+<li>Keyboard shortcut to show the menu.</li>
+<li>Number key selection for browsers in the menu.</li>
+</ul>
+<h4 id="why-is-this-not-in-the-app-store">Why is this not in the App Store?</h4>
+<p>Much of the functionality would not be possible in the App Store because of <a href="/apps/faq#macos-sandbox">sandboxing</a>.</p>
+<h4 id="why-is-it-a-paid-app">Why is it a paid app?</h4>
+<p>I love making <a href="/apps/free">free apps</a> and having them available to everyone, but they come with a heavy support burden—I already handle 10–40 app-related emails daily. To focus on quality and sustainability, my new apps will mostly be paid.</p>
+<h4 id="more-faqs"><a href="/apps/faq">More FAQs…</a></h4>
+<!-- ### Older Versions
+
+- [] for macOS 15
+
+These are free for everyone but they will not run on newer macOS versions.
+ -->
+<h2 id="scripting">Scripting</h2>
+<h3 id="shortcuts">Shortcuts</h3>
+<p>The app comes with support for the Shortcuts app. Look up the app in the Shortcuts app to see what actions it provides.</p>
+<p>For example, you could switch to a certain browser at a <a href="#auto-switch-browser">specific time of the day</a>, or maybe when joining a specific Wi-Fi network. For such triggers, you will also need the <a href="https://apps.apple.com/app/id1594183810">Shortery</a> app.</p>
+<h3 id="focus-filter">Focus filter</h3>
+<p>The app includes a <a href="https://support.apple.com/guide/mac-help/mchl613dc43f/mac#mchl49b73d04">Focus filter</a> to automatically switch the default browser based on the Focus mode. Enable it in “System Settings › Focus”.</p>
+<h3 id="events">Events</h3>
+<p>The <a href="/apps/faq#distributed-notifications">distributed notification</a> <code>com.sindresorhus.defaultBrowserDidChange</code> is emitted when the default browser is changed from the app or the Shortcuts action.</p> </div> </article> </section> <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"applicationCategory": "UtilitiesApplication",
+	"name": "Default Browser",
+	"operatingSystem": "macOS",
+	"author": {
+		"@type": "Person",
+		"givenName": "Sindre",
+		"familyName": "Sorhus",
+		"url": "https://sindresorhus.com",
+		"sameAs": [
+			"https://github.com/sindresorhus",
+			"https://x.com/sindresorhus",
+			"https://mastodon.social/@sindresorhus",
+			"https://bsky.app/profile/sindresorhus.com"
+		]
+	},
+	"datePublished": "2025-01-13",
+	"description": "Switch default browser from your menu bar",
+	"url": "https://sindresorhus.com/default-browser",
+	"image": "https://sindresorhus.com/apps/default-browser/icon.png",
+	"screenshot": [
+		"https://sindresorhus.com/_astro/screenshot1.FGMLqJbW.jpg",
+		"https://sindresorhus.com/_astro/screenshot2.CmOaNujV.jpg",
+		"https://sindresorhus.com/_astro/screenshot3.CosmL0yB.jpg"
+	]
+}</script>  </main> <footer class="border-t border-gray-200 dark:border-slate-800" data-nosnippet> <div class="max-w-6xl mx-auto px-4 sm:px-6"> <div class="md:flex md:items-center md:justify-between py-6 md:py-8"> <ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"> <li> <a href="https://x.com/sindresorhus" rel="me" aria-label="X (Twitter)" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-x"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4 11.733 16H20L8.267 4zm0 16 6.768-6.768m2.46-2.46L20 4"/></svg> </a> </li> <li> <a href="https://mastodon.social/@sindresorhus" rel="me" aria-label="Mastodon" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-mastodon"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.648 15.254C16.832 17.017 12 16.88 12 16.88a18.3 18.3 0 0 1-3.288-.256q1.69 2.977 8.982 2.475c-1.945 2.013-13.598 5.257-13.668-7.636L4 10.309c0-3.036.023-4.115 1.352-5.633C7.023 2.766 12 3.01 12 3.01s4.977-.243 6.648 1.667C19.977 6.195 20 7.274 20 10.31s-.456 4.074-1.352 4.944"/><path d="M12 11.204V8.278C12 7.02 11.105 6 10 6S8 7.02 8 8.278V13m4-4.722C12 7.02 12.895 6 14 6s2 1.02 2 2.278V13"/></g></svg> </a> </li> <li> <a href="https://bsky.app/profile/sindresorhus.com" rel="me" aria-label="Bluesky" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-bluesky"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856"/></svg> </a> </li> <li> <a href="https://instagram.com/sindresorhus" rel="me" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></g></svg> </a> </li> <li> <a href="https://unsplash.com/@sindresorhus" rel="me" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z"/></svg> </a> </li> <li> <a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/ajaygtm"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> </a> </li> </ul> <div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400"> <q>The people who are crazy enough to think they can change the world are the ones who do</q> </div> </div> </div> </footer>  <script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>  </body> </html> <script type="module">const appTitle = "Default Browser";
+const appStoreUrl = undefined;
+
+	const shareData = {
+		title: appTitle,
+		url: appStoreUrl
+	};
+
+	if (navigator.canShare(shareData)) {
+		const shareButton = document.querySelector('#share-button');
+
+		shareButton.style.display = 'block';
+
+		shareButton.addEventListener('click', async () => {
+			try {
+				await navigator.share(shareData);
+			} catch (error) {
+				console.error('Share failed:', error.message);
+			}
+		});
+	}
+</script> <script type="module">
+	if (document.referrer.endsWith('/apps/random')) {
+		document.querySelector('#another-random-app').style.display = 'flex';
+	}
+</script>

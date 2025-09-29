@@ -1,0 +1,761 @@
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ajay Gautam"><meta name="twitter:site" content="@sindresorhus"><meta name="twitter:creator" content="@sindresorhus"><meta name="twitter:description" content="Menu bar calendar and world clocks, plus fullscreen meeting notifications"><meta name="fediverse:creator" content="@sindresorhus@mastodon.social"><meta name="x-build-time" content="Mon, 29 Sep 2025 20:07:49 GMT"><meta name="apple-itunes-app" content="app-id=1470584107">
+	<meta name="twitter:card" content="app">
+	<meta name="twitter:app:id:iphone" content="1470584107"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — Blog" href="/rss.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Apps" href="/rss-apps.xml"><link rel="alternate" type="application/rss+xml" title="Sindre Sorhus — New Repos" href="/rss-repos.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>"><script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script><!-- <ViewTransitions/> --><title>Dato — Ajay Gautam</title>
+<meta name="description" content="Menu bar calendar and world clocks, plus fullscreen meeting notifications">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ajaygtm.github.io/dato">
+<meta property="og:title" content="Dato">
+<meta property="og:description" content="Menu bar calendar and world clocks, plus fullscreen meeting notifications">
+<meta property="og:url" content="https://ajaygtm.github.io/dato">
+<meta property="og:type" content="product">
+<meta property="og:image" content="https://ajaygtm.github.io/apps/dato/icon.png">
+
+<meta property="og:locale" content="en_US"><link rel="stylesheet" href="/_astro/_page_.255jGt1i.css"></head> <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-950">  <style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style><header data-nosnippet class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-950 dark:md:bg-slate-950/90 md:backdrop-blur-md border-b dark:border-b-0"> <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"> Ajay Gautam </span> </a> <div class="flex items-center md:hidden"> <button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg> </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Primary navigation" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement"> <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"> <li> <a href="/projects" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Projects</span> </a> </li> <li> <a href="/certifications" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Certifications</span> </a> </li> <li> <a href="/experience" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Experience</span> </a> </li> <li> <a href="/about" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">About</span> </a> </li> <li> <a href="/blog" class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Blog</span> </a> </li> <li> <a href="/contact" class="md:hidden font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" itemprop="url"> <span itemprop="name">Contact</span> </a> </li> </ul> <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"> <div class="hidden items-center md:flex"> <a href="/feeds" aria-label="RSS Feeds" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg> </a> <a href="/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></g></svg> </a> </div> </div> </nav> </div> </header> <main>  <section class="max-w-3xl py-8 sm:py-16 lg:py-20 mx-auto lg:-mt-10 mb-10"> <article itemscope itemtype="https://schema.org/SoftwareApplication"> <header class="flex flex-col items-center text-center px-4 sm:px-6 mb-40"> <img src="/apps/dato/icon.png" width="256" height="256" alt="Dato app icon" class=" mb-3"> <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 font-heading" itemprop="name"> Dato </h1> <h2 class="text-2xl md:text-4xl tracking-tight mb-8" itemprop="description"> Menu bar calendar and world clocks, plus fullscreen meeting notifications </h2> <div id="another-random-app" class="flex justify-center hidden instapaper_ignore"> <a href="/apps/random" class="flex items-center gap-2 px-4 py-2 mb-6 font-semibold text-white bg-linear-to-r from-primary-500 to-secondary-500 rounded-full shadow-xs hover:shadow-md hover:from-primary-600 hover:to-secondary-600 focus:outline-hidden focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5" astro-icon="tabler:arrows-shuffle"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 4 3 3-3 3m0 10 3-3-3-3"/><path d="M3 7h3a5 5 0 0 1 5 5 5 5 0 0 0 5 5h5m0-10h-5a4.98 4.98 0 0 0-3 1m-4 8a5 5 0 0 1-3 1H3"/></g></svg>
+Another Random App
+</a> </div>  <nav class="flex flex-col sm:flex-row gap-x-4 gap-y-8 mt-2 instapaper_ignore" aria-label="Download options"> <div class="relative"> <button id="share-button" class="hidden absolute inset-0 left-[-26px] opacity-90" style="width:16px"> <svg viewBox="0 0 24 24" class="w-4" astro-icon="tabler:share-2"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1m-4 5V3M9 6l3-3 3 3"/></svg> </button> <a href="https://apps.apple.com/app/id1470584107"> <img src="/assets/download-on-app-store-badge.svg" alt="Download on the App Store" style="margin: 0; padding: 0; display: block; height: 60px; user-select: none"> </a> </div> <a href="https://go.setapp.com/stp181?refAppID=571&utm_medium=vendor_program&utm_content=button"> <img src="/assets/download-on-setapp-badge.svg" alt="Download on Setapp" style="margin: 0; padding: 0; display: block; height: 60px; user-select: none"> </a>  </nav> <nav class="flex flex-wrap gap-4 max-w-md justify-center mt-8 font-semibold text-xl text-primary-600 instapaper_ignore" aria-label="App links"> <a href="#trial" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Trial</a><a href="#tips" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Tips</a><a href="#faq" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">FAQ</a><a href="#scripting" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Scripting</a><a href="#older-versions" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Older Versions</a><a href="/feedback?product=Dato" class="hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-200">Support</a> <div class="relative flex items-center" style="padding-top:2px"> <select aria-label="Overflow menu" class="overflow-menu-component absolute inset-0 w-full h-full opacity-0 cursor-pointer" style="font-weight: initial; font-family: system-ui;"> <option value="" disabled selected>…</option>  <option value="https://apps.apple.com/app/id1470584107">What’s New</option><option value="/dato/privacy-policy">Privacy Policy</option><option value="/apps/terms">Terms of Use</option> <option value="/apps/discounts">Discounts</option><hr> <option value="/apps/random">Show Random App</option>  </select> <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 text-primary-600 dark:text-primary-400 pointer-events-none" astro-icon="tabler:dots-circle-horizontal"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0m5 0v.01m4-.01v.01m4-.01v.01"/></svg> </div> <script>
+document.addEventListener('change', event => {
+	if (event.target?.matches('.overflow-menu-component')) {
+		const selectedValue = event.target.value;
+		if (selectedValue) {
+			event.target.value = ''; // Clear selection
+			window.location.href = selectedValue;
+		}
+	}
+});
+</script> </nav> </header> <div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-img:rounded-md prose-img:shadow-lg mt-8 prose-a:text-black/75 dark:prose-a:text-white/90 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary-500 prose-a:hover:decoration-primary-600 prose-a:decoration-2 prose-a:hover:decoration-4 prose-a:hover:text-black dark:prose-a:hover:text-white break-words tracking-normal prose-h4:tracking-normal prose-h5:tracking-normal prose-h6:tracking-normal prose-code:before:hidden prose-code:after:hidden prose-h2:mt-24"> <section class="mb-20" aria-label="App media">  <img src="/_astro/screenshot1.IX_7bQOQ.jpg" width="2880" height="1800" alt="Dato screenshot 1" loading="lazy"><img src="/_astro/screenshot2.Cri47rPO.jpg" width="2880" height="1800" alt="Dato screenshot 2" loading="lazy"><img src="/_astro/screenshot3.DMt5NTd5.jpg" width="2880" height="1800" alt="Dato screenshot 3" loading="lazy"><img src="/_astro/screenshot4.BQUiDBJi.jpg" width="2880" height="1800" alt="Dato screenshot 4" loading="lazy"><img src="/_astro/screenshot5.DWiUfNBY.jpg" width="2880" height="1800" alt="Dato screenshot 5" loading="lazy"><img src="/_astro/screenshot6.6TF5pXwm.jpg" width="2880" height="1800" alt="Dato screenshot 6" loading="lazy"> </section> <p>Dato gives you a local clock, date, and multiple world clocks in the menu bar. When you click Dato in the menu bar, you get a menu with a calendar, calendar events, and world clocks. All of this is highly customizable.</p>
+<p>Dato is a one-time purchase on the App Store with a lifetime of updates.
+<br>
+<sup>(Equivalent to two months of Fantastical subscription)</sup></p>
+<p><a href="https://www.macstories.net/reviews/dato-review-calendar-events-and-time-zones-from-your-macs-menu-bar/">MacStories review of Dato.</a></p>
+<h4 id="features">Features</h4>
+<ul>
+<li>Calendar, optionally with week numbers and event &#x26; reminder indicators.</li>
+<li>Your upcoming events for the next week (customizable) at a glance.</li>
+<li>Fullscreen meeting notifications.</li>
+<li>Reminders support.</li>
+<li>Time zones in the Dato menu, optionally with custom names.</li>
+<li>Show the upcoming event in the menu bar (like Fantastical, Meeter, and MeetingBar)</li>
+<li>Time travel for time zones.</li>
+<li>Deduplicates identical events from different calendars</li>
+<li>Create events (even with a global keyboard shortcut)</li>
+<li>Join the next video call meeting with a customizable global keyboard shortcut</li>
+<li>Clocks for multiple time zones in the menu bar.</li>
+<li>Custom format for the date &#x26; time in the menu bar.</li>
+<li>Highlight certain days of the week in the calendar.</li>
+<li>Search time zones by city (15k cities included offline).</li>
+<li>Supports all calendar services that the built-in Calendar app supports (iCloud, Google, Outlook, etc).</li>
+<li>Fully customizable.</li>
+<li>Lots of in-app keyboard shortcuts for power users.</li>
+<li>Global keyboard shortcut to open/close the app.</li>
+<li>Supports calendar events with HTML formatted notes.</li>
+<li>Show seconds in the menu bar clock or in the menu. (Optional)</li>
+<li>Integration with Zoom, Google Meet, Microsoft Teams, and 50+ other services.
+<ul>
+<li>And the ability to add support for any other video call service yourself.</li>
+</ul>
+</li>
+<li>Open calendar events from Google Calendar directly in Google Calendar on the web.</li>
+<li>Comes with multiple menu bar icons to choose from: date in calendar, date with border (like Itsycal), static clock, none.</li>
+<li>Large text mode.</li>
+<li>Date calculator.</li>
+<li>Hourly chime.</li>
+</ul>
+<h5 id="supported-video-call-services">Supported video call services</h5>
+<ul>
+<li>8x8</li>
+<li>Amazon Chime</li>
+<li>Around</li>
+<li>BlueJeans</li>
+<li>Cal.com</li>
+<li>Chorus</li>
+<li>CoScreen</li>
+<li>Demio</li>
+<li>Demodesk</li>
+<li>Dialpad</li>
+<li>Doxy.me</li>
+<li>FaceTime</li>
+<li>Gather</li>
+<li>Gong</li>
+<li>Google Meet</li>
+<li>GoToMeeting</li>
+<li>GoToWebinar</li>
+<li>Huddle01</li>
+<li>Jam</li>
+<li>Jitsi Meet</li>
+<li>Lark</li>
+<li>LiveKit Meet</li>
+<li>Livestorm</li>
+<li>Luma</li>
+<li>Microsoft Teams</li>
+<li>oVice</li>
+<li>Pop</li>
+<li>Preply</li>
+<li>Pumble</li>
+<li>Reclaim</li>
+<li>Relayed</li>
+<li>RingCentral</li>
+<li>Session</li>
+<li>Skype</li>
+<li>Slack</li>
+<li>StreamYard</li>
+<li>TeamViewer</li>
+<li>Teemyco</li>
+<li>Tuple</li>
+<li>UserZoom</li>
+<li>Venue</li>
+<li>Vimeo</li>
+<li>Vonage</li>
+<li>VooV</li>
+<li>Vowel</li>
+<li>Webex</li>
+<li>Whereby</li>
+<li>Workplace Chat</li>
+<li>Zhumu</li>
+<li>Zoho Cliq</li>
+<li>Zoom</li>
+</ul>
+<p><em>And you can add support for any other video call service yourself in the app.</em></p>
+<hr>
+<p>If all you need is another clock in the menu bar, check out <a href="/second-clock">Second Clock</a>.</p>
+<hr>
+<h2 id="trial">Trial</h2>
+<p>Try the fully functional trial <a href="https://www.dropbox.com/scl/fi/bm2exq57off5l89lfz4gx/Dato-5.6.3-trial-1757957113.zip?rlkey=sz371ao9tqnrr48tbquw9imzs&#x26;raw=1">here</a>. The only limitation is a reminder to buy the app every 12 hours, and no automatic updates. All data and settings carry over if you buy it on the App Store.</p>
+<p><em>Download it to the Downloads folder, double-click to unzip, and then move it to the <code>/Applications</code> folder.</em></p>
+<p>You can also <a href="https://go.setapp.com/stp181?refAppID=571&#x26;utm_medium=vendor_program&#x26;utm_content=button">try it on Setapp</a> for 7 days for free.</p>
+<h2 id="tips">Tips</h2>
+<table>
+	<tbody><tr>
+		<td>
+			Double-click an event in the event list to open it in the default calendar app, if possible.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Click the month &#x26; year label in the calendar (for example, “April 2020”) to change the selected day to “today”. Right-click it to quickly go to a specific date.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Long-press a day in the calendar to open that day in the default calendar app. (Supports: Calendar, Fantastical 2, BusyCal, Outlook)
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Hold <kbd>option</kbd> while clicking the calendar arrows to jump a year instead of a month.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Hold <kbd>option</kbd> while dragging the time travel slider to skip by 15 minutes instead of an hour.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			If you open the “new event” window while the time travel slider is active, the event will default to the time of the slider.
+		</td>
+	</tr>
+</tbody></table>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<h4 id="general">General</h4>
+<table>
+	<tbody><tr>
+		<td>
+			<kbd>◀</kbd>
+			/
+			<kbd>▶</kbd>
+		</td>
+		<td>Previous/next day in the calendar</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>▲</kbd>
+			/
+			<kbd>▼</kbd>
+		</td>
+		<td>Same day in the previous/next week in the calendar</td>
+	</tr>
+	<tr>
+		<td class="whitespace-nowrap">
+			<kbd>option</kbd> <kbd>◀</kbd>
+			<br>
+			<kbd>option</kbd> <kbd>▶</kbd>
+		</td>
+		<td>Previous/next month in the calendar</td>
+	</tr>
+	<tr>
+		<td class="whitespace-nowrap">
+			<kbd>shift</kbd> <kbd>option</kbd> <kbd>◀</kbd>
+			<br>
+			<kbd>shift</kbd> <kbd>option</kbd> <kbd>▶</kbd>
+		</td>
+		<td>Previous/next year in the calendar</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>space</kbd>
+		</td>
+		<td>Select today in the calendar</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>n</kbd>
+		</td>
+		<td>Create a new event</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>p</kbd>
+		</td>
+		<td>Toggle window pinning</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>c</kbd>
+		</td>
+		<td>Show the date &#x26; time calculator</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>j</kbd>
+		</td>
+		<td>Join the current/upcoming Zoom/Meet/Teams meeting (works in the Dato menu and the “upcoming event in menu bar” menu)</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>o</kbd>
+		</td>
+		<td>Open the default calendar app</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>command</kbd> <kbd>q</kbd>
+		</td>
+		<td>Quit the app</td>
+	</tr>
+</tbody></table>
+<h4 id="fullscreen-notifications">Fullscreen notifications</h4>
+<table>
+	<tbody><tr>
+		<td>
+			<kbd>esc</kbd>
+		</td>
+		<td>Dismiss notification</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>return</kbd>
+		</td>
+		<td>Run the default action (highlighted button)</td>
+	</tr>
+</tbody></table>
+<h4 id="time-travel">Time travel</h4>
+<table>
+	<tbody><tr>
+		<td class="whitespace-nowrap">
+			<kbd>command</kbd> <kbd>◀</kbd>
+			<br>
+			<kbd>command</kbd> <kbd>▶</kbd>
+		</td>
+		<td>Activate time travel and offset it by one step backwards or forwards</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>esc</kbd> / <kbd>space</kbd>
+		</td>
+		<td>Deactivate time travel</td>
+	</tr>
+</tbody></table>
+<h4 id="new-event--reminder-window">New event &#x26; reminder window</h4>
+<table>
+	<tbody><tr>
+		<td>
+			<kbd>control</kbd> <kbd>tab</kbd>
+		</td>
+		<td>Switch between new event and new reminder</td>
+	</tr>
+</tbody></table>
+<h3 id="gestures">Gestures</h3>
+<table>
+	<tbody><tr>
+		<td>
+			Double-click an event in the event list
+		</td>
+		<td>Open the event in the default calendar app, if possible</td>
+	</tr>
+	<tr>
+		<td>
+			Swipe left/right on the calendar
+		</td>
+		<td>Next/previous month in the calendar</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>option</kbd> + Swipe left/right on the calendar
+		</td>
+		<td>Next/previous year in the calendar</td>
+	</tr>
+	<tr>
+		<td>
+			<kbd>shift</kbd> + Swipe left/right on the calendar
+		</td>
+		<td>Next/previous day in the calendar</td>
+	</tr>
+</tbody></table>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h4 id="i-have-a-feature-request-bug-report-or-some-feedback">I have a feature request, bug report, or some feedback</h4>
+<p>Click the feedback button in the app or <a href="/feedback?product=Dato&#x26;referrer=Website-FAQ">send it here.</a></p>
+<h4 id="the-app-does-not-show-up-in-the-menu-bar">The app does not show up in the menu bar</h4>
+<p><a href="/apps/faq#app-not-showing-in-menu-bar">Try this</a></p>
+<h4 id="dato-does-not-work-with-ice">Dato does not work with Ice</h4>
+<p>This is an <a href="https://github.com/jordanbaird/Ice/discussions/298">issue with Ice</a> and must be fixed there.</p>
+<h4 id="i-have-multiple-menu-bar-items-that-open-dato">I have multiple menu bar items that open Dato</h4>
+<p>Dato can potentially have multiple menu bar items:</p>
+<ul>
+<li>The main one</li>
+<li>Upcoming event</li>
+<li>Time zone in the menu bar</li>
+</ul>
+<p>You can choose which one of these to show in the menu bar in the app settings.</p>
+<h4 id="can-i-buy-dato-from-outside-the-app-store-and-setapp">Can I buy Dato from outside the App Store and Setapp?</h4>
+<p>No. Dato is only available from the App Store and Setapp.</p>
+<h4 id="dato-quit-suddenly">Dato quit suddenly</h4>
+<p>Check if there are any <a href="/apps/faq#crash-report">crash reports</a>. If none exists, it’s likely macOS terminated Dato because it needed to reclaim memory. This is an especially common problem on MacBook Air laptops with only 8 GB RAM. Try restarting your computer.</p>
+<h4 id="missing-calendars">Some calendars are missing</h4>
+<p>Dato simply fetches calendars and events from macOS. If something is missing, it’s never caused by Dato.</p>
+<p>Make sure:</p>
+<ul>
+<li>The calendars show in the Calendar app and that they are enabled there.
+<ul>
+<li>Open the Calendar app settings, click the “Accounts” pane, and then check that the calendars are there. Dato can only show calendars added there.</li>
+</ul>
+</li>
+<li>The calendars are enabled in the Dato settings.
+<ul>
+<li>Open the Dato settings, click the “Events” tab, and make sure the calendars are enabled.</li>
+</ul>
+</li>
+<li><a href="#refresh-interval">The calendar events may not yet have been fetched by macOS</a></li>
+<li>You have tried restarting your computer.</li>
+<li>You are on the latest version of macOS.</li>
+<li>You have tried resetting permissions for Dato using <a href="/app-buddy">App Buddy</a>.</li>
+</ul>
+<p>Some users had luck with removing the account from the Calendar app settings and re-adding it.</p>
+<p><a href="/feedback?product=Dato&#x26;referrer=Website-FAQ">Contact me</a> if you have tried all this and you are still having issues. I’m not aware of any issue that was not one of the things mentioned above.</p>
+<h4 id="missing-events">Some calendar events are missing in Dato</h4>
+<p>Make sure:</p>
+<ul>
+<li>The calendar with the event is enabled in Dato.</li>
+<li>You are on the latest Dato and macOS versions.</li>
+<li>You have tried restarting your computer.</li>
+<li>The event is not a declined event, which Dato does not show.</li>
+<li>You have not hidden the event using the “Hide” action in the event’s context menu.</li>
+<li>You have not excluded the event with the “Exclude events” setting.</li>
+<li>The event shows up in the Calendar app.
+<ul>
+<li>If it does not show up there, the problem is not with Dato.</li>
+<li>Try pressing <kbd>Command</kbd>+<kbd>R</kbd> in the Calendar app to force-refresh.</li>
+<li>Try signing out and in again of the account in the Calendar app settings. That has helped a few users.</li>
+</ul>
+</li>
+<li><a href="https://answers.microsoft.com/en-us/outlook_com/forum/all/bookings-meetings-sync-with-iphone-but-not-with/085530b3-90d2-4792-b0d9-0cc6f52875ba?page=3">Microsoft Bookings has problems syncing to MacBooks.</a></li>
+</ul>
+<h4 id="upcoming-event-in-menu-bar-troubleshooting">The “upcoming event in menu bar” notification is not showing up</h4>
+<p>Make sure:</p>
+<ul>
+<li>The feature in enabled in the settings.</li>
+<li>The correct calendars for it are enabled (it has a separate calendar picker).</li>
+<li>When in the settings for it, the placeholder example menu bar item shows up in the menu bar.
+<ul>
+<li>If it doesn’t show up, try reducing the “event title limit”.</li>
+</ul>
+</li>
+<li>There is enough space in the menu bar to show it.</li>
+<li>You are on the latest Dato and macOS versions.</li>
+<li>You have tried restarting your computer.</li>
+<li>If you have Bartender or Ice (or a similar app that hides menu bar items) installed, make sure the menu bar item was not auto-hidden by them.
+<ul>
+<li>Note that it uses a separate menu item from the main Dato menu item, so it could still be hidden by Bartender/Ice while the main menu bar item is not.</li>
+<li>Try quitting Bartender/Ice to make sure it is not one causing the issue.</li>
+<li>If you are using Ice, see <a href="https://github.com/jordanbaird/Ice/discussions/298">this</a>.
+<ul>
+<li>As a workaround, in the “upcoming event in menu bar” settings, you could choose to keep the menu bar item visible even when there are no upcoming events.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The event is not an all-day event (which are not shown).</li>
+<li>You have not muted the event.</li>
+<li>You have not excluded the event with the “Exclude events” setting.</li>
+<li>If you have “Show for video call events only” enabled, ensure the event shows a video call icon in the event list.</li>
+<li>If you have “Show for events with an alert only” enabled, ensure the event has an alert.</li>
+<li>If you have “Show only for accepted events” enabled, ensure the event is accepted.</li>
+</ul>
+<h4 id="fullscreen-notifications-troubleshooting">Fullscreen notifications do not work</h4>
+<p>Make sure:</p>
+<ul>
+<li>The fullscreen notifications setting is enabled.</li>
+<li>You have selected the correct calendars in the fullscreen notifications settings.</li>
+<li>You are on the latest Dato and macOS versions.</li>
+<li>You have tried restarting your computer.</li>
+<li>The event is not an all-day event (which are not shown).</li>
+<li>You have not muted the event.</li>
+<li>You have not excluded the event with the “Exclude events” setting.</li>
+<li>You have not already joined the event in the last 15 minutes.</li>
+<li>You have not paused fullscreen notification from a <a href="https://support.apple.com/guide/mac-help/mchl613dc43f/mac">Focus Filter</a>.</li>
+<li>If you have “Show for video call events only” enabled, ensure the event shows a video call icon in the event list.</li>
+<li>If you have “Show for events with an alert only” enabled, ensure the event has an alert.</li>
+<li>If you have “Show only for accepted events” enabled, ensure the event is accepted.</li>
+</ul>
+<h4 id="the-dato-menu-bar-item-is-not-faded-out-on-inactive-displays">The Dato menu bar item is not faded out on inactive displays</h4>
+<p>This is a macOS bug. macOS replicates the menu bar item on inactive displays and this handling is outside the control of apps. The reason it does not happen for all items is that Dato sets rich-text content.</p>
+<h4 id="what-is-the-diamond-menu-bar-icon-that-suddenly-appeared">What is the diamond menu bar icon that suddenly appeared?</h4>
+<p>This is the menu item for the “upcoming event in menu bar” feature. It shows this diamond icon when there are no active events. You can choose to either hide it or show a different icon in the settings.</p>
+<h4 id="it-does-not-support-the-video-call-service-i-use">It does not support the video call service I use</h4>
+<p>I’m happy to add support for more <a href="#supported-video-call-services">services</a>. Just <a href="/feedback?product=Dato&#x26;referrer=Website-FAQ">send me</a> an invitation link (replace a few characters at the end to anonymize it).</p>
+<p>The app can also detect the link of any video call service if you correctly add it in the Calendar app:</p>
+<ul>
+<li>Create a new event.</li>
+<li>Paste the video call link into the location field.</li>
+<li>Accept the dropdown suggestion about it being a video call.</li>
+</ul>
+<p>If you don’t use the Calendar app, you can add the following to the notes field of an event:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>----( Video Call )----</span></span>
+<span class="line"><span>https://some-video-call-service.com/join/23423</span></span>
+<span class="line"><span>---===---</span></span></code></pre>
+<h4 id="how-do-i-add-a-calendar">How do I add a calendar</h4>
+<p><a href="https://support.apple.com/guide/calendar/add-or-delete-calendar-accounts-icl4308d6701/mac">Add the calendar to the built-in Calendar app</a> and then enable it in the Dato settings.</p>
+<h4 id="velja">How can I open meeting links (Google Meet, Zoom, Microsoft Teams, etc.) in a specific browser or browser profile?</h4>
+<p>Check out my <a href="/velja">Velja app</a>. I made it exactly for this purpose. It has built-in support for this without any setup. It can also open links to Zoom and Microsoft Teams directly in their desktop app.</p>
+<p>You can even make it open a specific browser or profile only for links clicked in Dato. Create a custom rule in Velja and set the source app as Dato.</p>
+<h4 id="how-can-i-go-back-to-the-current-day-in-the-calendar">How can I go back to the current day in the calendar?</h4>
+<p>Click the month and year on the top left. You can also press the <kbd>Space</kbd> key.</p>
+<h4 id="i-have-hidden-the-toolbar-and-now-i-cannot-access-settings">I have hidden the toolbar and now I cannot access settings</h4>
+<p>Press the <kbd>Option</kbd> key to reveal a button to access settings or press <kbd>Command</kbd>+<kbd>comma</kbd>.</p>
+<h4 id="time-zones-menu-bar">How can I add multiple time zones to the menu bar?</h4>
+<p>In the Dato settings, go to the “Time Zones” pane, add a time zone, and in the edit window, check “Show in menu bar”. Do the same with the other time zones you want to show in the menu bar. If you already have the time zones added, right-click a time zone, click “Edit”, and then check “Show in menu bar”.</p>
+<h4 id="why-does-the-app-use-a-lot-of-cpu-when-not-in-use">Why does the app use a lot of CPU when not in use?</h4>
+<p>You most likely have enabled showing seconds in the menu bar. Unfortunately, updating the menu bar is quite expensive. This is a problem with macOS and out of my control.</p>
+<p>If you don’t have seconds enabled, please let me know about the excessive CPU usage.</p>
+<h4 id="why-does-the-menu-bar-hide-when-i-click-the-dato-menu-bar-item">Why does the menu bar hide when I click the Dato menu bar item?</h4>
+<p>This is a macOS 14 bug and unfortunately not something I can work around.</p>
+<p>If you work at Apple → <a href="https://github.com/feedback-assistant/reports/issues/457">FB13544993</a></p>
+<h4 id="dato-is-not-in-sync-with-outlook">Dato is not in sync with Outlook</h4>
+<p>Dato simply presents events from the macOS calendar system (the builtin Calendar app). It does not do the actual syncing. macOS has known problems with Outlook syncing. <a href="https://discussions.apple.com/thread/254365894?sortBy=rank">This may help.</a></p>
+<h4 id="how-can-i-edit-an-event-in-dato">How can I edit an event in Dato?</h4>
+<p>Dato does not support editing events. Simply double-click the event in the event list to edit it in the Calendar app.</p>
+<h4 id="how-can-i-toggle-ampm-for-the-time">How can I toggle AM/PM for the time?</h4>
+<p>Dato adheres to what you have set in “System Settings › General › Language and Region”.</p>
+<h4 id="how-can-i-change-the-first-day-of-the-week">How can I change the first day of the week?</h4>
+<p>Dato adheres to what you have set in “System Settings › General › Language and Region”.</p>
+<h4 id="can-you-support-natural-language-input-like-fantastical">Can you support natural language input like Fantastical?</h4>
+<p>I’m hoping to have this done later this year. It’s quite a complicated feature.</p>
+<h4 id="notion-calendar">Can you integrate with Notion Calendar (previously Cron)?</h4>
+<p>The integration is already done, but Notion Calendar has multiple bugs that make it not work properly. We will have to wait for them to fix these bugs.</p>
+<h4 id="vimcal">Can you integrate with <a href="https://www.vimcal.com">Vimcal</a>?</h4>
+<p>Vimcal currently lacks integration capabilities. I suggest reaching out to them to request support for a feature like <a href="https://flexibits.com/fantastical-ios/help/integration#url-actions">Fantastical’s custom URL scheme</a>.</p>
+<h4 id="can-you-localize-the-app-into-my-language">Can you localize the app into my language?</h4>
+<p>All the date and time output and the calendar adhere to your locale settings. I have no plans to localize the app itself.</p>
+<h4 id="i-added-a-calendar-to-the-calendar-app-but-it-doesnt-show-up-in-the-app">I added a calendar to the Calendar app but it doesn’t show up in the app</h4>
+<p>You need to enable the calendar in the Dato settings.</p>
+<h4 id="can-you-add-support-for-google-calendar--outlook-365--exchange">Can you add support for Google Calendar / Outlook 365 / Exchange?</h4>
+<p>It’s already supported. Just add your calendars to the built-in Calendar app and then enable those calendars in the app settings.</p>
+<h4 id="can-you-support-google-calendars-and-outlook-directly-without-going-through-the-calendar-app">Can you support Google Calendars and Outlook directly without going through the Calendar app?</h4>
+<p>Dato uses macOS’s built-in calendaring system, which syncs seamlessly with Google Calendar, Outlook, and other services. This approach ensures all your calendars are managed centrally by macOS, providing a consistent experience across apps. The Calendar app on macOS is just one of the many apps that utilize this system. Adding direct syncing with Google Calendar and Outlook would offer minimal additional benefit but require significant development effort, which would detract from other important improvements.</p>
+<h4 id="macos11-hide-clock">How can I hide the built-in menu bar clock?</h4>
+<p>It’s unfortunately not possible to disable the built-in menu bar clock.</p>
+<p>However, you have some options:</p>
+<ol>
+<li><strong>(Recommended)</strong> In “System Settings › Control Center › Clock Options”, choose the analog clock and disable showing the date. This gets you the closest to how it was on macOS 10.15 as you can use Dato for both date and time. <img width="258" src="https://user-images.githubusercontent.com/170270/105505537-a5044800-5cfb-11eb-979b-7a0b109f0c93.png"><br>This has the added benefit that while the system clock <a href="https://user-images.githubusercontent.com/170270/105506021-2c51bb80-5cfc-11eb-84a6-79b62d69d4bc.png">shows as disabled</a> when you enable “Do Not Disturb” (which makes it pretty unreadable), Dato always shows it the same way.</li>
+<li>Use Dato for showing the date and the built-in clock for the time.</li>
+<li>Only show an icon for Dato.</li>
+</ol>
+<p>I would appreciate it if you could take a moment to <a href="https://www.apple.com/feedback/macos.html">complain to Apple</a> that they should bring back the ability to disable the built-in menu bar clock. For reference, on macOS 10.15, there’s a checkbox called “Show date and time in the menu bar” in “System Preferences › Date &#x26; Time › Clock”. This checkbox no longer exists on macOS 11 and later.</p>
+<p>I have already <a href="https://github.com/feedback-assistant/reports/issues/131">reported it to Apple</a>, but I have yet to get a reply.</p>
+<h4 id="hide-event">What does the “Hide” button on an event do?</h4>
+<p>It makes Dato pretend the event does not exist. The event will not be shown in Dato and it will not cause any notifications from Dato. You can unhide events from the <code>…</code> menu (at the top-right).</p>
+<h4 id="mute-event">What does the “Mute” button on an event do?</h4>
+<p>It makes Dato not notify you about the event. This practically means the event will be ignored for:</p>
+<ul>
+<li>Fullscreen notifications</li>
+<li>Upcoming event in the menu bar</li>
+<li>System notifications for video call events</li>
+</ul>
+<h4 id="how-can-i-customize-the-menu-bar-date-and-time-format">How can I customize the menu bar date and time format?</h4>
+<p>If you just want to toggle a certain component, like date or time, see the “Menu Bar” pane in the Dato settings.</p>
+<p>If you want something more custom, go to “Date &#x26; Time Format” text field. You can specify a <a href="https://nsdateformatter.com">datetime pattern</a>.</p>
+<p>For example, you could display the full month name, the year, or the day of the year.</p>
+<h4 id="how-can-i-show-the-menu-bar-date-and-time-in-iso-8601-format">How can I show the menu bar date and time in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format?</h4>
+<p>Either change <a href="https://apple.stackexchange.com/questions/191445/standard-iso-8601-week-number-in-calendar-app/209340#209340">this system setting</a> or go to the “Menu Bar” pane in the Dato settings, and in the “Date &#x26; Time Format” text field, write <code>YYYY-MM-dd  HH:mm:ss</code>.</p>
+<h4 id="why-does-it-not-show-week-53">Why does it not show week 53?</h4>
+<p>You are probably expecting <a href="https://en.wikipedia.org/wiki/ISO_week_date">ISO week-numbering</a> while having your system set to <a href="https://en.wikipedia.org/wiki/ISO_week_date#Relation_with_the_Gregorian_calendar">Gregorian week numbering</a>. You can change it with <a href="https://apple.stackexchange.com/questions/191445/standard-iso-8601-week-number-in-calendar-app/209340#209340">this system setting</a>.</p>
+<h4 id="why-does-it-show-the-last-days-of-december-as-week-1">Why does it show the last days of December as week 1?</h4>
+<p>That is called <a href="https://en.wikipedia.org/wiki/ISO_week_date">ISO week-numbering</a>.</p>
+<h4 id="incorrect-week-number">It shows the incorrect week number</h4>
+<p>You are probably expecting <a href="https://en.wikipedia.org/wiki/ISO_week_date">ISO week-numbering</a> while having your system set to <a href="https://en.wikipedia.org/wiki/ISO_week_date#Relation_with_the_Gregorian_calendar">Gregorian week numbering</a>, or the inverse. You can change it with <a href="https://apple.stackexchange.com/questions/191445/standard-iso-8601-week-number-in-calendar-app/209340#209340">this system setting</a>.</p>
+<h4 id="how-can-i-change-the-week-number-to-iso-8601-format">How can I change the week number to <a href="https://en.wikipedia.org/wiki/ISO_week_date">ISO 8601</a> format?</h4>
+<p>Change <a href="https://apple.stackexchange.com/questions/191445/standard-iso-8601-week-number-in-calendar-app/209340#209340">this system setting</a>.</p>
+<h4 id="how-can-i-open-a-calendar-event-in-my-favorite-calendar-app-fantastical-busycal-etc-instead-of-the-built-in-calendar-app">How can I open a calendar event in my favorite calendar app (Fantastical, BusyCal, etc.) instead of the built-in Calendar app?</h4>
+<p><del>Dato uses the system default calendar app. To change the default calendar app, open the Calendar app’s settings, and in the “Default calendar app” setting, select the app you want.</del> <strong>Because of a <a href="https://github.com/feedback-assistant/reports/issues/290">macOS bug</a>, this does not work. Instead, drag an event from the Calendar app into Finder, right-click on it, select “Get Info”, select your calendar in the “Open with” field, and click “Change All”. Then relaunch Dato.</strong></p>
+<p>Dato supports opening calendar events directly in Calendar, Fantastical, BusyCal, Outlook, and Google Calendar (web). For other apps, Dato will just open the app.</p>
+<h4 id="how-can-i-send-calendar-invites-when-creating-an-event">How can I send calendar invites when creating an event?</h4>
+<p>In the new event window, click the “More Settings” button, and send the invites from the Calendar app.</p>
+<p>Built-in support for sending calendar invites directly from Dato is not possible, as Apple does not currently provide this capability for third-party apps.</p>
+<h4 id="refresh-interval">How can I make my calendar refresh more often?</h4>
+<p>Open the Calendar app’s settings, go to the “Accounts” pane, choose the relevant calendar service in the left sidebar, and then change the “Refresh Calendars” setting. Ideally, it should be set to “Push”, but not all services support that, like Google Calendar.</p>
+<h4 id="how-can-i-acceptdecline-invites">How can I accept/decline invites?</h4>
+<p>Unfortunately, Apple does not allow third-party apps to manage invites. As a workaround, double-click the event in the list to open it in the Calendar app, where you can accept or decline the invite.</p>
+<h4 id="notifications">How can I get system notifications for upcoming events?</h4>
+<p>Dato does not support this as you can just set it up in the built-in Calendar app. Open the Calendar app’s settings, select the “Alerts” pane, and there you can choose when to be notified.</p>
+<p>What Dato does support is showing a notification right when an event for a video call starts. The notification includes a button to join the video call directly. You can enable this notification in the Dato settings. You can also enable fullscreen notifications.</p>
+<h4 id="can-i-use-the-time-travel-slider-to-check-times-on-future-dates">Can I use the time travel slider to check times on future dates?</h4>
+<p>Select any date in the calendar and then use the time travel slider to adjust the time for that day.</p>
+<h4 id="how-can-i-enable-fullscreen-notifications-only-at-certain-times-or-for-certain-conditions">How can I enable fullscreen notifications only at certain times or for certain conditions?</h4>
+<p>You can use the <a href="https://support.apple.com/guide/mac-help/mchl613dc43f/mac">Focus Filter</a> that comes with Dato to pause fullscreen notifications when in certain focus modes.</p>
+<p>Alternatively, use the built-in Shortcuts app. You can use the <code>Set Fullscreen Notifications State</code> action provided by Dato to enable or disable fullscreen notifications. For example, to only enable fullscreen notifications during work hours, you will need to create two shortcuts. One to enable fullscreen notifications and one to disable it. You also need the <a href="https://apps.apple.com/no/app/shortery/id1594183810?mt=12">Shortery app</a> to run the shortcuts at the correct times.</p>
+<h4 id="how-can-i-enable-fullscreen-notification-only-when-a-certain-focus-mode-is-active">How can I enable fullscreen notification only when a certain <a href="https://support.apple.com/guide/mac-help/mchl613dc43f/mac">Focus mode</a> is active?</h4>
+<p>Same as the above but make the Shortery app run the shortcuts when the Focus mode changes.</p>
+<h4 id="can-you-add-support-for-showing-an-analog-clock-like-the-system-clock">Can you add support for showing an analog clock like the system clock?</h4>
+<p>I have no plans to add that, but you can make it work by unchecking the “Time” setting in Dato and keeping the system clock in analog mode.</p>
+<h4 id="can-you-add-support-for-flashing-the-time-separator-like-the-system-clock">Can you add support for flashing the time separator like the system clock?</h4>
+<p>I have no plans to add that, but you can make it work by unchecking the “Time” setting in Dato and keeping the system clock.</p>
+<h4 id="how-can-i-show-smart-lists-from-the-reminders-app-in-dato">How can I show smart lists from the Reminders app in Dato?</h4>
+<p>Dato can only show normal lists. macOS does not let third-party apps access smart lists.</p>
+<h4 id="can-i-add-links-images-flags-or-tags-to-reminders-in-the-new-reminder-window">Can I add links, images, flags, or tags to reminders in the “New Reminder” window?</h4>
+<p>No, Apple does not expose these features to third-party apps.</p>
+<h4 id="how-can-i-make-the-text-in-dato-be-more-easily-readable">How can I make the text in Dato be more easily readable?</h4>
+<p>Try turning off the “Vibrancy” setting. You can also try increasing the text size with the “Larger text” setting.</p>
+<h4 id="what-does-the-ⓘ-symbol-in-the-upcoming-event-in-menu-bar-item-mean">What does the <code>ⓘ</code> symbol in the “upcoming event in menu bar” item mean?</h4>
+<p>It indicates that there are multiple ongoing events, but only one is shown.</p>
+<h4 id="my-google-calendar-does-not-update-in-the-app">My Google Calendar does not update in the app</h4>
+<p>The events may not have been <a href="#refresh-interval">fetched yet by macOS</a>.</p>
+<p>Or you may have to re-authenticate your Google account. Open the Calendar app’s settings, go to the “Accounts” pane, and try to remove and re-add the Google account.</p>
+<h4 id="can-i-show-utc-time-in-the-menu-bar">Can I show UTC time in the menu bar?</h4>
+<p>Yes</p>
+<ol>
+<li>Open the Dato settings</li>
+<li>Go to the “Time Zones” pane</li>
+<li>Click the plus button</li>
+<li>Write “utc”</li>
+<li>Select the “UTC” item</li>
+<li>Click “Add”</li>
+<li>Enable “Show in menu bar”</li>
+<li>Click “Save”</li>
+</ol>
+<h4 id="how-can-i-hide-the-dato-clock-when-doing-a-specific-task-or-at-a-certain-time-of-the-day">How can I hide the Dato clock when doing a specific task or at a certain time of the day?</h4>
+<p>This is a perfect use case for the built-in Shortcuts app. You can use the <code>Quit App</code> and <code>Open App</code> actions to quit and relaunch Dato whenever needed. For example, you could create a focus shortcut that quits Dato, plays some music, turns off notifications, etc.</p>
+<p>To hide the Dato clock at a certain time of the day, you need the <a href="https://apps.apple.com/no/app/shortery/id1594183810?mt=12">Shortery app</a>.</p>
+<h4 id="how-can-i-show-day-of-year-in-the-menu-bar">How can I show <a href="https://nsidc.org/data/user-resources/help-center/day-year-doy-calendar">day of year</a> in the menu bar?</h4>
+<p>In the “Custom date &#x26; time format” setting, write: <code>D</code></p>
+<p><a href="https://www.unicode.org/reports/tr35/tr35-dates.html#dfst-day">Learn more</a></p>
+<h4 id="can-i-change-the-background-color-of-dato">Can I change the background color of Dato?</h4>
+<p>No, but you can make it white/black by turning off the “Vibrancy” setting.</p>
+<h4 id="can-you-add-more-menu-bar-icons">Can you add more menu bar icons?</h4>
+<p>I’m happy to consider requests. You can find icons <a href="https://developer.apple.com/sf-symbols/">here</a> and <a href="https://thenounproject.com">here</a>.</p>
+<h4 id="the-widgets-provided-by-dato-do-not-show-up-in-the-widget-picker">The widgets provided by Dato do not show up in the widget picker</h4>
+<p>This is a known macOS bug. Restarting your computer usually fixes it.</p>
+<h4 id="the-widgets-provided-by-dato-are-white-or-black-with-no-content">The widgets provided by Dato are white or black with no content</h4>
+<p>Same answer as above.</p>
+<h4 id="the-time-zone-widget-resets-each-time-dato-updates">The time zone widget resets each time Dato updates</h4>
+<p>This is a macOS bug and unfortunately out of my control. Dato simply defines the parameters for the widget, but macOS is the one that shows the configuration screen and saves your choices from there.</p>
+<h4 id="can-it-show-the-list-of-events-in-a-separate-menu-item-from-the-calendar-and-time-zones">Can it show the list of events in a separate menu item from the calendar and time zones?</h4>
+<p>No, but you could use Dato in combination with my <a href="/today">Today</a> app.</p>
+<h4 id="things">How can I show todos from <a href="https://culturedcode.com/things/">Things</a> in Dato?</h4>
+<p>Dato integrates with the Reminders app only. However, you can use the Shortcuts app to sync todos from Things to the Reminders app, which will make Dato show your todos.</p>
+<p><a href="https://www.icloud.com/shortcuts/2b856dd9607f412fb660d009a03d60a8">Here is a shortcut</a> that does this. Run it and then enable the “Things” reminders list in the Dato settings.</p>
+<p>The Shortcuts app does not yet support automation, so to have the shown todo stay in sync with Things, we need to use the <a href="https://apps.apple.com/us/app/shortery/id1594183810">Shortery</a> app to run the shortcut. Choose the “Application” trigger type and make it trigger when Things becomes “Inactive”. Alternatively, place the shortcut in the menu bar and run it manually.</p>
+<h4 id="how-can-i-show-seconds-in-the-menu-bar-only-when-connected-to-power">How can I show seconds in the menu bar only when connected to power?</h4>
+<p>You can use the <a href="https://apps.apple.com/us/app/shortery/id1594183810">Shortery</a> app to run a shortcut when connected and disconnected to power, which would show and hide seconds in the menu bar.</p>
+<ul>
+<li><a href="https://www.icloud.com/shortcuts/41adf21d1bea44499d5034864687d01d">Show seconds shortcut</a></li>
+<li><a href="https://www.icloud.com/shortcuts/dcb7b8c4d66740a8a8ba8abae063e661">Hide seconds shortcut</a></li>
+</ul>
+<h4 id="focus-filters">Can Dato support Focus Filters?</h4>
+<p>Dato has a focus filter for pausing fullscreen notifications. Ideas for other filters welcome.</p>
+<h4 id="can-i-change-the-chime-frequency-for-the-hourly-chime-feature">Can I change the chime frequency for the “Hourly Chime” feature?</h4>
+<p>I don’t plan to add more settings to this feature. However, you can achieve this by using the Shortcuts app. Make a shortcut using the “Get Sound” action provided by Dato and have <a href="https://apps.apple.com/us/app/shortery/id1594183810">Shortery</a> run it at the interval you prefer. <a href="https://www.icloud.com/shortcuts/72e44ca37e024b8ab016bd827557f00f">Example shortcut.</a></p>
+<h4 id="how-can-i-transfer-my-settings-from-the-app-store-version-to-the-setapp-version">How can I transfer my settings from the App Store version to the Setapp version?</h4>
+<p>Run this command in the Terminal app:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">defaults</span><span style="color:#9ECBFF"> export</span><span style="color:#9ECBFF"> com.sindresorhus.Dato</span><span style="color:#9ECBFF"> -</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> defaults</span><span style="color:#9ECBFF"> import</span><span style="color:#9ECBFF"> com.sindresorhus.Dato-setapp</span><span style="color:#9ECBFF"> -</span></span></code></pre>
+<p>And to transfer the other way:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">defaults</span><span style="color:#9ECBFF"> export</span><span style="color:#9ECBFF"> com.sindresorhus.Dato-setapp</span><span style="color:#9ECBFF"> -</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> defaults</span><span style="color:#9ECBFF"> import</span><span style="color:#9ECBFF"> com.sindresorhus.Dato</span><span style="color:#9ECBFF"> -</span></span></code></pre>
+<h4 id="how-is-this-different-from-fantastical">How is this different from Fantastical?</h4>
+<p>Fantastical is a full-blown calendar app, while Dato is a read-only view of your events. Fantastical is a replacement for the built-in Calendar app. You can use both Fantastical and Dato at the same time. Dato even has integration with Fantastical, so you can open events in Dato directly in Fantastical. Fantastical also has a menu bar item, but many people prefer the UI of Dato. Dato also shows time zones and has more customizability for what’s shown in the menu bar. Dato can replace the system date/time, for example.</p>
+<h4 id="how-is-this-different-from-istat-menus">How is this different from iStat Menus?</h4>
+<p>iStat Menus lets you show different kinds of info in the menu bar, like system stats, network speed, etc. Dato is focused on date and time only. Dato also looks better.</p>
+<h4 id="how-is-it-different-from-itsycal">How is it different from Itsycal?</h4>
+<p>Dato is not just a calendar app, but also includes menu bar clock replacement, time zones, upcoming event in menu bar, fullscreen notifications, and a lot more. Try both (see the <a href="#trial">Dato trial</a>) and see for yourself.</p>
+<h4 id="why-the-name-dato">Why the name “Dato”?</h4>
+<p>It means “date” in Norwegian. I just wanted a short, unique, and relevant name.</p>
+<h4 id="more-faqs"><a href="/apps/faq">More FAQs…</a></h4>
+<br>
+<br>
+<h4 id="dato-5">Dato 5</h4>
+<h6 id="behavior-changes">Behavior changes</h6>
+<ul>
+<li><strong>You must now click an event in the list to show event details. Previously you hovered over it.</strong></li>
+<li>Right-click an event in the list for more actions.</li>
+<li>Double-click an event in the list to open it in the default calendar app.</li>
+</ul>
+<h6 id="why-are-there-so-many-changes">Why are there so many changes?</h6>
+<p>The latest version of Dato has been rewritten, moving away from its original <a href="https://developer.apple.com/design/human-interface-guidelines/menus">system menu</a> format — a change partly prompted by macOS 14 breaking various things. This shift has allowed me to implement significant improvements I have envisioned for years. It’s a change for the better, and I encourage you to give it a few weeks to adapt. If you’re still unsatisfied after that time, please reach out. I am continuously working to refine and enhance the app, which has grown substantially since its simple beginnings, making the old menu system increasingly impractical for its current complexity.</p>
+<p>If you are not ready to move to Dato 5, here is <a href="https://www.dropbox.com/scl/fi/xex1okacdtcctr8nytyu9/Dato-4.7.2-1692797926-1701610613.zip?rlkey=1yrr9r2xdczm35fkpzaoco72u&#x26;raw=1">Dato 4</a>, which you can use in the meantime.</p>
+<h5 id="some-functionality-is-missing">Some functionality is missing</h5>
+<p>All existing functionality should be preserved, but some functionality moved into context menus. Simply right-click an event in the event list for more actions. Or right-click an attendee in the event details for more actions.</p>
+<h6 id="why-does-clicking-the-upcoming-event-in-menu-bar-item-now-open-the-main-dato-window">Why does clicking the “upcoming event in menu bar” item now open the main Dato window?</h6>
+<p>I had a large number of requests that wanted more context for the event (for example, the events coming after it). When you click the “upcoming event in the menu bar” menu item now, it opens the main Dato window, but highlights the clicked event and shows the event details. This lets you easily see what comes after it.</p>
+<p>This also enabled the new setting that lets you hide the main Dato menu bar item, since you can now click the “upcoming event in menu bar” item instead.</p>
+<h6 id="how-can-i-now-hide-an-event-from-showing-up-in-the-menu-bar">How can I now hide an event from showing up in the menu bar?</h6>
+<p>Previously, when you clicked the event in the menu bar, you could hide it from the menu bar by clicking “Hide from Menu Bar”. You now need to right-click the menu bar item and click “Mute”.</p>
+<h2 id="scripting">Scripting</h2>
+<h3 id="shortcuts">Shortcuts</h3>
+<p>The app comes with support for the Shortcuts app. Look up the app in the Shortcuts app to see what it provides.</p>
+<h3 id="events">Events</h3>
+<p>The <a href="/apps/faq#distributed-notifications">distributed notification</a> <code>com.sindresorhus.Dato.joinedVideoCall</code> is emitted when you join a video call from Dato.</p>
+<h2 id="older-versions">Older Versions</h2>
+<ul>
+<li><a href="https://github.com/sindresorhus/sindresorhus.github.com/releases/download/v1.0.0/Dato.5.4.4.-.macOS.14.zip">5.4.4</a> for macOS 14</li>
+<li><a href="https://github.com/sindresorhus/meta/files/14097627/Dato.5.1.3.-.macOS.13.zip">5.1.3</a> for macOS 13</li>
+<li><a href="https://github.com/sindresorhus/meta/files/10516478/Dato.4.3.3.-.macOS.12.zip">4.3.3</a> for macOS 12</li>
+<li><a href="https://github.com/sindresorhus/meta/files/8935698/Dato.3.3.8.-.macOS.11.zip">3.3.8</a> for macOS 11</li>
+<li><a href="https://github.com/sindresorhus/meta/files/6758848/Dato.2.6.1.-.macOS.10.15.zip">2.6.1</a> for macOS 10.15</li>
+<li><a href="https://github.com/sindresorhus/meta/files/5360452/Dato.1.14.9.-.Special.last.Mojave.compatible.release.zip">1.4.9</a> for macOS 10.14</li>
+</ul>
+<p>These are free for everyone but they will not run on newer macOS versions.</p>
+<script type="application/ld+json" is:inline="">
+{
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"applicationCategory": "BusinessApplication",
+	"name": "Dato",
+	"operatingSystem": "macOS 15",
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "4.9",
+		"ratingCount": "727"
+	},
+	"offers": {
+		"@type": "Offer",
+		"price": "16.00",
+		"priceCurrency": "USD"
+	},
+	"datePublished": "2019-07-13",
+	"headline": "Dato — Calendar events and world clocks in your menu bar",
+	"alternativeHeadline": "Calendar events and world clocks in your menu bar",
+	"downloadUrl": "https://apps.apple.com/app/id1470584107",
+	"softwareVersion": "5.5.0",
+	"screenshot": "https://sindresorhus.com/_astro/screenshot1.IX_7bQOQ.jpg",
+	"fileSize": "15MB",
+	"description": "Dato gives you a local clock, date, and multiple world clocks in the menu bar. When you click Dato in the menu bar, you get a menu with a calendar, calendar events, and world clocks. All of this is highly customizable.",
+	"keywords": "calendar,menu,bar,date,time,zone,world,clock,zoom,meet",
+	"thumbnailUrl": "https://sindresorhus.com/apps/dato/icon.png",
+	"author": {
+		"@type": "Person",
+		"givenName": "Sindre",
+		"familyName": "Sorhus",
+		"jobTitle": "Open-Sourcerer",
+		"knowsAbout": "Unicorns",
+		"nationality": "Norway",
+		"image": "https://sindresorhus.com/assets/sindre-sorhus.jpg",
+		"url": "https://sindresorhus.com",
+		"sameAs": "https://github.com/sindresorhus"
+	}
+}
+</script> </div> </article> </section> <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"applicationCategory": "UtilitiesApplication",
+	"name": "Dato",
+	"operatingSystem": "macOS",
+	"author": {
+		"@type": "Person",
+		"givenName": "Sindre",
+		"familyName": "Sorhus",
+		"url": "https://sindresorhus.com",
+		"sameAs": [
+			"https://github.com/sindresorhus",
+			"https://x.com/sindresorhus",
+			"https://mastodon.social/@sindresorhus",
+			"https://bsky.app/profile/sindresorhus.com"
+		]
+	},
+	"datePublished": "2019-07-13",
+	"description": "Menu bar calendar and world clocks, plus fullscreen meeting notifications",
+	"url": "https://sindresorhus.com/dato",
+	"image": "https://sindresorhus.com/apps/dato/icon.png",
+	"downloadUrl": "https://apps.apple.com/app/id1470584107",
+	"screenshot": [
+		"https://sindresorhus.com/_astro/screenshot1.IX_7bQOQ.jpg",
+		"https://sindresorhus.com/_astro/screenshot2.Cri47rPO.jpg",
+		"https://sindresorhus.com/_astro/screenshot3.DMt5NTd5.jpg",
+		"https://sindresorhus.com/_astro/screenshot4.BQUiDBJi.jpg",
+		"https://sindresorhus.com/_astro/screenshot5.DWiUfNBY.jpg",
+		"https://sindresorhus.com/_astro/screenshot6.6TF5pXwm.jpg"
+	],
+	"offers": {
+		"@type": "Offer",
+		"availability": "https://schema.org/InStock",
+		"url": "https://apps.apple.com/app/id1470584107",
+		"seller": {
+			"@type": "Person",
+			"name": "Sindre Sorhus"
+		},
+		"priceCurrency": "USD"
+	}
+}</script>  </main> <footer class="border-t border-gray-200 dark:border-slate-800" data-nosnippet> <div class="max-w-6xl mx-auto px-4 sm:px-6"> <div class="md:flex md:items-center md:justify-between py-6 md:py-8"> <ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"> <li> <a href="https://x.com/sindresorhus" rel="me" aria-label="X (Twitter)" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-x"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4 11.733 16H20L8.267 4zm0 16 6.768-6.768m2.46-2.46L20 4"/></svg> </a> </li> <li> <a href="https://mastodon.social/@sindresorhus" rel="me" aria-label="Mastodon" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-mastodon"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.648 15.254C16.832 17.017 12 16.88 12 16.88a18.3 18.3 0 0 1-3.288-.256q1.69 2.977 8.982 2.475c-1.945 2.013-13.598 5.257-13.668-7.636L4 10.309c0-3.036.023-4.115 1.352-5.633C7.023 2.766 12 3.01 12 3.01s4.977-.243 6.648 1.667C19.977 6.195 20 7.274 20 10.31s-.456 4.074-1.352 4.944"/><path d="M12 11.204V8.278C12 7.02 11.105 6 10 6S8 7.02 8 8.278V13m4-4.722C12 7.02 12.895 6 14 6s2 1.02 2 2.278V13"/></g></svg> </a> </li> <li> <a href="https://bsky.app/profile/sindresorhus.com" rel="me" aria-label="Bluesky" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-bluesky"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856"/></svg> </a> </li> <li> <a href="https://instagram.com/sindresorhus" rel="me" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></g></svg> </a> </li> <li> <a href="https://unsplash.com/@sindresorhus" rel="me" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z"/></svg> </a> </li> <li> <a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/ajaygtm"> <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> </a> </li> </ul> <div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400"> <q>The people who are crazy enough to think they can change the world are the ones who do</q> </div> </div> </div> </footer>  <script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>  </body> </html> <script type="module">const appTitle = "Dato";
+const appStoreUrl = "https://apps.apple.com/app/id1470584107";
+
+	const shareData = {
+		title: appTitle,
+		url: appStoreUrl
+	};
+
+	if (navigator.canShare(shareData)) {
+		const shareButton = document.querySelector('#share-button');
+
+		shareButton.style.display = 'block';
+
+		shareButton.addEventListener('click', async () => {
+			try {
+				await navigator.share(shareData);
+			} catch (error) {
+				console.error('Share failed:', error.message);
+			}
+		});
+	}
+</script> <script type="module">
+	if (document.referrer.endsWith('/apps/random')) {
+		document.querySelector('#another-random-app').style.display = 'flex';
+	}
+</script>
